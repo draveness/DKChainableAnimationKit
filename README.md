@@ -8,24 +8,17 @@ DKAnimationKit is a DSL to make animation easy on iOS with **Swift**. This is a 
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)
 
-
-**Thanks for [jhurray](https://github.com/jhurray)'s permission for me to rewritten this wonderful repo!**
-
-
-
 **If you app is written in Objective-C, you should use [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations) instead.**
 
 ## With JHChainableAnimations
 
 ```
-// swift code
 view.makeScale()(2.0).spring().animate()(1.0)
 ```
 
 ## With DKAnimationKit
 
 ```
-// swift code
 view.animation.makeScale(2.0).spring.animate(1.0)
 ```
 
