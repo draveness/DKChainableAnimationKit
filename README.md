@@ -8,6 +8,8 @@ DKAnimationKit is a DSL to make animation easy on iOS with **Swift**. Which is a
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)
 
+> DKAnimationKit does build just fine, Travis.ci doesn't support Swift 1.2 yet so this will show as failing until it is supported.
+
 
 **If you app is written in Objective-C, you should use [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations) instead.**
 
