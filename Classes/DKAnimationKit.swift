@@ -790,6 +790,10 @@ class DKAnimationKit: NSObject {
 
         if self.animationGroups.count == 0 {
             self.clear()
+            if let completion = self.animationCompletion {
+                self.animationCompletion = nil
+                completion()
+            }
         } else {
             self.animateChain()
         }
