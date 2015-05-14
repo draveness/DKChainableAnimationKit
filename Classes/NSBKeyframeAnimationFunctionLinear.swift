@@ -226,8 +226,9 @@ func NSBKeyframeAnimationFunctionEaseInOutElastic(var t: Double, b: Double, c: D
 }
 
 func NSBKeyframeAnimationFunctionEaseInBack(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    const Double s = 1.70158;
-    return c*(t/=d)*t*((s+1)*t - s) + b;
+    let s = 1.70158;
+    t /= d
+    return c*t*t*((s+1)*t - s) + b;
 }
 
 func NSBKeyframeAnimationFunctionEaseOutBack(var t: Double, b: Double, c: Double, d: Double) -> Double {
