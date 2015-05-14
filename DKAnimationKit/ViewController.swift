@@ -27,7 +27,6 @@ class ViewController: UIViewController {
     }
 
     func animateView(sender: UIButton) {
-//        v.animation.moveX(50).easeIn.thenAfter(1.0).makeScale(2.0).thenAfter(1.0).moveXY(20, 20).animate(1.0)
         let purple = UIColor.purpleColor()
         v.animation.makeBackground(purple).animate(1.0);
         v.animation.animationCompletion = {

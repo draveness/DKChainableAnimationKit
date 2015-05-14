@@ -1,6 +1,6 @@
 # DKAnimationKit(Swift)
 
-DKAnimationKit is a DSL to make animation easy on iOS with **Swift**. Which is a rewritten for [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations)
+DKAnimationKit is a DSL to make animation easy on iOS with **Swift**. Which is a rewritten for [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations) by [jhurray](https://github.com/jhurray)
 
 Thanks for jhurray's [permission](https://github.com/jhurray)
 
@@ -37,6 +37,106 @@ view.animation.makeScale(2.0).spring.animate(1.0)
 
 ```
 pod "DKAnimationKit", "~> 0.1.0"
+```
+
+# Usage
+
+If you are familiar with JHChainableAnimations, reading usage here isn't required. 
+
+The only different between the two framework is that when using `DKAnimationKit` you should first call `animation` on `UIView` instance.
+
+```
+view.animation.moveX(10).animate(1.0)
+```
+
+## Animating
+
+Chainable properties or functions like **`moveX(x)`** must come between the **`animate(duration)`** function.
+
+```
+view.animation.moveX(100.0).animate(1.0)
+```
+
+If you want mutiple animation at one time.
+
+```
+view.animation.moveX(100.0).moveY(100.0).animte(1.0)
+```
+
+This will move the view 100 point right and 100 point down at the same time. Order is not important.
+
+## Chaining Animations
+
+To chain animations seperate the chains with the **thenAfter(duration)** function.
+
+```
+view.animation.moveX(100.0).thenAfter(1.0).makeScale(2.0).animate(2.0)
+```
+
+This will move the view for one second and after moving, it will scale for two seconds.
+
+## Animation Effects
+
+To add animatation effect, call the effect method adter the chainable property you want it to apply it.
+
+Below is an exmple of moving a view with a spring effect.
+
+```
+view.animation.moveX(10).spring.animate(1.0)
+```
+
+If you add two animation effect, the first will be cancel out.
+
+```
+view.animation.moveX(10).spring.bounce.animate(1.0)
+// The same as view.animation.moveX(10).bounce.animate(1.0)
+```
+
+## Anchoring
+
+To anchor your view call an anchoring method at some point in an animation chain. And if you add two anchoring property, the first will be cancel like effects.
+
+```
+view.animation.rotate(180).anchorTopLeft.thenAfter(1.0).rotate(90).anchorCenter.animanimation
+```
+
+## Delay
+
+To delay an animation call the **`wait(time)`** or **`delay(time)`** chainable function.
+
+```
+view.animation.moveXY(100, 40).wait(0.5).animate(1.0)
+view.animation.moveXY(100, 40).delay(0.5).animate(1.0)
+delay
+```
+
+This will move the view after 0.5 second delay.
+
+## Completion
+
+If you want to run code after an animation finishes, you are supposed to set the **`animationCompletion`** property or call **`animateWithCompletion(t, completion)`** function.
+
+```
+view.animation.makeX(0).animateWithCompletion(1.0, {
+    println("Animation Done")
+})
+```
+
+This is the same as
+
+```
+view.animation.animationCompletion = {
+    println("Animation Done")
+}
+view.animation.makeX(0).aniamte(1.0)
+```
+
+And also the same as
+
+```
+view.animation.makeX(0).aniamte(1.0).animationCompletion = {
+    println("Animation Done")
+}
 ```
 
 # License
