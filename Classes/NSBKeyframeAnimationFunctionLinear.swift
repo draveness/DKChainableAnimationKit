@@ -243,7 +243,7 @@ func NSBKeyframeAnimationFunctionEaseInOutBack(var t: Double, b: Double, c: Doub
 
     if (t < 1) {
         s *= 1.525
-        return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
+        return c/2*(t*t*((s+1)*t - s)) + b;
     } else {
         t -= 2
         s *= 1.525
@@ -256,7 +256,8 @@ func NSBKeyframeAnimationFunctionEaseInBounce(var t: Double, b: Double, c: Doubl
 }
 
 func NSBKeyframeAnimationFunctionEaseOutBounce(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    if ((t/=d) < (1/2.75)) {
+    t /= d
+    if (t < (1/2.75)) {
         return c*(7.5625*t*t) + b;
     } else if (t < (2/2.75)) {
         return c*(7.5625*(t-=(1.5/2.75))*t + 0.75) + b;
