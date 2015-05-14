@@ -108,6 +108,24 @@ class DKAnimationKit: NSObject {
         return self
     }
 
+    internal func makeX(x: CGFloat) -> DKAnimationKit {
+        return self.makeOrigin(x, self.view.layer.frame.origin.y)
+    }
+
+    internal func makeY(y: CGFloat) -> DKAnimationKit {
+        return self.makeOrigin(self.view.layer.frame.origin.x, y)
+    }
+
+    internal func makeWidth(width: CGFloat) -> DKAnimationKit {
+        return self.makeSize(width, self.view.layer.frame.size.height)
+    }
+
+    internal func makeHeight(height: CGFloat) -> DKAnimationKit {
+        return self.makeOrigin(self.view.layer.frame.size.width, height)
+    }
+
+    
+
     internal func animate(duration: NSTimeInterval) -> DKAnimationKit {
         if let group = self.animationGroups.lastObject as? CAAnimationGroup {
             group.duration = duration
