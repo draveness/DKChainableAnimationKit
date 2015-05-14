@@ -107,13 +107,13 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
 
     }
 
-    private func colorArrayFrom(#redValues: [CGFloat], greenValues: [CGFloat], blueValues: [CGFloat], alphaValues: [CGFloat]) -> [UIColor] {
+    private func colorArrayFrom(#redValues: [CGFloat], greenValues: [CGFloat], blueValues: [CGFloat], alphaValues: [CGFloat]) -> [CGColor] {
         let numberOfColors = redValues.count
-        var values: [UIColor] = []
-        var value: UIColor!
+        var values: [CGColor] = []
+        var value: CGColor!
 
         for i in 1..<numberOfColors {
-            value = UIColor(red: redValues[i], green: greenValues[i], blue: blueValues[i], alpha: alphaValues[i])
+            value = UIColor(red: redValues[i], green: greenValues[i], blue: blueValues[i], alpha: alphaValues[i]).CGColor
             values.append(value)
         }
         return values
