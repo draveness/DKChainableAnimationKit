@@ -41,8 +41,5 @@ pod "DKAnimationKit", "~> 0.1.0"
 
 # License
 
-DKNightVersion is available under the MIT license. See the LICENSE file for more info.
+DKAnimationKit is available under the MIT license. See the LICENSE file for more info.
 
-# Todo
-
-- Documentation
