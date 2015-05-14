@@ -128,8 +128,8 @@ class DKAnimationKit: NSObject {
 
         self.addAnimationCalculationAction { (weakSelf: UIView) -> Void in
             let opacityAnimation = self.basicAnimationForKeyPath("opacity")
-            opacityAnimation.fromValue = NSNumber(float: Float(weakSelf.alpha))
-            opacityAnimation.toValue = NSNumber(float: Float(opacity))
+            opacityAnimation.fromValue = weakSelf.alpha
+            opacityAnimation.toValue = opacity
             self.addAnimationFromCalculationBlock(opacityAnimation)
         }
 
@@ -153,6 +153,73 @@ class DKAnimationKit: NSObject {
         }
         return self
     }
+
+    internal func makeBorderColor(color: UIColor) -> DKAnimationKit {
+
+        self.addAnimationCalculationAction { (weakSelf: UIView) -> Void in
+            let borderColorAnimation = self.basicAnimationForKeyPath("borderColor")
+            borderColorAnimation.fromValue = weakSelf.layer.borderColor
+            borderColorAnimation.toValue = color
+            self.addAnimationFromCalculationBlock(borderColorAnimation)
+        }
+
+        self.addAnimationCompletionAction { (weakSelf: UIView) -> Void in
+            weakSelf.layer.borderColor = color.CGColor
+        }
+        return self
+    }
+
+    internal func makeBorderWidth(width: CGFloat) -> DKAnimationKit {
+
+        let width = max(0, width)
+        self.addAnimationCalculationAction { (weakSelf: UIView) -> Void in
+            let borderColorAnimation = self.basicAnimationForKeyPath("borderWidth")
+            borderColorAnimation.fromValue = weakSelf.layer.borderWidth
+            borderColorAnimation.toValue = width
+            self.addAnimationFromCalculationBlock(borderColorAnimation)
+        }
+
+        self.addAnimationCompletionAction { (weakSelf: UIView) -> Void in
+            weakSelf.layer.borderWidth = width
+        }
+        return self
+    }
+
+    internal func makeCornerRadius(cornerRadius: CGFloat) -> DKAnimationKit {
+
+        let cornerRadius = max(0, cornerRadius)
+        self.addAnimationCalculationAction { (weakSelf: UIView) -> Void in
+            let cornerRadiusAnimation = self.basicAnimationForKeyPath("cornerRadius")
+            cornerRadiusAnimation.fromValue = weakSelf.layer.cornerRadius
+            cornerRadiusAnimation.toValue = cornerRadius
+            self.addAnimationFromCalculationBlock(cornerRadiusAnimation)
+        }
+
+        self.addAnimationCompletionAction { (weakSelf: UIView) -> Void in
+            weakSelf.layer.cornerRadius = cornerRadius
+        }
+        return self
+    }
+
+    internal func makeScale(scale: CGFloat) -> DKAnimationKit {
+
+        let scale = max(0, scale)
+        self.addAnimationCalculationAction { (weakSelf: UIView) -> Void in
+            let scaleAnimation = self.basicAnimationForKeyPath("bounds")
+            let rect = CGRect(x: 0, y: 0, width: max(weakSelf.bounds.size.width * scale, 0), height: max(weakSelf.bounds.size.height * scale, 0))
+            scaleAnimation.fromValue = NSValue(CGRect: weakSelf.layer.bounds)
+            scaleAnimation.toValue = NSValue(CGRect: rect)
+            self.addAnimationFromCalculationBlock(scaleAnimation)
+        }
+
+        self.addAnimationCompletionAction { (weakSelf: UIView) -> Void in
+            let rect = CGRect(x: 0, y: 0, width: max(weakSelf.bounds.size.width * scale, 0), height: max(weakSelf.bounds.size.height * scale, 0))
+            weakSelf.layer.bounds = rect
+            weakSelf.bounds = rect
+        }
+        return self
+    }
+
 
     internal func delay(delay: NSTimeInterval) -> DKAnimationKit {
         var delay = delay
