@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
 
     func animateView(sender: UIButton) {
-        v.animation.moveX(50).easeIn.thenAfter(1.0).makeScale(2.0).thenAfter(1.0).moveXY(20, 20).animate(1.0)
+//        v.animation.moveX(50).easeIn.thenAfter(1.0).makeScale(2.0).thenAfter(1.0).moveXY(20, 20).animate(1.0)
         v.animation.animationCompletion = {
             self.v.layer.transform = CATransform3DMakeRotation(0, 0, 0, 1);
             self.v.frame = CGRectMake(100, 150, 50, 50);
@@ -37,6 +37,11 @@ class ViewController: UIViewController {
                 sender.userInteractionEnabled = true;
             };
         }
+        let purple = UIColor.purpleColor()
+        v.animation.moveWidth(50).bounce.makeBackground(purple).easeIn.anchorTopLeft.thenAfter(0.8).rotate(95).easeBack.wait(0.2).thenAfter(0.5).moveY(300).easeIn.makeOpacity(0.0).animate(0.4);
+
+        sender.animation.moveY(50).easeInOutExpo.animate(0.5);
+
     }
 }
 

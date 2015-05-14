@@ -371,53 +371,73 @@ class DKAnimationKit: NSObject {
         return self.moveXY(x, y)
     }
 
-    internal func anchorDefault() -> DKAnimationKit {
-        return self.anchorCenter()
+    internal var anchorDefault: DKAnimationKit {
+        get {
+            return self.anchorCenter
+        }
     }
 
-    internal func anchorCenter() -> DKAnimationKit {
-        self.makeAnchorFrom(x: 0.5, y: 0.5)
-        return self
+    internal var anchorCenter: DKAnimationKit {
+        get {
+            self.makeAnchorFrom(x: 0.5, y: 0.5)
+            return self
+        }
     }
 
-    internal func anchorTopLeft() -> DKAnimationKit {
-        self.makeAnchorFrom(x: 0.0, y: 0.0)
-        return self
+    internal var anchorTopLeft: DKAnimationKit {
+        get {
+            self.makeAnchorFrom(x: 0.0, y: 0.0)
+            return self
+        }
     }
 
-    internal func anchorTopRight() -> DKAnimationKit {
-        self.makeAnchorFrom(x: 1.0, y: 0.0)
-        return self
+    internal var anchorTopRight: DKAnimationKit {
+        get {
+            self.makeAnchorFrom(x: 1.0, y: 0.0)
+            return self
+        }
     }
 
-    internal func anchorBottomLeft() -> DKAnimationKit {
-        self.makeAnchorFrom(x: 0.0, y: 1.0)
-        return self
+    internal var anchorBottomLeft: DKAnimationKit {
+        get {
+            self.makeAnchorFrom(x: 0.0, y: 1.0)
+            return self
+        }
     }
 
-    internal func anchorBottomRight() -> DKAnimationKit {
-        self.makeAnchorFrom(x: 1.0, y: 1.0)
-        return self
+    internal var anchorBottomRight: DKAnimationKit {
+        get {
+            self.makeAnchorFrom(x: 1.0, y: 1.0)
+            return self
+        }
     }
 
-    internal func anchorTop() -> DKAnimationKit {
-        self.makeAnchorFrom(x: 0.5, y: 0.0)
-        return self
+    internal var anchorTop: DKAnimationKit {
+        get {
+            self.makeAnchorFrom(x: 0.5, y: 0.0)
+            return self
+        }
     }
 
-    internal func anchorBottom() -> DKAnimationKit {
-        self.makeAnchorFrom(x: 0.5, y: 1.0)
-        return self
+    internal var anchorBottom: DKAnimationKit {
+        get {
+            self.makeAnchorFrom(x: 0.5, y: 1.0)
+            return self
+        }
     }
 
-    internal func anchorLeft() -> DKAnimationKit {
-        self.makeAnchorFrom(x: 1.0, y: 0.5)
-        return self
+    internal var anchorLeft: DKAnimationKit {
+        get {
+            self.makeAnchorFrom(x: 1.0, y: 0.5)
+            return self
+        }
     }
 
-    internal func anchorRight() -> DKAnimationKit {
-        self.makeAnchorFrom(x: 0.0, y: 0.5)
-        return self
+    internal var anchorRight: DKAnimationKit {
+        get {
+            self.makeAnchorFrom(x: 0.0, y: 0.5)
+            return self
+        }
     }
 
     internal var easeIn: DKAnimationKit {
