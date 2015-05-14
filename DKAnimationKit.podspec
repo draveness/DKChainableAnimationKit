@@ -1,15 +1,12 @@
 Pod::Spec.new do |s|
   s.name         = "DKAnimationKit"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.summary      = "Chainable Animation in Swift"
 
   s.description  = <<-DESC
                    A longer description of DKAnimationKit in Markdown format.
 
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
+                   DKAnimationKit is rewritten for JHChainableAnimations and provide you a more convience approach to deal with Animation in swift, if your app is developed using Objective-C, you should use JHChainableAnimations instead.
                    DESC
 
   s.homepage     = "https://github.com/Draveness/DKAnimationKit"
