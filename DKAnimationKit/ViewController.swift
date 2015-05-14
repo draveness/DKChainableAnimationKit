@@ -38,7 +38,7 @@ class ViewController: UIViewController {
             };
         }
         let purple = UIColor.purpleColor()
-        v.animation.moveWidth(50).bounce.makeBackground(purple).easeIn.anchorTopLeft.thenAfter(0.8).rotate(95).easeBack.wait(0.2).thenAfter(0.5).moveY(300).easeIn.makeOpacity(0.0).animate(0.4);
+        v.animation.makeBackground(purple).animate(1.0);
 
         sender.animation.moveY(50).easeInOutExpo.animate(0.5);
 

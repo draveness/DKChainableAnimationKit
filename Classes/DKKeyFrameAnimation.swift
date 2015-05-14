@@ -34,7 +34,7 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
                 self.values = self.valueArrayFor(startValue: CGFloat(fromValue.floatValue), endValue: CGFloat(toValue.floatValue)) as [AnyObject]
             } else if valueIsKindOf(UIColor) {
                 let fromColor = self.fromValue.CGColor
-                let toColor = self.fromValue.CGColor
+                let toColor = self.toValue.CGColor
                 let fromComponents = CGColorGetComponents(fromColor)
                 let toComponents = CGColorGetComponents(toColor)
 
@@ -43,7 +43,7 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
                 let blueValues = self.valueArrayFor(startValue: fromComponents[2], endValue: toComponents[2]) as! [CGFloat]
                 let alphaValues = self.valueArrayFor(startValue: fromComponents[3], endValue: toComponents[3]) as! [CGFloat]
 
-                self.values  = self.colorArrayFrom(redValues: redValues, greenValues: greenValues, blueValues: blueValues, alphaValues: alphaValues)
+                self.values = self.colorArrayFrom(redValues: redValues, greenValues: greenValues, blueValues: blueValues, alphaValues: alphaValues) as [AnyObject]
             } else if valueIsKindOf(NSValue) {
                 self.fromValue.objCType
                 let valueType: NSString! = NSString(CString: self.fromValue.objCType, encoding: 1)
