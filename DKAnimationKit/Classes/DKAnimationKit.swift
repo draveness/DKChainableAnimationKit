@@ -50,7 +50,7 @@ class DKAnimationKit: NSObject {
 
         self.addAnimationCalculationAction { (weakSelf: UIView) -> Void in
             let positionAnimation = self.basicAnimationForKeyPath("position")
-            let newPosition = self.newPositionFromNewOrigin(CGPoint(x: x, y: y))
+            let newPosition = self.newPositionFrom(newOrigin: CGPoint(x: x, y: y))
             positionAnimation.fromValue = NSValue(CGPoint: weakSelf.layer.position)
             positionAnimation.toValue = NSValue(CGPoint: newPosition)
             self.addAnimationFromCalculationBlock(positionAnimation)
@@ -158,7 +158,7 @@ class DKAnimationKit: NSObject {
         return animation
     }
 
-    private func newPositionFromNewOrigin(newOrigin: CGPoint) -> CGPoint {
+    private func newPositionFrom(#newOrigin: CGPoint) -> CGPoint {
         let anchor = self.view.layer.anchorPoint
         let size = self.view.bounds.size
         let newPosition = CGPoint(x: newOrigin.x + anchor.x * size.width, y: newOrigin.y + anchor.y * size.height)
