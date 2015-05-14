@@ -124,7 +124,22 @@ class DKAnimationKit: NSObject {
         return self.makeOrigin(self.view.layer.frame.size.width, height)
     }
 
-    
+
+    internal func delay(delay: NSTimeInterval) -> DKAnimationKit {
+        var delay = delay
+        for group in self.animationGroups {
+            let duration = group.duration as NSTimeInterval
+            delay += duration
+        }
+        if let group = self.animationGroups.lastObject as? CAAnimationGroup {
+            group.beginTime = CACurrentMediaTime() + delay
+        }
+        return self
+    }
+
+    internal func wait(delay: NSTimeInterval) -> DKAnimationKit {
+        return self.delay(delay)
+    }
 
     internal func animate(duration: NSTimeInterval) -> DKAnimationKit {
         if let group = self.animationGroups.lastObject as? CAAnimationGroup {
