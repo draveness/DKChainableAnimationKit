@@ -1,11 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "DKAnimationKit"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "Chainable Animation in Swift"
 
   s.description  = <<-DESC
-                   A longer description of DKAnimationKit in Markdown format.
-
                    DKAnimationKit is rewritten for JHChainableAnimations and provide you a more convience approach to deal with Animation in swift, if your app is developed using Objective-C, you should use JHChainableAnimations instead.
                    DESC
 
