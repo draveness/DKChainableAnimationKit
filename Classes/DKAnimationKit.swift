@@ -178,6 +178,18 @@ class DKAnimationKit: NSObject {
         return self
     }
 
+    internal func thenAfter(after: NSTimeInterval) -> DKAnimationKit {
+        if let group = self.animationGroups.lastObject as? CAAnimationGroup {
+            group.duration = after
+            let newGroup = self.basicAnimationGroup()
+            self.animationGroups.addObject(newGroup)
+            self.animations.append([])
+            self.animationCalculationActions.append([])
+            self.animationCompletionActions.append([])
+        }
+        return self
+    }
+
     private func animateChain() {
         self.sanityCheck()
         CATransaction.begin()
