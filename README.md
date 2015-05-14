@@ -1,8 +1,8 @@
 # DKAnimationKit(Swift)
 
-DKAnimationKit is a DSL to make animation easy on iOS with **Swift**. Which is a rewritten for [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations)
+DKAnimationKit is a DSL to make animation easy on iOS with **Swift**.
 
-Thanks for jhurray's [permission](https://github.com/jhurray)
+**Thanks for [jhurray](https://github.com/jhurray)'s permission!**
 
 
 ![Version](https://img.shields.io/badge/Pod-%20v0.1.0%20-or.svg)
