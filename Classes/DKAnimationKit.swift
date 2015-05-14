@@ -46,6 +46,23 @@ class DKAnimationKit: NSObject {
         self.animationGroups.addObject(self.basicAnimationGroup())
     }
 
+    internal func makeSize(width: CGFloat, _ height: CGFloat) -> DKAnimationKit {
+
+        self.addAnimationCalculationAction { (weakSelf: UIView) -> Void in
+            let sizeAnimation = self.basicAnimationForKeyPath("bounds.size")
+            sizeAnimation.fromValue = NSValue(CGSize: weakSelf.layer.bounds.size)
+            sizeAnimation.toValue = NSValue(CGSize: CGSize(width: width, height: height))
+            self.addAnimationFromCalculationBlock(sizeAnimation)
+        }
+
+        self.addAnimationCompletionAction { (weakSelf: UIView) -> Void in
+            var bounds = CGRect(x: 0, y: 0, width: width, height: height)
+            weakSelf.layer.bounds = bounds
+            weakSelf.bounds = bounds
+        }
+        return self
+    }
+
     internal func makeOrigin(x: CGFloat, _ y: CGFloat) -> DKAnimationKit {
 
         self.addAnimationCalculationAction { (weakSelf: UIView) -> Void in
@@ -63,7 +80,23 @@ class DKAnimationKit: NSObject {
             weakSelf.layer.frame = rect
             weakSelf.frame = rect
         }
+        return self
 
+    }
+
+    internal func makeCenter(x: CGFloat, _ y: CGFloat) -> DKAnimationKit {
+
+        self.addAnimationCalculationAction { (weakSelf: UIView) -> Void in
+            let positionAnimation = self.basicAnimationForKeyPath("position")
+            let newPosition = self.newPositionFrom(newCenter: CGPoint(x: x, y: y))
+            positionAnimation.fromValue = NSValue(CGPoint: weakSelf.layer.position)
+            positionAnimation.toValue = NSValue(CGPoint: newPosition)
+            self.addAnimationFromCalculationBlock(positionAnimation)
+        }
+
+        self.addAnimationCompletionAction { (weakSelf: UIView) -> Void in
+            weakSelf.center = CGPoint(x: x, y: y)
+        }
         return self
     }
 
@@ -152,8 +185,6 @@ class DKAnimationKit: NSObject {
         let animation = DKKeyFrameAnimation(keyPath: keyPath)
         animation.repeatCount = 0
         animation.autoreverses = false
-        println(animation.keyPath)
-        println(keyPath)
 
         return animation
     }
@@ -164,7 +195,15 @@ class DKAnimationKit: NSObject {
         let newPosition = CGPoint(x: newOrigin.x + anchor.x * size.width, y: newOrigin.y + anchor.y * size.height)
         return newPosition
     }
-    
+
+    private func newPositionFrom(#newCenter: CGPoint) -> CGPoint {
+        let anchor = self.view.layer.anchorPoint
+        let size = self.view.bounds.size
+        let newPosition = CGPoint(x: newCenter.x + (anchor.x - 0.5) * size.width, y: newCenter.y + (anchor.y - 0.5) * size.height)
+        return newPosition
+    }
+
+
     private func sanityCheck() {
         
     }
