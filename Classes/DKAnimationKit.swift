@@ -46,6 +46,14 @@ class DKAnimationKit: NSObject {
         self.animationGroups.addObject(self.basicAnimationGroup())
     }
 
+    internal func makeFrame(rect: CGRect) -> DKAnimationKit {
+        return self.makeOrigin(rect.origin.x, rect.origin.y).makeBounds(rect)
+    }
+
+    internal func makeBounds(rect: CGRect) -> DKAnimationKit {
+        return self.makeSize(rect.size.width, rect.size.height)
+    }
+
     internal func makeSize(width: CGFloat, _ height: CGFloat) -> DKAnimationKit {
 
         self.addAnimationCalculationAction { (weakSelf: UIView) -> Void in
