@@ -17,7 +17,6 @@ class ViewController: UIViewController {
         v.backgroundColor = UIColor.blueColor()
         view.addSubview(v)
 
-
         let button = UIButton(frame: CGRect(x: 100, y: 150, width: 50, height: 50))
         button.frame = CGRect(x: 0, y: self.view.bounds.size.height - 50.0, width: self.view.bounds.size.width, height: 50)
         button.backgroundColor = UIColor.blueColor()
@@ -28,7 +27,7 @@ class ViewController: UIViewController {
     }
 
     func animateView(sender: UIButton) {
-        v.animation.makeOpacity(0.5).thenAfter(1.0).makeSize(200, 200).animate(1)
+        v.animation.moveX(50).thenAfter(1.0).makeScale(2.0).animate(1.0)
     }
 }
 
