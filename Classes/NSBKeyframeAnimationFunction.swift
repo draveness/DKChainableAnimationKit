@@ -1,6 +1,6 @@
 
 //
-//  NSBKeyframeAnimationFunctionLinear.swift
+//  NSBKeyframeAnimationFunction.swift
 //  DKAnimationKit
 //
 //  Created by apple on 15/5/13.

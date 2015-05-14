@@ -15,7 +15,7 @@
 		181670161B037F0C00E5FEA8 /* DKAnimationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181670151B037F0C00E5FEA8 /* DKAnimationKitTests.swift */; };
 		18D58F041B04503B00C0E4D5 /* DKAnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D58F001B04503B00C0E4D5 /* DKAnimationKit.swift */; };
 		18D58F051B04503B00C0E4D5 /* DKKeyFrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D58F011B04503B00C0E4D5 /* DKKeyFrameAnimation.swift */; };
-		18D58F061B04503B00C0E4D5 /* NSBKeyframeAnimationFunctionLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D58F021B04503B00C0E4D5 /* NSBKeyframeAnimationFunctionLinear.swift */; };
+		18D58F061B04503B00C0E4D5 /* NSBKeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D58F021B04503B00C0E4D5 /* NSBKeyframeAnimationFunction.swift */; };
 		18D58F071B04503B00C0E4D5 /* UIView+AnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D58F031B04503B00C0E4D5 /* UIView+AnimationKit.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +42,7 @@
 		181670151B037F0C00E5FEA8 /* DKAnimationKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKAnimationKitTests.swift; sourceTree = "<group>"; };
 		18D58F001B04503B00C0E4D5 /* DKAnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKAnimationKit.swift; sourceTree = "<group>"; };
 		18D58F011B04503B00C0E4D5 /* DKKeyFrameAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKKeyFrameAnimation.swift; sourceTree = "<group>"; };
-		18D58F021B04503B00C0E4D5 /* NSBKeyframeAnimationFunctionLinear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBKeyframeAnimationFunctionLinear.swift; sourceTree = "<group>"; };
+		18D58F021B04503B00C0E4D5 /* NSBKeyframeAnimationFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBKeyframeAnimationFunction.swift; sourceTree = "<group>"; };
 		18D58F031B04503B00C0E4D5 /* UIView+AnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,7 +126,7 @@
 			children = (
 				18D58F001B04503B00C0E4D5 /* DKAnimationKit.swift */,
 				18D58F011B04503B00C0E4D5 /* DKKeyFrameAnimation.swift */,
-				18D58F021B04503B00C0E4D5 /* NSBKeyframeAnimationFunctionLinear.swift */,
+				18D58F021B04503B00C0E4D5 /* NSBKeyframeAnimationFunction.swift */,
 				18D58F031B04503B00C0E4D5 /* UIView+AnimationKit.swift */,
 			);
 			path = Classes;
@@ -233,7 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D58F071B04503B00C0E4D5 /* UIView+AnimationKit.swift in Sources */,
-				18D58F061B04503B00C0E4D5 /* NSBKeyframeAnimationFunctionLinear.swift in Sources */,
+				18D58F061B04503B00C0E4D5 /* NSBKeyframeAnimationFunction.swift in Sources */,
 				181670021B037F0C00E5FEA8 /* ViewController.swift in Sources */,
 				18D58F041B04503B00C0E4D5 /* DKAnimationKit.swift in Sources */,
 				181670001B037F0C00E5FEA8 /* AppDelegate.swift in Sources */,
