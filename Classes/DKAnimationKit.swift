@@ -16,12 +16,10 @@ class DKAnimationKit: NSObject {
     typealias AnimationCompletionAction = UIView -> Void
 
     var animationCalculationActions: [[AnimationCalculationAction]]!
-
     var animationCompletionActions: [[AnimationCompletionAction]]!
-
     var animationGroups: NSMutableArray!
-
     var animations: [[DKKeyFrameAnimation]]!
+    var animationCompletion: (Void -> Void)?
 
     override init() {
         super.init()
@@ -346,10 +344,6 @@ class DKAnimationKit: NSObject {
         return self.makeSize(max(self.view.bounds.size.width + width, 0), self.view.bounds.size.height)
     }
 
-    private func degreesToRadians(degree: Double) -> Double {
-        return degree / 180.0 * M_PI
-    }
-
     internal func rotate(angle: Double) -> DKAnimationKit {
 
         self.addAnimationCalculationAction { (view: UIView) -> Void in
@@ -428,42 +422,42 @@ class DKAnimationKit: NSObject {
 
     internal var easeIn: DKAnimationKit {
         get {
-            self.easeInQuad()
+            self.easeInQuad
             return self
         }
     }
 
     internal var easeOut: DKAnimationKit {
         get {
-            self.easeOutQuad()
+            self.easeOutQuad
             return self
         }
     }
 
     internal var easeInOut: DKAnimationKit {
         get {
-            self.easeInOutQuad()
+            self.easeInOutQuad
             return self
         }
     }
 
     internal var easeBack: DKAnimationKit {
         get {
-            self.easeOutBack()
+            self.easeOutBack
             return self
         }
     }
 
     internal var spring: DKAnimationKit {
         get {
-            self.easeOutElastic()
+            self.easeOutElastic
             return self
         }
     }
 
     internal var bounce: DKAnimationKit {
         get { 
-            self.easeOutBounce()
+            self.easeOutBounce
             return self         
         }
     }
@@ -477,156 +471,215 @@ class DKAnimationKit: NSObject {
         }
     }
 
-    private func easeInQuad() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuad)
-        return self
+    internal var easeInQuad: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuad)
+            return self
+        }
     }
 
-    private func easeOutQuad() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuad)
-        return self
+    internal var easeOutQuad: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuad)
+            return self
+        }
     }
 
-    private func easeInOutQuad() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuad)
-        return self
+    internal var easeInOutQuad: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuad)
+            return self
+        }
     }
 
-    private func easeInCubic() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInCubic)
-        return self
+    internal var easeInCubic: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInCubic)
+            return self
+        }
     }
 
-    private func easeOutCubic() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutCubic)
-        return self
+    internal var easeOutCubic: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutCubic)
+            return self
+        }
     }
 
-    private func easeInOutCubic() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutCubic)
-        return self
+    internal var easeInOutCubic: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutCubic)
+            return self
+        }
     }
 
-    private func easeInQuart() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuart)
-        return self
+    internal var easeInQuart: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuart)
+            return self
+        }
     }
 
-    private func easeOutQuart() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuart)
-        return self
+    internal var easeOutQuart: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuart)
+            return self
+        }
     }
 
-    private func easeInOutQuart() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuart)
-        return self
+    internal var easeInOutQuart: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuart)
+            return self
+        }
     }
 
-    private func easeInQuint() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuint)
-        return self
+    internal var easeInQuint: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuint)
+            return self
+        }
     }
 
-    private func easeOutQuint() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuint)
-        return self
+    internal var easeOutQuint: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuint)
+            return self
+        }
     }
 
-    private func easeInOutQuint() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuint)
-        return self
+    internal var easeInOutQuint: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuint)
+            return self
+        }
     }
 
-    private func easeInSine() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInSine)
-        return self
+    internal var easeInSine: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInSine)
+            return self
+        }
     }
 
-    private func easeOutSine() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutSine)
-        return self
+    internal var easeOutSine: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutSine)
+            return self
+        }
     }
 
-    private func easeInOutSine() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutSine)
-        return self
+    internal var easeInOutSine: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutSine)
+            return self
+        }
     }
 
-    private func easeInExpo() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInExpo)
-        return self
+    internal var easeInExpo: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInExpo)
+            return self
+        }
     }
 
-    private func easeOutExpo() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutExpo)
-        return self
+    internal var easeOutExpo: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutExpo)
+            return self
+        }
     }
 
-    private func easeInOutExpo() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutExpo)
-        return self
+    internal var easeInOutExpo: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutExpo)
+            return self
+        }
     }
 
-    private func easeInCirc() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInCirc)
-        return self
+    internal var easeInCirc: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInCirc)
+            return self
+        }
     }
 
-    private func easeOutCirc() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutCirc)
-        return self
+    internal var easeOutCirc: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutCirc)
+            return self
+        }
     }
 
-    private func easeInOutCirc() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutCirc)
-        return self
+    internal var easeInOutCirc: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutCirc)
+            return self
+        }
     }
 
-    private func easeInElastic() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInElastic)
-        return self
+    internal var easeInElastic: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInElastic)
+            return self
+        }
     }
 
-    private func easeOutElastic() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutElastic)
-        return self
+    internal var easeOutElastic: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutElastic)
+            return self
+        }
     }
 
-    private func easeInOutElastic() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutElastic)
-        return self
+    internal var easeInOutElastic: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutElastic)
+            return self
+        }
     }
 
-    private func easeInBack() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInBack)
-        return self
+    internal var easeInBack: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInBack)
+            return self
+        }
     }
 
-    private func easeOutBack() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutBack)
-        return self
+    internal var easeOutBack: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutBack)
+            return self
+        }
     }
 
-    private func easeInOutBack() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutBack)
-        return self
-    }
-    
-    private func easeInBounce() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInBounce)
-        return self
-    }
-    
-    private func easeOutBounce() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutBounce)
-        return self
-    }
-    
-    private func easeInOutBounce() -> DKAnimationKit {
-        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutBounce)
-        return self
+    internal var easeInOutBack: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutBack)
+            return self
+        }
     }
 
+    internal var easeInBounce: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInBounce)
+            return self
+        }
+    }
+
+    internal var easeOutBounce: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutBounce)
+            return self
+        }
+    }
+
+    internal var easeInOutBounce: DKAnimationKit {
+        get {
+            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutBounce)
+            return self
+        }
+    }
 
     internal func delay(delay: NSTimeInterval) -> DKAnimationKit {
         var delay = delay
@@ -652,6 +705,15 @@ class DKAnimationKit: NSObject {
         return self
     }
 
+    internal func animateWithCompletion(duration: NSTimeInterval, completion: Void -> Void) -> DKAnimationKit {
+        if let group = self.animationGroups.lastObject as? CAAnimationGroup {
+            group.duration = duration
+            self.animationCompletion = completion
+            self.animateChain()
+        }
+        return self
+    }
+
     internal func thenAfter(after: NSTimeInterval) -> DKAnimationKit {
         if let group = self.animationGroups.lastObject as? CAAnimationGroup {
             group.duration = after
@@ -662,6 +724,10 @@ class DKAnimationKit: NSObject {
             self.animationCompletionActions.append([])
         }
         return self
+    }
+
+    private func degreesToRadians(degree: Double) -> Double {
+        return degree / 180.0 * M_PI
     }
 
     private func animateChain() {

@@ -28,6 +28,15 @@ class ViewController: UIViewController {
 
     func animateView(sender: UIButton) {
         v.animation.moveX(50).easeIn.thenAfter(1.0).makeScale(2.0).thenAfter(1.0).moveXY(20, 20).animate(1.0)
+        v.animation.animationCompletion = {
+            self.v.layer.transform = CATransform3DMakeRotation(0, 0, 0, 1);
+            self.v.frame = CGRectMake(100, 150, 50, 50);
+            self.v.animation.makeOpacity(1.0).makeBackground(UIColor.blueColor()).animate(1.0);
+
+            sender.animation.moveY(-50).easeInOutExpo.animate(1.1).animationCompletion = {
+                sender.userInteractionEnabled = true;
+            };
+        }
     }
 }
 

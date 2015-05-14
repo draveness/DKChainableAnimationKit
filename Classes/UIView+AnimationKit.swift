@@ -12,8 +12,7 @@ private var animationKitAssociationKey = "animationKitAssociationKey"
 
 public extension UIView {
 
-
-    internal var animation: DKAnimationKit {
+    final internal var animation: DKAnimationKit {
         get {
             var animation = objc_getAssociatedObject(self, &animationKitAssociationKey) as! DKAnimationKit?
             if let animation = animation {
