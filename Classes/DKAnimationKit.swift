@@ -124,6 +124,35 @@ class DKAnimationKit: NSObject {
         return self.makeOrigin(self.view.layer.frame.size.width, height)
     }
 
+    internal func makeOpacity(opacity: CGFloat) -> DKAnimationKit {
+
+        self.addAnimationCalculationAction { (weakSelf: UIView) -> Void in
+            let opacityAnimation = self.basicAnimationForKeyPath("opacity")
+            opacityAnimation.fromValue = NSNumber(float: Float(weakSelf.alpha))
+            opacityAnimation.toValue = NSNumber(float: Float(opacity))
+            self.addAnimationFromCalculationBlock(opacityAnimation)
+        }
+
+        self.addAnimationCompletionAction { (weakSelf: UIView) -> Void in
+            weakSelf.alpha = opacity
+        }
+        return self
+    }
+
+    internal func makeBackground(color: UIColor) -> DKAnimationKit {
+
+        self.addAnimationCalculationAction { (weakSelf: UIView) -> Void in
+            let backgroundColorAnimation = self.basicAnimationForKeyPath("backgroundColor")
+            backgroundColorAnimation.fromValue = weakSelf.backgroundColor
+            backgroundColorAnimation.toValue = color
+            self.addAnimationFromCalculationBlock(backgroundColorAnimation)
+        }
+
+        self.addAnimationCompletionAction { (weakSelf: UIView) -> Void in
+            weakSelf.backgroundColor = color
+        }
+        return self
+    }
 
     internal func delay(delay: NSTimeInterval) -> DKAnimationKit {
         var delay = delay

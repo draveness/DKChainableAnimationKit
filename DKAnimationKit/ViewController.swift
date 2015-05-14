@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
 
     func animateView(sender: UIButton) {
-        v.animation.makeOrigin(50, 50).delay(1).animate(0.4)
+        v.animation.makeOpacity(0.5).animate(0.4)
     }
 }
 
