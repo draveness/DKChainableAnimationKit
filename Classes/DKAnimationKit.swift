@@ -366,7 +366,6 @@ class DKAnimationKit: NSObject {
     // MARK: - Move
 
     internal func moveX(x: CGFloat) -> DKAnimationKit {
-
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let translationAnimation = self.basicAnimationForKeyPath("transform.translation.x")
             translationAnimation.fromValue = 0
@@ -383,7 +382,6 @@ class DKAnimationKit: NSObject {
     }
 
     internal func moveY(y: CGFloat) -> DKAnimationKit {
-
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let translationAnimation = self.basicAnimationForKeyPath("transform.translation.y")
             translationAnimation.fromValue = 0
@@ -419,7 +417,6 @@ class DKAnimationKit: NSObject {
     }
 
     internal func rotate(angle: Double) -> DKAnimationKit {
-
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let rotationAnimation = self.basicAnimationForKeyPath("transform.rotation.z")
             let transform = view.layer.transform
@@ -439,6 +436,56 @@ class DKAnimationKit: NSObject {
     }
 
     // MARK: - Bezier
+
+    private func bezierPathForAnimation() -> UIBezierPath {
+        let path = UIBezierPath()
+        path.moveToPoint(self.view.layer.position)
+        return path
+    }
+
+    internal func moveOnPath(path: UIBezierPath) -> DKAnimationKit {
+        self.addAnimationCalculationAction { (view: UIView) -> Void in
+            let pathAnimation = self.basicAnimationForKeyPath("position")
+            pathAnimation.path = path.CGPath
+            self.addAnimationFromCalculationBlock(pathAnimation)
+        }
+
+        self.addAnimationCompletionAction { (view: UIView) -> Void in
+            let endPoint = path.currentPoint
+            view.layer.position = endPoint
+        }
+        return self
+    }
+
+    internal func moveAndRotateOnPath(path: UIBezierPath) -> DKAnimationKit {
+        self.addAnimationCalculationAction { (view: UIView) -> Void in
+            let pathAnimation = self.basicAnimationForKeyPath("position")
+            pathAnimation.path = path.CGPath
+            pathAnimation.rotationMode = kCAAnimationRotateAuto
+            self.addAnimationFromCalculationBlock(pathAnimation)
+        }
+
+        self.addAnimationCompletionAction { (view: UIView) -> Void in
+            let endPoint = path.currentPoint
+            view.layer.position = endPoint
+        }
+        return self
+    }
+
+    internal func moveAndReverseRotateOnPath(path: UIBezierPath) -> DKAnimationKit {
+        self.addAnimationCalculationAction { (view: UIView) -> Void in
+            let pathAnimation = self.basicAnimationForKeyPath("position")
+            pathAnimation.path = path.CGPath
+            pathAnimation.rotationMode = kCAAnimationRotateAutoReverse
+            self.addAnimationFromCalculationBlock(pathAnimation)
+        }
+
+        self.addAnimationCompletionAction { (view: UIView) -> Void in
+            let endPoint = path.currentPoint
+            view.layer.position = endPoint
+        }
+        return self
+    }
 
     // MARK: - Animation Effects
 
