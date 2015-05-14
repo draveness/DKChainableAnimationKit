@@ -13,10 +13,10 @@
 		181670071B037F0C00E5FEA8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181670061B037F0C00E5FEA8 /* Images.xcassets */; };
 		1816700A1B037F0C00E5FEA8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181670081B037F0C00E5FEA8 /* LaunchScreen.xib */; };
 		181670161B037F0C00E5FEA8 /* DKAnimationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181670151B037F0C00E5FEA8 /* DKAnimationKitTests.swift */; };
-		181670231B037F6400E5FEA8 /* DKKeyFrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181670221B037F6400E5FEA8 /* DKKeyFrameAnimation.swift */; };
-		181670251B037F9300E5FEA8 /* NSBKeyframeAnimationFunctionLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181670241B037F9300E5FEA8 /* NSBKeyframeAnimationFunctionLinear.swift */; };
-		181670271B037FC300E5FEA8 /* DKAnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181670261B037FC300E5FEA8 /* DKAnimationKit.swift */; };
-		1816702B1B03801E00E5FEA8 /* UIView+AnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816702A1B03801E00E5FEA8 /* UIView+AnimationKit.swift */; };
+		18D58F041B04503B00C0E4D5 /* DKAnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D58F001B04503B00C0E4D5 /* DKAnimationKit.swift */; };
+		18D58F051B04503B00C0E4D5 /* DKKeyFrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D58F011B04503B00C0E4D5 /* DKKeyFrameAnimation.swift */; };
+		18D58F061B04503B00C0E4D5 /* NSBKeyframeAnimationFunctionLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D58F021B04503B00C0E4D5 /* NSBKeyframeAnimationFunctionLinear.swift */; };
+		18D58F071B04503B00C0E4D5 /* UIView+AnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D58F031B04503B00C0E4D5 /* UIView+AnimationKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +40,10 @@
 		1816700F1B037F0C00E5FEA8 /* DKAnimationKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKAnimationKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181670141B037F0C00E5FEA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181670151B037F0C00E5FEA8 /* DKAnimationKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKAnimationKitTests.swift; sourceTree = "<group>"; };
-		181670221B037F6400E5FEA8 /* DKKeyFrameAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKKeyFrameAnimation.swift; sourceTree = "<group>"; };
-		181670241B037F9300E5FEA8 /* NSBKeyframeAnimationFunctionLinear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBKeyframeAnimationFunctionLinear.swift; sourceTree = "<group>"; };
-		181670261B037FC300E5FEA8 /* DKAnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKAnimationKit.swift; sourceTree = "<group>"; };
-		1816702A1B03801E00E5FEA8 /* UIView+AnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationKit.swift"; sourceTree = "<group>"; };
+		18D58F001B04503B00C0E4D5 /* DKAnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKAnimationKit.swift; sourceTree = "<group>"; };
+		18D58F011B04503B00C0E4D5 /* DKKeyFrameAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKKeyFrameAnimation.swift; sourceTree = "<group>"; };
+		18D58F021B04503B00C0E4D5 /* NSBKeyframeAnimationFunctionLinear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBKeyframeAnimationFunctionLinear.swift; sourceTree = "<group>"; };
+		18D58F031B04503B00C0E4D5 /* UIView+AnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 		18166FFC1B037F0C00E5FEA8 /* DKAnimationKit */ = {
 			isa = PBXGroup;
 			children = (
-				181670211B037F3100E5FEA8 /* Classes */,
+				18D58EFF1B04503B00C0E4D5 /* Classes */,
 				18166FFF1B037F0C00E5FEA8 /* AppDelegate.swift */,
 				181670011B037F0C00E5FEA8 /* ViewController.swift */,
 				181670031B037F0C00E5FEA8 /* Main.storyboard */,
@@ -121,16 +121,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		181670211B037F3100E5FEA8 /* Classes */ = {
+		18D58EFF1B04503B00C0E4D5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				181670221B037F6400E5FEA8 /* DKKeyFrameAnimation.swift */,
-				181670241B037F9300E5FEA8 /* NSBKeyframeAnimationFunctionLinear.swift */,
-				181670261B037FC300E5FEA8 /* DKAnimationKit.swift */,
-				1816702A1B03801E00E5FEA8 /* UIView+AnimationKit.swift */,
+				18D58F001B04503B00C0E4D5 /* DKAnimationKit.swift */,
+				18D58F011B04503B00C0E4D5 /* DKKeyFrameAnimation.swift */,
+				18D58F021B04503B00C0E4D5 /* NSBKeyframeAnimationFunctionLinear.swift */,
+				18D58F031B04503B00C0E4D5 /* UIView+AnimationKit.swift */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -232,12 +232,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1816702B1B03801E00E5FEA8 /* UIView+AnimationKit.swift in Sources */,
-				181670271B037FC300E5FEA8 /* DKAnimationKit.swift in Sources */,
+				18D58F071B04503B00C0E4D5 /* UIView+AnimationKit.swift in Sources */,
+				18D58F061B04503B00C0E4D5 /* NSBKeyframeAnimationFunctionLinear.swift in Sources */,
 				181670021B037F0C00E5FEA8 /* ViewController.swift in Sources */,
+				18D58F041B04503B00C0E4D5 /* DKAnimationKit.swift in Sources */,
 				181670001B037F0C00E5FEA8 /* AppDelegate.swift in Sources */,
-				181670231B037F6400E5FEA8 /* DKKeyFrameAnimation.swift in Sources */,
-				181670251B037F9300E5FEA8 /* NSBKeyframeAnimationFunctionLinear.swift in Sources */,
+				18D58F051B04503B00C0E4D5 /* DKKeyFrameAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +433,7 @@
 				1816701B1B037F0C00E5FEA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1816701C1B037F0C00E5FEA8 /* Build configuration list for PBXNativeTarget "DKAnimationKitTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +442,7 @@
 				1816701E1B037F0C00E5FEA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
