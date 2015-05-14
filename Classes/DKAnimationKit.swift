@@ -220,6 +220,45 @@ class DKAnimationKit: NSObject {
         return self
     }
 
+    internal func makeScaleX(xScale: CGFloat) -> DKAnimationKit {
+
+        let xScale = max(0, xScale)
+        self.addAnimationCalculationAction { (weakSelf: UIView) -> Void in
+            let scaleAnimation = self.basicAnimationForKeyPath("bounds")
+            let rect = CGRect(x: 0, y: 0, width: weakSelf.bounds.size.width, height: max(weakSelf.bounds.size.height * xScale, 0))
+            scaleAnimation.fromValue = NSValue(CGRect: weakSelf.layer.bounds)
+            scaleAnimation.toValue = NSValue(CGRect: rect)
+            self.addAnimationFromCalculationBlock(scaleAnimation)
+        }
+
+        self.addAnimationCompletionAction { (weakSelf: UIView) -> Void in
+            let rect = CGRect(x: 0, y: 0, width: weakSelf.bounds.size.width, height: max(weakSelf.bounds.size.height * xScale, 0))
+            weakSelf.layer.bounds = rect
+            weakSelf.bounds = rect
+        }
+        return self
+    }
+
+    internal func makeScaleY(yScale: CGFloat) -> DKAnimationKit {
+
+        let yScale = max(0, yScale)
+        self.addAnimationCalculationAction { (weakSelf: UIView) -> Void in
+            let scaleAnimation = self.basicAnimationForKeyPath("bounds")
+            let rect = CGRect(x: 0, y: 0, width: max(weakSelf.bounds.size.width * yScale, 0), height: weakSelf.bounds.size.height)
+            scaleAnimation.fromValue = NSValue(CGRect: weakSelf.layer.bounds)
+            scaleAnimation.toValue = NSValue(CGRect: rect)
+            self.addAnimationFromCalculationBlock(scaleAnimation)
+        }
+
+        self.addAnimationCompletionAction { (weakSelf: UIView) -> Void in
+            let rect = CGRect(x: 0, y: 0, width: max(weakSelf.bounds.size.width * yScale, 0), height: weakSelf.bounds.size.height)
+            weakSelf.layer.bounds = rect
+            weakSelf.bounds = rect
+        }
+        return self
+    }
+
+
 
     internal func delay(delay: NSTimeInterval) -> DKAnimationKit {
         var delay = delay
