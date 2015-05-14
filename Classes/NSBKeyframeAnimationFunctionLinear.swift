@@ -196,12 +196,33 @@ func NSBKeyframeAnimationFunctionEaseOutElastic(var t: Double, b: Double, c: Dou
 }
 
 func NSBKeyframeAnimationFunctionEaseInOutElastic(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    Double s=1.70158, p=0, a=c;
-    if (t==0) return b;  if ((t/=d/2)==2) return b+c;  if (!p) p=d*(.3*1.5);
-    if (a < fabs(c))  a=c; s=p/4; }
-else s = p/(2*M_PI) * asin(c/a);
-if (t < 1) return -.5*(a*pow(2,10*(t-=1)) * sin( (t*d-s)*(2*M_PI)/p )) + b;
-return a*pow(2,-10*(t-=1)) * sin( (t*d-s)*(2*M_PI)/p )*.5 + c + b;
+    var s = 1.70158
+    var p = 0.0
+    var a = c;
+    if t == 0 {
+        return b
+    }
+    t /= d
+    if t == 2 {
+        return b + c
+    }
+    if p == 0.0 {
+        p = d * 0.3 * 1.5
+    }
+    if a < fabs(c) {
+        a = c
+        s = p / 4
+    } else {
+        s = p / (2 * M_PI) * asin (c / a)
+    }
+
+    if t < 1 {
+        t -= 1
+        return -0.5*(a*pow(2,10*t) * sin( (t*d-s)*(2*M_PI)/p )) + b
+    } else {
+        t -= 1
+        return a*pow(2,-10*t) * sin( (t*d-s)*(2*M_PI)/p )*.5 + c + b
+    }
 }
 
 func NSBKeyframeAnimationFunctionEaseInBack(var t: Double, b: Double, c: Double, d: Double) -> Double {
