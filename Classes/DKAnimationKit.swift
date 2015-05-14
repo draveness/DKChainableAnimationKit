@@ -418,11 +418,12 @@ class DKAnimationKit: NSObject {
 
     internal func rotate(angle: Double) -> DKAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
-            let rotationAnimation = self.basicAnimationForKeyPath("transform.rotation.z")
+            let rotationAnimation = self.basicAnimationForKeyPath("transform.rotation")
             let transform = view.layer.transform
             let originalRotation = Double(atan2(transform.m12, transform.m11))
             rotationAnimation.fromValue = originalRotation
             rotationAnimation.toValue = originalRotation + self.degreesToRadians(angle)
+            println(self.degreesToRadians(angle))
             self.addAnimationFromCalculationBlock(rotationAnimation)
         }
 
@@ -792,7 +793,7 @@ class DKAnimationKit: NSObject {
     }
 
     private func degreesToRadians(degree: Double) -> Double {
-        return degree / 180.0 * M_PI
+        return (degree / 180.0) * M_PI
     }
 
     private func animateChain() {

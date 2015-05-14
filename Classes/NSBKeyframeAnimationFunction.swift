@@ -235,7 +235,7 @@ func NSBKeyframeAnimationFunctionEaseInBack(var t: Double, b: Double, c: Double,
 
 func NSBKeyframeAnimationFunctionEaseOutBack(var t: Double, b: Double, c: Double, d: Double) -> Double {
     let s = 1.70158
-    t /= d - 1
+    t = t/d - 1
     return c*(t*t*((s+1)*t + s) + 1) + b;
 }
 
