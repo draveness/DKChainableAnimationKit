@@ -30,14 +30,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18166FFA1B037F0C00E5FEA8 /* DKAnimationKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKAnimationKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18166FFA1B037F0C00E5FEA8 /* DKAnimationKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DKAnimationKit.app; path = "/Users/apple/Desktop/DKAnimationKit/build/Debug-iphoneos/DKAnimationKit.app"; sourceTree = "<absolute>"; };
 		18166FFE1B037F0C00E5FEA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18166FFF1B037F0C00E5FEA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		181670011B037F0C00E5FEA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		181670041B037F0C00E5FEA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		181670061B037F0C00E5FEA8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		181670091B037F0C00E5FEA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		1816700F1B037F0C00E5FEA8 /* DKAnimationKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKAnimationKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1816700F1B037F0C00E5FEA8 /* DKAnimationKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DKAnimationKitTests.xctest; path = "/Users/apple/Desktop/DKAnimationKit/build/Debug-iphoneos/DKAnimationKitTests.xctest"; sourceTree = "<absolute>"; };
 		181670141B037F0C00E5FEA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181670151B037F0C00E5FEA8 /* DKAnimationKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKAnimationKitTests.swift; sourceTree = "<group>"; };
 		18D58F001B04503B00C0E4D5 /* DKAnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKAnimationKit.swift; sourceTree = "<group>"; };
@@ -69,17 +69,7 @@
 			children = (
 				18166FFC1B037F0C00E5FEA8 /* DKAnimationKit */,
 				181670121B037F0C00E5FEA8 /* DKAnimationKitTests */,
-				18166FFB1B037F0C00E5FEA8 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		18166FFB1B037F0C00E5FEA8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				18166FFA1B037F0C00E5FEA8 /* DKAnimationKit.app */,
-				1816700F1B037F0C00E5FEA8 /* DKAnimationKitTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		18166FFC1B037F0C00E5FEA8 /* DKAnimationKit */ = {
@@ -197,7 +187,7 @@
 				Base,
 			);
 			mainGroup = 18166FF11B037F0C00E5FEA8;
-			productRefGroup = 18166FFB1B037F0C00E5FEA8 /* Products */;
+			productRefGroup = 18166FF11B037F0C00E5FEA8;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (

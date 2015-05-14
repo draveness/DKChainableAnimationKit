@@ -1,15 +1,29 @@
-# DKAnimationKit
+# DKAnimationKit(Swift)
 
-DKAnimationKit is a light weight framework. `
+DKAnimationKit is a DSL to make animation easy on iOS with **Swift**. Which is a rewritten for [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations)
 
-![Version](https://img.shields.io/badge/Pod-%20v0.6.1%20-or.svg)
-[![Build Status](https://travis-ci.org/Draveness/DKNightVersion.png)](https://travis-ci.org/Draveness/DKNightVersion)
+
+![Version](https://img.shields.io/badge/Pod-%20v0.1.0%20-or.svg)
+[![Build Status](https://travis-ci.org/Draveness/DKAnimationKit.png)](https://travis-ci.org/Draveness/DKAnimationKit)
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)
 
-# Demo
 
-![](./images/DKNightVersion.gif)
+**If you app is written in Objective-C, you should use [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations) instead.**
+
+## With JHChainableAnimations
+
+```
+// swift code
+view.makeScale()(2.0).spring().animate()(1.0)
+```
+
+## With DKAnimationKit
+
+```
+// swift code
+view.animation.makeScale(2.0).spring.animate(1.0)
+```
 
 # Installation with CocoaPods
 
@@ -18,126 +32,8 @@ DKAnimationKit is a light weight framework. `
 ## Podfile
 
 ```
-pod "DKNightVersion", "~> 0.6.1"
+pod "DKAnimationKit", "~> 0.1.0"
 ```
-
-## Usage
-
-Just add one line of code in your precompiled header, or import it where you need.
-
-```
-#import "DKNightVersion.h"
-```
-
-----
-
-# How to use
-
-## Using night color
-
-DKNightVersion is based on property `nightColor`, such as `nightBackgroundColor` `nightTextColor` and etc.
-
-Assign the night mode color you want to the `UIKit` component like this:
-
-```
-self.view.nightBackgroundColor = [UIColor blackColor];
-self.label.nightTextColor = [UIColor whiteColor];
-```
-
-## Using DKNightVersionManager change theme
-
-Use `DKNightVersionManager` sets the theme.
-
-```
-[DKNightVersionManager nightFalling];
-```
-
-If you'd like to switch back to normal mode:
-
-```
-[DKNightVersionManager dawnComing];
-```
-
-It's pretty easy to swich theme between night and normal mode.
-
-## Make your own customize
-
-### Notification
-
-`nightFalling` method will post `DKNightVersionNightFallingNotification` when it is called. Similarly, `dawnComing` will post `DKNightVersionDawnComingNotification`. You can observe these notification in proper place, and make your own customize easily.
-
-### JSON
-
-There is a json file in `Generator` folder named `property.json`, you can change the color in it, which will cuz the default color changing to the color you want.
-
-```
-{
-    "UIView": 
-    { 
-        "backgroundColor": "0x343434",
-        "tintColor": "0xffffff"
-    },
-    "UILabel":
-    {
-        "textColor": "0x5d5d5d"
-    },
-    "UINavigationBar":
-    {
-        "barTintColor": "0x444444"
-    },
-    "UIButton":
-    {
-        "titleColor": "0x5F80AC"
-    },
-    "UIScrollView":
-    {
-        "backgroundColor": "0x343434"
-    },
-    "UITableView":
-    {
-        "backgroundColor": "0x343434",
-        "separatorColor": "0x313131"
-    },
-    "UITableViewCell":
-    {
-        "backgroundColor": "0x343434" 
-    } 
-}
-```
-
-And run `rake` in terminal under folder `Pods/DKNightVersion`.
-
-This command will automatically do everything for you.
-
-## Using default night version
-
-If you set `useDefaultNightColor` property for singleton manager to `YES`, which is the default value. DKNightVersion will provide you a default night mode. 
-
-And you can also customize the color through assign color value to `nightColor` property. And we will first pick color you specified instead of default behavior.
-
-Optionally, turn off the default night mode and set it on your own is also supported.
-
-```
-[DKNightVersionManager setUseDefaultNightColor:NO];
-```
-
-## Picking Color
-
-DKNightVersionManager will pick the proper color following these two rules.
-
-1. `useDefaultNightColor == YES` (The default behavior)
-
-		nightColor > defaultNightColor > normalColor
-
-2. `useDefaultNightColor == NO`
-
-		nightColor > normalColor
-
-# Contribute
-
-if there is a bug, you can either fix it and open a pull request or open a issue.
-
-If you want some new features, read the documentation and fork this repo.
 
 # Contact
 
