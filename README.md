@@ -2,18 +2,18 @@
 
 <table>
 <tr>
-<td width= 50%">
+<td width="75%">
 <img src="./Gifs/Code1.png"></img>
 </td>
-<td width= 50%">
+<td width="25%">
 <img src="./Gifs/Demo1.gif"></img>
 </td>
 </tr
 <tr>
-<td width="50%">
+<td width="75%">
 <img src="./Gifs/Code2.png"></img>
 </td>
-<td width="50%">
+<td width="25%">
 <img src="./Gifs/Demo2.gif"></img>
 </td>
 </tr>
