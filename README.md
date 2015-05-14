@@ -1,5 +1,27 @@
 # DKAnimationKit(Swift)
 
+<table>
+<tr>
+<td width= 50%">
+view.animation.makeBackground(purple).rotate(360).moveX(250).animate(1.5)
+</td>
+<td width= 50%">
+<img src="./Gifs/Demo1.gif"></img>
+</td>
+</tr
+<tr>
+<td width="50%">
+view.animation.moveWidth(50).bounce.makeBackground(green).easeIn.anchorTopLeft
+            .thenAfter(0.8).rotate(95).easeBack.wait(0.2)
+            .thenAfter(0.5).moveY(300).easeIn.makeOpacity(0.0).animate(0.4)
+</td>
+<td width="50%">
+<img src="./Gifs/Demo2.gif"></img>
+</td>
+</tr>
+
+</table>
+
 DKAnimationKit is a DSL to make animation easy on iOS with **Swift**. This is a swift port for JHChainableAnimations by [jhurray](https://github.com/jhurray).
 
 ![language](https://img.shields.io/badge/language-%20Swift%20-orange.svg)
