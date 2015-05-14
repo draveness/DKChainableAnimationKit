@@ -138,6 +138,11 @@ You can also aniamte a view along a UIBezierPath. Call `bezierPathForAnimation` 
 
 ```
 let path = view.animation.bezierPathForAnimation()
+path.addLintToPoint(CGPoint(x: 30, y: 40))
+view.animation.moveOnPath(path).animate(1.0)
+```
+
+Animation effects does not work on path movement.
 
 # License
 
