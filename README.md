@@ -2,7 +2,7 @@
 
 DKAnimationKit is a DSL to make animation easy on iOS with **Swift**.
 
-**Thanks for [jhurray](https://github.com/jhurray)'s permission!**
+**Thanks for [jhurray](https://github.com/jhurray)'s permission for me to rewritten this wonderful repo!**
 
 
 ![Version](https://img.shields.io/badge/Pod-%20v0.1.0%20-or.svg)
