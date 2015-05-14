@@ -433,6 +433,41 @@ class DKAnimationKit: NSObject {
         }
     }
 
+    internal var easeOut: DKAnimationKit {
+        get {
+            self.easeOutQuad()
+            return self
+        }
+    }
+
+    internal var easeInOut: DKAnimationKit {
+        get {
+            self.easeInOutQuad()
+            return self
+        }
+    }
+
+    internal var easeBack: DKAnimationKit {
+        get {
+            self.easeOutBack()
+            return self
+        }
+    }
+
+    internal var spring: DKAnimationKit {
+        get {
+            self.easeOutElastic()
+            return self
+        }
+    }
+
+    internal var bounce: DKAnimationKit {
+        get { 
+            self.easeOutBounce()
+            return self         
+        }
+    }
+
     private func addAnimationKeyframeCalculation(functionBlock: NSBKeyframeAnimationFunctionBlock) {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let animationCluster = self.animations.first
