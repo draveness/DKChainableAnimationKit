@@ -1,9 +1,9 @@
 # DKAnimationKit(Swift)
 
-DKAnimationKit is a DSL to make animation easy on iOS with **Swift**. This is a swift port for JHChainableAnimations.
+DKAnimationKit is a DSL to make animation easy on iOS with **Swift**. This is a swift port for JHChainableAnimations by [jhurray](https://github.com/jhurray).
 
-![language](https://img.shields.io/badge/language-swift-orange.svg)
-![Version](https://img.shields.io/badge/Pod-%20v0.1.0%20-or.svg)
+![language](https://img.shields.io/badge/language-%20Swift%20-orange.svg)
+![Version](https://img.shields.io/badge/Pod-%20v0.1.1%20-or.svg)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)
@@ -29,7 +29,7 @@ view.animation.makeScale(2.0).spring.animate(1.0)
 ## Podfile
 
 ```
-pod "DKAnimationKit", "~> 0.1.0"
+pod "DKAnimationKit", "~> 0.1.1"
 ```
 
 # Usage
