@@ -9,6 +9,8 @@
 
 import UIKit
 
+typealias NSBKeyframeAnimationFunctionBlock = (Double, Double, Double, Double) -> Double
+
 func NSBKeyframeAnimationFunctionLinear(var t: Double, b: Double, c: Double, d: Double) -> Double {
     t /= d
     return c * t + b

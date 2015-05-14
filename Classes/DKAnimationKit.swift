@@ -295,7 +295,7 @@ class DKAnimationKit: NSObject {
         }
     }
 
-    internal func makeAnchor(x: CGFloat, y: CGFloat) -> DKAnimationKit {
+    internal func makeAnchor(x: CGFloat, _ y: CGFloat) -> DKAnimationKit {
         self.makeAnchorFrom(x: x, y: y)
         return self
     }
@@ -334,7 +334,7 @@ class DKAnimationKit: NSObject {
         return self
     }
 
-    internal func moveXY(x :CGFloat, y: CGFloat) -> DKAnimationKit {
+    internal func moveXY(x :CGFloat, _ y: CGFloat) -> DKAnimationKit {
         return self.moveX(x).moveY(y)
     }
 
@@ -346,7 +346,7 @@ class DKAnimationKit: NSObject {
         return self.makeSize(max(self.view.bounds.size.width + width, 0), self.view.bounds.size.height)
     }
 
-    private func degreeToRadians(degree: Double) -> Double {
+    private func degreesToRadians(degree: Double) -> Double {
         return degree / 180.0 * M_PI
     }
 
@@ -357,18 +357,241 @@ class DKAnimationKit: NSObject {
             let transform = view.layer.transform
             let originalRotation = Double(atan2(transform.m12, transform.m11))
             rotationAnimation.fromValue = originalRotation
-            rotationAnimation.toValue = originalRotation + self.degreeToRadians(angle)
+            rotationAnimation.toValue = originalRotation + self.degreesToRadians(angle)
             self.addAnimationFromCalculationBlock(rotationAnimation)
         }
 
         self.addAnimationCompletionAction { (view: UIView) -> Void in
             let transform = view.layer.transform
             let originalRotation = Double(atan2(transform.m12, transform.m11))
-            let zRotation = CATransform3DMakeRotation(CGFloat(self.degreeToRadians(angle) + originalRotation), 0.0, 0.0, 1.0)
+            let zRotation = CATransform3DMakeRotation(CGFloat(self.degreesToRadians(angle) + originalRotation), 0.0, 0.0, 1.0)
             view.layer.transform = zRotation
         }
         return self
     }
+
+    internal func movePolar(radius: Double, _ angle: Double) -> DKAnimationKit {
+        let radians  = self.degreesToRadians(angle)
+        let x = CGFloat(radius * cos(radians))
+        let y = CGFloat(-radius * sin(radians))
+        return self.moveXY(x, y)
+    }
+
+    internal func anchorDefault() -> DKAnimationKit {
+        return self.anchorCenter()
+    }
+
+    internal func anchorCenter() -> DKAnimationKit {
+        self.makeAnchorFrom(x: 0.5, y: 0.5)
+        return self
+    }
+
+    internal func anchorTopLeft() -> DKAnimationKit {
+        self.makeAnchorFrom(x: 0.0, y: 0.0)
+        return self
+    }
+
+    internal func anchorTopRight() -> DKAnimationKit {
+        self.makeAnchorFrom(x: 1.0, y: 0.0)
+        return self
+    }
+
+    internal func anchorBottomLeft() -> DKAnimationKit {
+        self.makeAnchorFrom(x: 0.0, y: 1.0)
+        return self
+    }
+
+    internal func anchorBottomRight() -> DKAnimationKit {
+        self.makeAnchorFrom(x: 1.0, y: 1.0)
+        return self
+    }
+
+    internal func anchorTop() -> DKAnimationKit {
+        self.makeAnchorFrom(x: 0.5, y: 0.0)
+        return self
+    }
+
+    internal func anchorBottom() -> DKAnimationKit {
+        self.makeAnchorFrom(x: 0.5, y: 1.0)
+        return self
+    }
+
+    internal func anchorLeft() -> DKAnimationKit {
+        self.makeAnchorFrom(x: 1.0, y: 0.5)
+        return self
+    }
+
+    internal func anchorRight() -> DKAnimationKit {
+        self.makeAnchorFrom(x: 0.0, y: 0.5)
+        return self
+    }
+
+    internal var easeIn: DKAnimationKit {
+        get {
+            self.easeInQuad()
+            return self
+        }
+    }
+
+    private func addAnimationKeyframeCalculation(functionBlock: NSBKeyframeAnimationFunctionBlock) {
+        self.addAnimationCalculationAction { (view: UIView) -> Void in
+            let animationCluster = self.animations.first
+            if let animation = animationCluster?.last {
+                animation.functionBlock = functionBlock
+            }
+        }
+    }
+
+    private func easeInQuad() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuad)
+        return self
+    }
+
+    private func easeOutQuad() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuad)
+        return self
+    }
+
+    private func easeInOutQuad() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuad)
+        return self
+    }
+
+    private func easeInCubic() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInCubic)
+        return self
+    }
+
+    private func easeOutCubic() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutCubic)
+        return self
+    }
+
+    private func easeInOutCubic() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutCubic)
+        return self
+    }
+
+    private func easeInQuart() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuart)
+        return self
+    }
+
+    private func easeOutQuart() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuart)
+        return self
+    }
+
+    private func easeInOutQuart() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuart)
+        return self
+    }
+
+    private func easeInQuint() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuint)
+        return self
+    }
+
+    private func easeOutQuint() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuint)
+        return self
+    }
+
+    private func easeInOutQuint() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuint)
+        return self
+    }
+
+    private func easeInSine() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInSine)
+        return self
+    }
+
+    private func easeOutSine() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutSine)
+        return self
+    }
+
+    private func easeInOutSine() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutSine)
+        return self
+    }
+
+    private func easeInExpo() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInExpo)
+        return self
+    }
+
+    private func easeOutExpo() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutExpo)
+        return self
+    }
+
+    private func easeInOutExpo() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutExpo)
+        return self
+    }
+
+    private func easeInCirc() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInCirc)
+        return self
+    }
+
+    private func easeOutCirc() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutCirc)
+        return self
+    }
+
+    private func easeInOutCirc() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutCirc)
+        return self
+    }
+
+    private func easeInElastic() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInElastic)
+        return self
+    }
+
+    private func easeOutElastic() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutElastic)
+        return self
+    }
+
+    private func easeInOutElastic() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutElastic)
+        return self
+    }
+
+    private func easeInBack() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInBack)
+        return self
+    }
+
+    private func easeOutBack() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutBack)
+        return self
+    }
+
+    private func easeInOutBack() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutBack)
+        return self
+    }
+    
+    private func easeInBounce() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInBounce)
+        return self
+    }
+    
+    private func easeOutBounce() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutBounce)
+        return self
+    }
+    
+    private func easeInOutBounce() -> DKAnimationKit {
+        self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutBounce)
+        return self
+    }
+
 
     internal func delay(delay: NSTimeInterval) -> DKAnimationKit {
         var delay = delay

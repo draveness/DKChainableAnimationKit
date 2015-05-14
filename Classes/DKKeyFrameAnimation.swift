@@ -16,12 +16,12 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
 
     public var fromValue: AnyObject!
     public var toValue: AnyObject!
-    public var animationBlock: NSBKeyframeAnimationFunction!
+    public var functionBlock: NSBKeyframeAnimationFunction!
 
     convenience init(keyPath path: String!) {
         self.init()
         self.keyPath = path
-        self.animationBlock = NSBKeyframeAnimationFunctionLinear
+        self.functionBlock = NSBKeyframeAnimationFunctionLinear
     }
 
     func calculte() {
@@ -132,7 +132,7 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
         var valueArray: [Double] = []
 
         for i in 0..<steps {
-            v = self.animationBlock(self.duration * progress * 1000, 0, 1, self.duration * 1000);
+            v = self.functionBlock(self.duration * progress * 1000, 0, 1, self.duration * 1000);
             value = startValue + v * (endValue - startValue);
 
             valueArray.append(value)
