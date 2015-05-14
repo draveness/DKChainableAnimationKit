@@ -221,7 +221,7 @@ func NSBKeyframeAnimationFunctionEaseInOutElastic(var t: Double, b: Double, c: D
         return -0.5*(a*pow(2,10*t) * sin( (t*d-s)*(2*M_PI)/p )) + b
     } else {
         t -= 1
-        return a*pow(2,-10*t) * sin( (t*d-s)*(2*M_PI)/p )*.5 + c + b
+        return a*pow(2,-10*t) * sin( (t*d-s)*(2*M_PI)/p )*0.5 + c + b
     }
 }
 
