@@ -37,11 +37,6 @@ view.animation.makeScale(2.0).spring.animate(1.0)
 pod "DKAnimationKit", "~> 0.1.0"
 ```
 
-# Contact
-
-- Powered by [Draveness](http://github.com/draveness)
-- Personal website [DeltaX](http://deltax.me)
-
 # License
 
 DKNightVersion is available under the MIT license. See the LICENSE file for more info.
