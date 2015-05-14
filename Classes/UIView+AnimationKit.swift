@@ -25,4 +25,11 @@ public extension UIView {
             }
         }
     }
+
+    final internal func bezierPathForAnimation() -> UIBezierPath {
+        let path = UIBezierPath()
+        path.moveToPoint(self.layer.position)
+        return path
+    }
+
 }

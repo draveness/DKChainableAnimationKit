@@ -132,6 +132,13 @@ view.animation.makeX(0).aniamte(1.0).animationCompletion = {
 }
 ```
 
+## Bezier Paths
+
+You can also aniamte a view along a UIBezierPath. Call `bezierPathForAnimation` method first and then add points or curves to it and us it in a chainable property.
+
+```
+let path = view.animation.bezierPathForAnimation()
+
 # License
 
 DKAnimationKit is available under the MIT license. See the LICENSE file for more info.

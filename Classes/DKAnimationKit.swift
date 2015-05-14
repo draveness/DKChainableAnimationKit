@@ -437,12 +437,6 @@ class DKAnimationKit: NSObject {
 
     // MARK: - Bezier
 
-    private func bezierPathForAnimation() -> UIBezierPath {
-        let path = UIBezierPath()
-        path.moveToPoint(self.view.layer.position)
-        return path
-    }
-
     internal func moveOnPath(path: UIBezierPath) -> DKAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let pathAnimation = self.basicAnimationForKeyPath("position")
