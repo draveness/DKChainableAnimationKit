@@ -232,15 +232,23 @@ func NSBKeyframeAnimationFunctionEaseInBack(var t: Double, b: Double, c: Double,
 }
 
 func NSBKeyframeAnimationFunctionEaseOutBack(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    let s = 1.70158;
+    let s = 1.70158
     t /= d - 1
     return c*(t*t*((s+1)*t + s) + 1) + b;
 }
 
 func NSBKeyframeAnimationFunctionEaseInOutBack(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    Double s = 1.70158;
-    if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
-    return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
+    var s = 1.70158
+    t /= d / 2
+
+    if (t < 1) {
+        s *= 1.525
+        return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
+    } else {
+        t -= 2
+        s *= 1.525
+        return c/2*(t*t*((s+1)*t + s) + 2) + b;
+    }
 }
 
 func NSBKeyframeAnimationFunctionEaseInBounce(var t: Double, b: Double, c: Double, d: Double) -> Double {
