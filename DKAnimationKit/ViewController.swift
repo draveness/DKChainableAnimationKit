@@ -30,11 +30,9 @@ class ViewController: UIViewController {
         let purple = UIColor.purpleColor()
         let green = UIColor.greenColor()
 
-        view.animation.makeBackground(purple).rotate(360).moveX(250).animate(1.5)
+//        view.animation.makeBackground(purple).rotate(360).moveX(250).animate(1.5)
 
-        view.animation.moveWidth(50).bounce.makeBackground(green).easeIn.anchorTopLeft
-            .thenAfter(0.8).rotate(95).easeBack.wait(0.2)
-            .thenAfter(0.5).moveY(300).easeIn.makeOpacity(0.0).animate(0.4)
+        v.animation.moveWidth(50).bounce.makeBackground(green).easeIn.anchorTopLeft.thenAfter(0.5).moveY(300).easeIn.makeOpacity(0.0).animate(0.4)
         
         v.animation.animationCompletion = {
             self.v.layer.transform = CATransform3DMakeRotation(0, 0, 0, 1);

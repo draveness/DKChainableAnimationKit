@@ -14,14 +14,14 @@ public extension UIView {
 
     final internal var animation: DKAnimationKit {
         get {
-            var animation = objc_getAssociatedObject(self, &animationKitAssociationKey) as! DKAnimationKit?
+            var animation: DKAnimationKit! = objc_getAssociatedObject(self, &animationKitAssociationKey) as? DKAnimationKit
             if let animation = animation {
                 return animation
             } else {
                 animation = DKAnimationKit()
-                animation?.view = self
+                animation.view = self
                 objc_setAssociatedObject(self, &animationKitAssociationKey, animation, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
-                return animation!
+                return animation
             }
         }
     }

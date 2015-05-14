@@ -10,7 +10,7 @@ import UIKit
 
 class DKAnimationKit: NSObject {
 
-    weak var view: UIView!
+    var view: UIView!
 
     typealias AnimationCalculationAction = UIView -> Void
     typealias AnimationCompletionAction = UIView -> Void
@@ -83,11 +83,8 @@ class DKAnimationKit: NSObject {
         }
 
         self.addAnimationCompletionAction { (view: UIView) -> Void in
-            var rect = view.frame
-            rect.origin.x = x
-            rect.origin.y = y
-            view.layer.frame = rect
-            view.frame = rect
+            let newPosition = self.newPositionFrom(newOrigin: CGPoint(x: x, y: y))
+            view.layer.position = newPosition
         }
         return self
 
@@ -109,11 +106,35 @@ class DKAnimationKit: NSObject {
     }
 
     internal func makeX(x: CGFloat) -> DKAnimationKit {
-        return self.makeOrigin(x, self.view.layer.frame.origin.y)
+        self.addAnimationCalculationAction { (view: UIView) -> Void in
+            let positionAnimation = self.basicAnimationForKeyPath("position.x")
+            let newPosition = self.newPositionFrom(newOrigin: CGPoint(x: x, y: view.layer.frame.origin.y))
+            positionAnimation.fromValue = view.layer.position.x
+            positionAnimation.toValue = newPosition.x
+            self.addAnimationFromCalculationBlock(positionAnimation)
+        }
+
+        self.addAnimationCompletionAction { (view: UIView) -> Void in
+            let newPosition = self.newPositionFrom(newOrigin: CGPoint(x: x, y: view.layer.frame.origin.y))
+            view.layer.position = newPosition
+        }
+        return self
     }
 
     internal func makeY(y: CGFloat) -> DKAnimationKit {
-        return self.makeOrigin(self.view.layer.frame.origin.x, y)
+        self.addAnimationCalculationAction { (view: UIView) -> Void in
+            let positionAnimation = self.basicAnimationForKeyPath("position.y")
+            let newPosition = self.newPositionFrom(newOrigin: CGPoint(x: view.layer.frame.origin.x, y: y))
+            positionAnimation.fromValue = view.layer.position.y
+            positionAnimation.toValue = newPosition.y
+            self.addAnimationFromCalculationBlock(positionAnimation)
+        }
+
+        self.addAnimationCompletionAction { (view: UIView) -> Void in
+            let newPosition = self.newPositionFrom(newOrigin: CGPoint(x: view.layer.frame.origin.x, y: y))
+            view.layer.position = newPosition
+        }
+        return self
     }
 
     internal func makeWidth(width: CGFloat) -> DKAnimationKit {
@@ -281,11 +302,10 @@ class DKAnimationKit: NSObject {
             view.layer.anchorPoint = anchorPoint
         }
 
-        let chainCount = self.animationCompletionActions.count
-        if chainCount == 1 {
-            action(self.view)
-        } else {
-            self.animationCompletionActions[chainCount - 2].append(action)
+        if var lastCalculationActions = self.animationCalculationActions.last {
+            lastCalculationActions.insert(action, atIndex: 0)
+            self.animationCalculationActions.removeLast()
+            self.animationCalculationActions.append(lastCalculationActions)
         }
     }
 
@@ -351,14 +371,14 @@ class DKAnimationKit: NSObject {
 
     internal var anchorLeft: DKAnimationKit {
         get {
-            self.makeAnchorFrom(x: 1.0, y: 0.5)
+            self.makeAnchorFrom(x: 0.0, y: 0.5)
             return self
         }
     }
 
     internal var anchorRight: DKAnimationKit {
         get {
-            self.makeAnchorFrom(x: 0.0, y: 0.5)
+            self.makeAnchorFrom(x: 1.0, y: 0.5)
             return self
         }
     }
@@ -367,10 +387,10 @@ class DKAnimationKit: NSObject {
 
     internal func moveX(x: CGFloat) -> DKAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
-            let translationAnimation = self.basicAnimationForKeyPath("transform.translation.x")
-            translationAnimation.fromValue = 0
-            translationAnimation.toValue = x
-            self.addAnimationFromCalculationBlock(translationAnimation)
+            let positionAnimation = self.basicAnimationForKeyPath("position.x")
+            positionAnimation.fromValue = view.layer.position.x
+            positionAnimation.toValue = view.layer.position.x + x
+            self.addAnimationFromCalculationBlock(positionAnimation)
         }
 
         self.addAnimationCompletionAction { (view: UIView) -> Void in
@@ -383,10 +403,10 @@ class DKAnimationKit: NSObject {
 
     internal func moveY(y: CGFloat) -> DKAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
-            let translationAnimation = self.basicAnimationForKeyPath("transform.translation.y")
-            translationAnimation.fromValue = 0
-            translationAnimation.toValue = y
-            self.addAnimationFromCalculationBlock(translationAnimation)
+            let positionAnimation = self.basicAnimationForKeyPath("position.y")
+            positionAnimation.fromValue = view.layer.position.y
+            positionAnimation.toValue = view.layer.position.y + y
+            self.addAnimationFromCalculationBlock(positionAnimation)
         }
 
         self.addAnimationCompletionAction { (view: UIView) -> Void in
@@ -398,15 +418,58 @@ class DKAnimationKit: NSObject {
     }
 
     internal func moveXY(x :CGFloat, _ y: CGFloat) -> DKAnimationKit {
-        return self.moveX(x).moveY(y)
+        self.addAnimationCalculationAction { (view: UIView) -> Void in
+            let positionAnimation = self.basicAnimationForKeyPath("position")
+            let oldOrigin = view.layer.frame.origin
+            let newPosition = CGPoint(x: view.layer.position.x + x, y: view.layer.position.y + y)
+            positionAnimation.fromValue = NSValue(CGPoint: oldOrigin)
+            positionAnimation.toValue = NSValue(CGPoint: newPosition)
+            self.addAnimationFromCalculationBlock(positionAnimation)
+        }
+
+        self.addAnimationCompletionAction { (view: UIView) -> Void in
+            var position = view.layer.position
+            position.x += x
+            position.y += y
+            view.layer.position = position
+        }
+        return self
     }
 
     internal func moveHeight(height: CGFloat) -> DKAnimationKit {
-        return self.makeSize(self.view.bounds.size.width, max(self.view.bounds.size.height + height, 0))
+        self.addAnimationCalculationAction { (view: UIView) -> Void in
+            let positionAnimation = self.basicAnimationForKeyPath("bounds.size")
+            let newSize = CGSize(width: view.layer.bounds.size.width, height: max(view.layer.bounds.size.width + height, 0))
+            positionAnimation.fromValue = NSValue(CGSize: view.layer.bounds.size)
+            positionAnimation.toValue = NSValue(CGSize: newSize)
+            self.addAnimationFromCalculationBlock(positionAnimation)
+        }
+
+        self.addAnimationCompletionAction { (view: UIView) -> Void in
+            let newSize = CGSize(width: view.layer.bounds.size.width, height: max(view.layer.bounds.size.width + height, 0))
+            let bounds = CGRect(origin: CGPointZero, size: newSize)
+            view.layer.bounds = bounds
+            view.bounds = bounds
+        }
+        return self
     }
 
     internal func moveWidth(width: CGFloat) -> DKAnimationKit {
-        return self.makeSize(max(self.view.bounds.size.width + width, 0), self.view.bounds.size.height)
+        self.addAnimationCalculationAction { (view: UIView) -> Void in
+            let positionAnimation = self.basicAnimationForKeyPath("bounds.size")
+            let newSize = CGSize(width: max(view.layer.bounds.size.width + width, 0), height: view.layer.bounds.size.height)
+            positionAnimation.fromValue = NSValue(CGSize: view.layer.bounds.size)
+            positionAnimation.toValue = NSValue(CGSize: newSize)
+            self.addAnimationFromCalculationBlock(positionAnimation)
+        }
+
+        self.addAnimationCompletionAction { (view: UIView) -> Void in
+            let newSize = CGSize(width: max(view.layer.bounds.size.width + width, 0), height: view.layer.bounds.size.height)
+            let bounds = CGRect(origin: CGPointZero, size: newSize)
+            view.layer.bounds = bounds
+            view.bounds = bounds
+        }
+        return self
     }
 
     internal func movePolar(radius: Double, _ angle: Double) -> DKAnimationKit {
@@ -804,9 +867,12 @@ class DKAnimationKit: NSObject {
         }
         self.animateChainLink()
         CATransaction.commit()
+
+        self.executeCompletionActions()
     }
 
     private func animateChainLink() {
+        self.makeAnchor(0.5, 0.5)
         if let animationCluster = self.animationCalculationActions.first {
             for action in animationCluster {
                 action(self.view)
@@ -822,12 +888,22 @@ class DKAnimationKit: NSObject {
         }
     }
 
-    private func chainLinkDidFinishAnimating() {
-        if let actionCluster: [AnimationCompletionAction] = self.animationCompletionActions.first {
-            for action in actionCluster {
-                action(self.view)
+    private func executeCompletionActions() {
+        if let group = self.animationGroups.firstObject as? CAAnimationGroup {
+            let delay = max(group.beginTime - CACurrentMediaTime(), 0.0)
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC)))
+            dispatch_after(delayTime, dispatch_get_main_queue()) {
+                if let actionCluster: [AnimationCompletionAction] = self.animationCompletionActions.first {
+                    for action in actionCluster {
+                        action(self.view)
+                    }
+                }
             }
         }
+    }
+
+    private func chainLinkDidFinishAnimating() {
         self.animationCompletionActions.removeAtIndex(0)
         self.animationCalculationActions.removeAtIndex(0)
         self.animations.removeAtIndex(0)
