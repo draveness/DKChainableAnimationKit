@@ -423,7 +423,6 @@ class DKAnimationKit: NSObject {
             let originalRotation = Double(atan2(transform.m12, transform.m11))
             rotationAnimation.fromValue = originalRotation
             rotationAnimation.toValue = originalRotation + self.degreesToRadians(angle)
-            println(self.degreesToRadians(angle))
             self.addAnimationFromCalculationBlock(rotationAnimation)
         }
 
