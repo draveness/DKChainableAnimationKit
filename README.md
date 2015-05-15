@@ -35,9 +35,9 @@
 view.makeScale()(2.0).spring().animate()(1.0)
 ```
 
-## With DKAnimationKit
+## With DKChainableAnimationKit
 
-Using DKAnimationKit, you do not need to write the **extra parentheses**.
+Using DKChainableAnimationKit, you do not need to write the **extra parentheses**.
 
 ```
 view.animation.makeScale(2.0).spring.animate(1.0)
@@ -50,7 +50,7 @@ view.animation.makeScale(2.0).spring.animate(1.0)
 ## Podfile
 
 ```
-pod "DKAnimationKit", "~> 1.0.0"
+pod "DKChainableAnimationKit", "~> 1.0.0"
 ```
 
 # Usage

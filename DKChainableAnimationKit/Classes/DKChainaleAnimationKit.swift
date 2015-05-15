@@ -968,7 +968,6 @@ class DKChainableAnimationKit: NSObject {
         let animation = DKKeyFrameAnimation(keyPath: keyPath)
         animation.repeatCount = 0
         animation.autoreverses = false
-
         return animation
     }
 
