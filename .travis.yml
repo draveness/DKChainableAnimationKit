@@ -1,0 +1,7 @@
+language: swift
+before_install:
+    - export LANG=en_US.UTF-8
+    - env
+    - locale
+
+script:
