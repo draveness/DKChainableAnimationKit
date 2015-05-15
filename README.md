@@ -1,6 +1,6 @@
 ![](./Gifs/DKAnimationKit.png)
 
-**DKAnimationKit** is a DSL to make animation easy on iOS with **Swift**. This is a swift port for JHChainableAnimations by [jhurray](https://github.com/jhurray).
+**DKChainableAnimationKit** is a DSL to make animation easy on iOS with **Swift**. This is a swift port for JHChainableAnimations by [jhurray](https://github.com/jhurray).
 
 ![language](https://img.shields.io/badge/language-%20Swift%20-orange.svg)
 ![Version](https://img.shields.io/badge/Pod-%20v0.1.1%20-or.svg)
