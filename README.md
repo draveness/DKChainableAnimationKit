@@ -1,4 +1,4 @@
-![](./Gifs/DKAnimationKit.png)
+![](./Gifs/DKChainableAnimationKit.jpg)
 
 **DKChainableAnimationKit** is a DSL to make animation easy on iOS with **Swift**. This is a swift port for JHChainableAnimations by [jhurray](https://github.com/jhurray).
 
