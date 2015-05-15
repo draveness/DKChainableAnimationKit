@@ -2,7 +2,7 @@
 
 **DKChainableAnimationKit** is a DSL to make animation easy on iOS with **Swift**. This is a swift port for JHChainableAnimations by [jhurray](https://github.com/jhurray).
 
-![language](https://img.shields.io/badge/language-%20Swift%20-orange.svg)
+![language](https://img.shields.io/badge/Language-%20Swift%20-orange.svg)
 ![Version](https://img.shields.io/badge/Pod-%20v1.0.0%20-or.svg)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)
