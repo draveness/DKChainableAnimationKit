@@ -1,6 +1,8 @@
 ![](./Gifs/DKChainableAnimationKit.jpg)
 
-**DKChainableAnimationKit** is a DSL to make animation easy on iOS with **Swift**. This is a swift port for JHChainableAnimations by [jhurray](https://github.com/jhurray).
+**DKChainableAnimationKit** is a DSL to make animation easy on iOS with **Swift**. 
+
+This is a swift port for JHChainableAnimations by [jhurray](https://github.com/jhurray).
 
 ![language](https://img.shields.io/badge/Language-%20Swift%20-orange.svg)
 ![Version](https://img.shields.io/badge/Pod-%20v1.0.0%20-or.svg)
@@ -50,14 +52,15 @@ view.animation.makeScale(2.0).spring.animate(1.0)
 ## Podfile
 
 ```
+use_frameworks!
+
 pod "DKChainableAnimationKit", "~> 1.0.0"
 ```
 
 # Usage
 
-If you are familiar with JHChainableAnimations, reading usage here isn't required. 
+DKChainableAnimationKit is designed to be extremely easy to use. First call `animation` method on `UIView` instance, and then add the animation you want followed by a `animate(t)`.
 
-The only different between the two framework is that when using `DKAnimationKit` you should first call `animation` on `UIView` instance.
 
 ```
 view.animation.moveX(10).animate(1.0)
