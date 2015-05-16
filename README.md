@@ -84,7 +84,7 @@ This will move the view 100 point right and 100 point down at the same time. Ord
 
 ## Chaining Animations
 
-To chain animations seperate the chains with the **thenAfter(duration)** function.
+To chain animations separate the chains with the **thenAfter(duration)** function.
 
 ```
 view.animation.moveX(100.0).thenAfter(1.0).makeScale(2.0).animate(2.0)
@@ -94,9 +94,9 @@ This will move the view for one second and after moving, it will scale for two s
 
 ## Animation Effects
 
-To add animatation effect, call the effect method adter the chainable property you want it to apply it.
+To add animation effect, call the effect method after the chainable property you want it to apply it.
 
-Below is an exmple of moving a view with a spring effect.
+Below is an example of moving a view with a spring effect.
 
 ```
 view.animation.moveX(10).spring.animate(1.0)
@@ -145,20 +145,20 @@ This is the same as
 view.animation.animationCompletion = {
     println("Animation Done")
 }
-view.animation.makeX(0).aniamte(1.0)
+view.animation.makeX(0).animate(1.0)
 ```
 
 And also the same as
 
 ```
-view.animation.makeX(0).aniamte(1.0).animationCompletion = {
+view.animation.makeX(0).animate(1.0).animationCompletion = {
     println("Animation Done")
 }
 ```
 
 ## Bezier Paths
 
-You can also aniamte a view along a UIBezierPath. Call `bezierPathForAnimation` method first and then add points or curves to it and us it in a chainable property.
+You can also animate a view along a UIBezierPath. Call `bezierPathForAnimation` method first and then add points or curves to it and us it in a chainable property.
 
 ```
 let path = view.animation.bezierPathForAnimation()
@@ -171,4 +171,5 @@ Animation effects does not work on path movement.
 # License
 
 DKAnimationKit is available under the MIT license. See the LICENSE file for more info.
+
 
