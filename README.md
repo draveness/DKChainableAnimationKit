@@ -77,7 +77,7 @@ view.animation.moveX(100.0).animate(1.0)
 If you want mutiple animation at one time.
 
 ```
-view.animation.moveX(100.0).moveY(100.0).animte(1.0)
+view.animation.moveX(100.0).moveY(100.0).animate(1.0)
 ```
 
 This will move the view 100 point right and 100 point down at the same time. Order is not important.
