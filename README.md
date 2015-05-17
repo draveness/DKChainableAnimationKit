@@ -172,6 +172,42 @@ Animation effects does not work on path movement.
 
 ----
 
+# Chainable Properties
+
+<table>
+
+<tr>
+<td width="75%">
+<code>view.animation.moveX(100.0).animate(0.5)</code>
+</td>
+<td width="25%">
+<img src="./Gifs/Demo/moveX.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="75%">
+<code>view.animation.moveY(100.0).animate(0.5)</code>
+</td>
+<td width="25%">
+<img src="./Gifs/Demo/moveY.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="75%">
+<code>view.animation.moveXY(100.0, 100.0).animate(0.5)</code>
+</td>
+<td width="25%">
+<img src="./Gifs/Demo/moveXY.gif"></img>
+</td>
+</tr>
+
+
+</table>
+
+----
+
 # Contact
 
 * If you have some advice open an issue or a PR.
