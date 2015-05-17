@@ -177,28 +177,28 @@ Animation effects does not work on path movement.
 <table>
 
 <tr>
-<td width="60%">
+<td width="80%">
 <code>view.animation.moveX(100.0).animate(0.5)</code>
 </td>
-<td width="40%">
+<td width="20%">
 <img src="./Gifs/Demo/moveX.gif"></img>
 </td>
 </tr>
 
 <tr>
-<td width="60%">
+<td width="80%">
 <code>view.animation.moveY(100.0).animate(0.5)</code>
 </td>
-<td width="40%">
+<td width="20%">
 <img src="./Gifs/Demo/moveY.gif"></img>
 </td>
 </tr>
 
 <tr>
-<td width="60%">
+<td width="80%">
 <code>view.animation.moveXY(100.0, 100.0).animate(0.5)</code>
 </td>
-<td width="40%">
+<td width="20%">
 <img src="./Gifs/Demo/moveXY.gif"></img>
 </td>
 </tr>
