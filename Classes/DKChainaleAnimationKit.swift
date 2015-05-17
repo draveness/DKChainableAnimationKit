@@ -8,18 +8,18 @@
 
 import UIKit
 
-class DKChainableAnimationKit: NSObject {
+public class DKChainableAnimationKit: NSObject {
 
     weak var view: UIView!
 
     typealias AnimationCalculationAction = UIView -> Void
     typealias AnimationCompletionAction = UIView -> Void
 
-    var animationCalculationActions: [[AnimationCalculationAction]]!
-    var animationCompletionActions: [[AnimationCompletionAction]]!
-    var animationGroups: NSMutableArray!
-    var animations: [[DKKeyFrameAnimation]]!
-    var animationCompletion: (Void -> Void)?
+    internal var animationCalculationActions: [[AnimationCalculationAction]]!
+    internal var animationCompletionActions: [[AnimationCompletionAction]]!
+    internal var animationGroups: NSMutableArray!
+    internal var animations: [[DKKeyFrameAnimation]]!
+    internal var animationCompletion: (Void -> Void)?
 
     // MARK: - Initialize
 
@@ -28,7 +28,7 @@ class DKChainableAnimationKit: NSObject {
         self.setup()
     }
 
-    func setup() {
+    private func setup() {
         self.animations = [[]]
         self.animationGroups = [self.basicAnimationGroup()]
         self.animationCompletionActions = [[]]
@@ -48,15 +48,25 @@ class DKChainableAnimationKit: NSObject {
 
     // MARK: - Animation Properties
 
-    internal func makeFrame(rect: CGRect) -> DKChainableAnimationKit {
+    public func makeFrame(rect: CGRect) -> DKChainableAnimationKit {
         return self.makeOrigin(rect.origin.x, rect.origin.y).makeBounds(rect)
     }
 
-    internal func makeBounds(rect: CGRect) -> DKChainableAnimationKit {
+    public func makeFrame(x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> DKChainableAnimationKit {
+        let rect = CGRect(x: x, y: y, width: width, height: height)
+        return self.makeOrigin(x, y).makeBounds(rect)
+    }
+
+    public func makeBounds(rect: CGRect) -> DKChainableAnimationKit {
         return self.makeSize(rect.size.width, rect.size.height)
     }
 
-    internal func makeSize(width: CGFloat, _ height: CGFloat) -> DKChainableAnimationKit {
+    public func makeBounds(x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> DKChainableAnimationKit {
+        return self.makeSize(width, height)
+    }
+
+
+    public func makeSize(width: CGFloat, _ height: CGFloat) -> DKChainableAnimationKit {
 
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let sizeAnimation = self.basicAnimationForKeyPath("bounds.size")
@@ -73,7 +83,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func makeOrigin(x: CGFloat, _ y: CGFloat) -> DKChainableAnimationKit {
+    public func makeOrigin(x: CGFloat, _ y: CGFloat) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let positionAnimation = self.basicAnimationForKeyPath("position")
             let newPosition = self.newPositionFrom(newOrigin: CGPoint(x: x, y: y))
@@ -90,7 +100,7 @@ class DKChainableAnimationKit: NSObject {
 
     }
 
-    internal func makeCenter(x: CGFloat, _ y: CGFloat) -> DKChainableAnimationKit {
+    public func makeCenter(x: CGFloat, _ y: CGFloat) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let positionAnimation = self.basicAnimationForKeyPath("position")
             let newPosition = self.newPositionFrom(newCenter: CGPoint(x: x, y: y))
@@ -105,7 +115,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func makeX(x: CGFloat) -> DKChainableAnimationKit {
+    public func makeX(x: CGFloat) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let positionAnimation = self.basicAnimationForKeyPath("position.x")
             let newPosition = self.newPositionFrom(newOrigin: CGPoint(x: x, y: view.layer.frame.origin.y))
@@ -121,7 +131,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func makeY(y: CGFloat) -> DKChainableAnimationKit {
+    public func makeY(y: CGFloat) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let positionAnimation = self.basicAnimationForKeyPath("position.y")
             let newPosition = self.newPositionFrom(newOrigin: CGPoint(x: view.layer.frame.origin.x, y: y))
@@ -137,15 +147,15 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func makeWidth(width: CGFloat) -> DKChainableAnimationKit {
+    public func makeWidth(width: CGFloat) -> DKChainableAnimationKit {
         return self.makeSize(width, self.view.layer.frame.size.height)
     }
 
-    internal func makeHeight(height: CGFloat) -> DKChainableAnimationKit {
-        return self.makeOrigin(self.view.layer.frame.size.width, height)
+    public func makeHeight(height: CGFloat) -> DKChainableAnimationKit {
+        return self.makeSize(self.view.layer.frame.size.width, height)
     }
 
-    internal func makeOpacity(opacity: CGFloat) -> DKChainableAnimationKit {
+    public func makeOpacity(opacity: CGFloat) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let opacityAnimation = self.basicAnimationForKeyPath("opacity")
             opacityAnimation.fromValue = view.alpha
@@ -159,7 +169,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func makeBackground(color: UIColor) -> DKChainableAnimationKit {
+    public func makeBackground(color: UIColor) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let backgroundColorAnimation = self.basicAnimationForKeyPath("backgroundColor")
             backgroundColorAnimation.fromValue = view.backgroundColor
@@ -173,10 +183,10 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func makeBorderColor(color: UIColor) -> DKChainableAnimationKit {
+    public func makeBorderColor(color: UIColor) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let borderColorAnimation = self.basicAnimationForKeyPath("borderColor")
-            borderColorAnimation.fromValue = view.layer.borderColor
+            borderColorAnimation.fromValue = UIColor(CGColor: view.layer.borderColor)
             borderColorAnimation.toValue = color
             self.addAnimationFromCalculationBlock(borderColorAnimation)
         }
@@ -187,7 +197,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func makeBorderWidth(width: CGFloat) -> DKChainableAnimationKit {
+    public func makeBorderWidth(width: CGFloat) -> DKChainableAnimationKit {
         let width = max(0, width)
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let borderColorAnimation = self.basicAnimationForKeyPath("borderWidth")
@@ -202,7 +212,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func makeCornerRadius(cornerRadius: CGFloat) -> DKChainableAnimationKit {
+    public func makeCornerRadius(cornerRadius: CGFloat) -> DKChainableAnimationKit {
         let cornerRadius = max(0, cornerRadius)
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let cornerRadiusAnimation = self.basicAnimationForKeyPath("cornerRadius")
@@ -217,7 +227,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func makeScale(scale: CGFloat) -> DKChainableAnimationKit {
+    public func makeScale(scale: CGFloat) -> DKChainableAnimationKit {
         let scale = max(0, scale)
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let scaleAnimation = self.basicAnimationForKeyPath("bounds")
@@ -235,7 +245,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func makeScaleX(xScale: CGFloat) -> DKChainableAnimationKit {
+    public func makeScaleX(xScale: CGFloat) -> DKChainableAnimationKit {
         let xScale = max(0, xScale)
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let scaleAnimation = self.basicAnimationForKeyPath("bounds")
@@ -253,7 +263,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func makeScaleY(yScale: CGFloat) -> DKChainableAnimationKit {
+    public func makeScaleY(yScale: CGFloat) -> DKChainableAnimationKit {
         let yScale = max(0, yScale)
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let scaleAnimation = self.basicAnimationForKeyPath("bounds")
@@ -309,74 +319,74 @@ class DKChainableAnimationKit: NSObject {
         }
     }
 
-    internal func makeAnchor(x: CGFloat, _ y: CGFloat) -> DKChainableAnimationKit {
+    public func makeAnchor(x: CGFloat, _ y: CGFloat) -> DKChainableAnimationKit {
         self.makeAnchorFrom(x: x, y: y)
         return self
     }
 
-    internal var anchorDefault: DKChainableAnimationKit {
+    public var anchorDefault: DKChainableAnimationKit {
         get {
             return self.anchorCenter
         }
     }
 
-    internal var anchorCenter: DKChainableAnimationKit {
+    public var anchorCenter: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 0.5, y: 0.5)
             return self
         }
     }
 
-    internal var anchorTopLeft: DKChainableAnimationKit {
+    public var anchorTopLeft: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 0.0, y: 0.0)
             return self
         }
     }
 
-    internal var anchorTopRight: DKChainableAnimationKit {
+    public var anchorTopRight: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 1.0, y: 0.0)
             return self
         }
     }
 
-    internal var anchorBottomLeft: DKChainableAnimationKit {
+    public var anchorBottomLeft: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 0.0, y: 1.0)
             return self
         }
     }
 
-    internal var anchorBottomRight: DKChainableAnimationKit {
+    public var anchorBottomRight: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 1.0, y: 1.0)
             return self
         }
     }
 
-    internal var anchorTop: DKChainableAnimationKit {
+    public var anchorTop: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 0.5, y: 0.0)
             return self
         }
     }
 
-    internal var anchorBottom: DKChainableAnimationKit {
+    public var anchorBottom: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 0.5, y: 1.0)
             return self
         }
     }
 
-    internal var anchorLeft: DKChainableAnimationKit {
+    public var anchorLeft: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 0.0, y: 0.5)
             return self
         }
     }
 
-    internal var anchorRight: DKChainableAnimationKit {
+    public var anchorRight: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 1.0, y: 0.5)
             return self
@@ -385,7 +395,7 @@ class DKChainableAnimationKit: NSObject {
 
     // MARK: - Move
 
-    internal func moveX(x: CGFloat) -> DKChainableAnimationKit {
+    public func moveX(x: CGFloat) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let positionAnimation = self.basicAnimationForKeyPath("position.x")
             positionAnimation.fromValue = view.layer.position.x
@@ -401,7 +411,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func moveY(y: CGFloat) -> DKChainableAnimationKit {
+    public func moveY(y: CGFloat) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let positionAnimation = self.basicAnimationForKeyPath("position.y")
             positionAnimation.fromValue = view.layer.position.y
@@ -417,7 +427,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func moveXY(x :CGFloat, _ y: CGFloat) -> DKChainableAnimationKit {
+    public func moveXY(x :CGFloat, _ y: CGFloat) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let positionAnimation = self.basicAnimationForKeyPath("position")
             let oldOrigin = view.layer.frame.origin
@@ -436,7 +446,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func moveHeight(height: CGFloat) -> DKChainableAnimationKit {
+    public func moveHeight(height: CGFloat) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let positionAnimation = self.basicAnimationForKeyPath("bounds.size")
             let newSize = CGSize(width: view.layer.bounds.size.width, height: max(view.layer.bounds.size.width + height, 0))
@@ -454,7 +464,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func moveWidth(width: CGFloat) -> DKChainableAnimationKit {
+    public func moveWidth(width: CGFloat) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let positionAnimation = self.basicAnimationForKeyPath("bounds.size")
             let newSize = CGSize(width: max(view.layer.bounds.size.width + width, 0), height: view.layer.bounds.size.height)
@@ -472,14 +482,14 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func movePolar(radius: Double, _ angle: Double) -> DKChainableAnimationKit {
+    public func movePolar(radius: Double, _ angle: Double) -> DKChainableAnimationKit {
         let radians  = self.degreesToRadians(angle)
         let x = CGFloat(radius * cos(radians))
         let y = CGFloat(-radius * sin(radians))
         return self.moveXY(x, y)
     }
 
-    internal func rotate(angle: Double) -> DKChainableAnimationKit {
+    public func rotate(angle: Double) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let rotationAnimation = self.basicAnimationForKeyPath("transform.rotation")
             let transform = view.layer.transform
@@ -500,7 +510,7 @@ class DKChainableAnimationKit: NSObject {
 
     // MARK: - Bezier
 
-    internal func moveOnPath(path: UIBezierPath) -> DKChainableAnimationKit {
+    public func moveOnPath(path: UIBezierPath) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let pathAnimation = self.basicAnimationForKeyPath("position")
             pathAnimation.path = path.CGPath
@@ -514,7 +524,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func moveAndRotateOnPath(path: UIBezierPath) -> DKChainableAnimationKit {
+    public func moveAndRotateOnPath(path: UIBezierPath) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let pathAnimation = self.basicAnimationForKeyPath("position")
             pathAnimation.path = path.CGPath
@@ -529,7 +539,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func moveAndReverseRotateOnPath(path: UIBezierPath) -> DKChainableAnimationKit {
+    public func moveAndReverseRotateOnPath(path: UIBezierPath) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let pathAnimation = self.basicAnimationForKeyPath("position")
             pathAnimation.path = path.CGPath
@@ -546,252 +556,252 @@ class DKChainableAnimationKit: NSObject {
 
     // MARK: - Animation Effects
 
-    internal var easeIn: DKChainableAnimationKit {
+    public var easeIn: DKChainableAnimationKit {
         get {
             self.easeInQuad
             return self
         }
     }
 
-    internal var easeOut: DKChainableAnimationKit {
+    public var easeOut: DKChainableAnimationKit {
         get {
             self.easeOutQuad
             return self
         }
     }
 
-    internal var easeInOut: DKChainableAnimationKit {
+    public var easeInOut: DKChainableAnimationKit {
         get {
             self.easeInOutQuad
             return self
         }
     }
 
-    internal var easeBack: DKChainableAnimationKit {
+    public var easeBack: DKChainableAnimationKit {
         get {
             self.easeOutBack
             return self
         }
     }
 
-    internal var spring: DKChainableAnimationKit {
+    public var spring: DKChainableAnimationKit {
         get {
             self.easeOutElastic
             return self
         }
     }
 
-    internal var bounce: DKChainableAnimationKit {
+    public var bounce: DKChainableAnimationKit {
         get { 
             self.easeOutBounce
             return self         
         }
     }
 
-    internal var easeInQuad: DKChainableAnimationKit {
+    public var easeInQuad: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuad)
             return self
         }
     }
 
-    internal var easeOutQuad: DKChainableAnimationKit {
+    public var easeOutQuad: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuad)
             return self
         }
     }
 
-    internal var easeInOutQuad: DKChainableAnimationKit {
+    public var easeInOutQuad: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuad)
             return self
         }
     }
 
-    internal var easeInCubic: DKChainableAnimationKit {
+    public var easeInCubic: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInCubic)
             return self
         }
     }
 
-    internal var easeOutCubic: DKChainableAnimationKit {
+    public var easeOutCubic: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutCubic)
             return self
         }
     }
 
-    internal var easeInOutCubic: DKChainableAnimationKit {
+    public var easeInOutCubic: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutCubic)
             return self
         }
     }
 
-    internal var easeInQuart: DKChainableAnimationKit {
+    public var easeInQuart: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuart)
             return self
         }
     }
 
-    internal var easeOutQuart: DKChainableAnimationKit {
+    public var easeOutQuart: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuart)
             return self
         }
     }
 
-    internal var easeInOutQuart: DKChainableAnimationKit {
+    public var easeInOutQuart: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuart)
             return self
         }
     }
 
-    internal var easeInQuint: DKChainableAnimationKit {
+    public var easeInQuint: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuint)
             return self
         }
     }
 
-    internal var easeOutQuint: DKChainableAnimationKit {
+    public var easeOutQuint: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuint)
             return self
         }
     }
 
-    internal var easeInOutQuint: DKChainableAnimationKit {
+    public var easeInOutQuint: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuint)
             return self
         }
     }
 
-    internal var easeInSine: DKChainableAnimationKit {
+    public var easeInSine: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInSine)
             return self
         }
     }
 
-    internal var easeOutSine: DKChainableAnimationKit {
+    public var easeOutSine: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutSine)
             return self
         }
     }
 
-    internal var easeInOutSine: DKChainableAnimationKit {
+    public var easeInOutSine: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutSine)
             return self
         }
     }
 
-    internal var easeInExpo: DKChainableAnimationKit {
+    public var easeInExpo: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInExpo)
             return self
         }
     }
 
-    internal var easeOutExpo: DKChainableAnimationKit {
+    public var easeOutExpo: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutExpo)
             return self
         }
     }
 
-    internal var easeInOutExpo: DKChainableAnimationKit {
+    public var easeInOutExpo: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutExpo)
             return self
         }
     }
 
-    internal var easeInCirc: DKChainableAnimationKit {
+    public var easeInCirc: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInCirc)
             return self
         }
     }
 
-    internal var easeOutCirc: DKChainableAnimationKit {
+    public var easeOutCirc: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutCirc)
             return self
         }
     }
 
-    internal var easeInOutCirc: DKChainableAnimationKit {
+    public var easeInOutCirc: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutCirc)
             return self
         }
     }
 
-    internal var easeInElastic: DKChainableAnimationKit {
+    public var easeInElastic: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInElastic)
             return self
         }
     }
 
-    internal var easeOutElastic: DKChainableAnimationKit {
+    public var easeOutElastic: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutElastic)
             return self
         }
     }
 
-    internal var easeInOutElastic: DKChainableAnimationKit {
+    public var easeInOutElastic: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutElastic)
             return self
         }
     }
 
-    internal var easeInBack: DKChainableAnimationKit {
+    public var easeInBack: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInBack)
             return self
         }
     }
 
-    internal var easeOutBack: DKChainableAnimationKit {
+    public var easeOutBack: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutBack)
             return self
         }
     }
 
-    internal var easeInOutBack: DKChainableAnimationKit {
+    public var easeInOutBack: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutBack)
             return self
         }
     }
 
-    internal var easeInBounce: DKChainableAnimationKit {
+    public var easeInBounce: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInBounce)
             return self
         }
     }
 
-    internal var easeOutBounce: DKChainableAnimationKit {
+    public var easeOutBounce: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutBounce)
             return self
         }
     }
 
-    internal var easeInOutBounce: DKChainableAnimationKit {
+    public var easeInOutBounce: DKChainableAnimationKit {
         get {
             self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutBounce)
             return self
@@ -809,7 +819,7 @@ class DKChainableAnimationKit: NSObject {
 
     // MARK: - Animation Time
 
-    internal func delay(delay: NSTimeInterval) -> DKChainableAnimationKit {
+    public func delay(delay: NSTimeInterval) -> DKChainableAnimationKit {
         var delay = delay
         for group in self.animationGroups {
             let duration = group.duration as NSTimeInterval
@@ -821,17 +831,17 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal var seconds: DKChainableAnimationKit {
+    public var seconds: DKChainableAnimationKit {
         get {
             return self
         }
     }
 
-    internal func wait(delay: NSTimeInterval) -> DKChainableAnimationKit {
+    public func wait(delay: NSTimeInterval) -> DKChainableAnimationKit {
         return self.delay(delay)
     }
 
-    internal func animate(duration: NSTimeInterval) -> DKChainableAnimationKit {
+    public func animate(duration: NSTimeInterval) -> DKChainableAnimationKit {
         if let group = self.animationGroups.lastObject as? CAAnimationGroup {
             group.duration = duration
             self.animateChain()
@@ -839,7 +849,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func thenAfter(after: NSTimeInterval) -> DKChainableAnimationKit {
+    public func thenAfter(after: NSTimeInterval) -> DKChainableAnimationKit {
         if let group = self.animationGroups.lastObject as? CAAnimationGroup {
             group.duration = after
             let newGroup = self.basicAnimationGroup()
@@ -851,7 +861,7 @@ class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    internal func animateWithCompletion(duration: NSTimeInterval, completion: Void -> Void) -> DKChainableAnimationKit {
+    public func animateWithCompletion(duration: NSTimeInterval, completion: Void -> Void) -> DKChainableAnimationKit {
         if let group = self.animationGroups.lastObject as? CAAnimationGroup {
             group.duration = duration
             self.animationCompletion = completion
@@ -968,7 +978,6 @@ class DKChainableAnimationKit: NSObject {
         let animation = DKKeyFrameAnimation(keyPath: keyPath)
         animation.repeatCount = 0
         animation.autoreverses = false
-
         return animation
     }
 

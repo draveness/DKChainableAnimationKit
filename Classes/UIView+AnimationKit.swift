@@ -12,7 +12,7 @@ private var animationKitAssociationKey = "animationKitAssociationKey"
 
 public extension UIView {
 
-    final internal var animation: DKChainableAnimationKit {
+    final public var animation: DKChainableAnimationKit {
         get {
             var animation: DKChainableAnimationKit! = objc_getAssociatedObject(self, &animationKitAssociationKey) as? DKChainableAnimationKit
             if let animation = animation {
@@ -26,7 +26,7 @@ public extension UIView {
         }
     }
 
-    final internal func bezierPathForAnimation() -> UIBezierPath {
+    final public func bezierPathForAnimation() -> UIBezierPath {
         let path = UIBezierPath()
         path.moveToPoint(self.layer.position)
         return path

@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		188C676C1B08B99E00323C03 /* NSBKeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C676A1B08B99E00323C03 /* NSBKeyframeAnimationFunction.swift */; };
+		188C676D1B08B99E00323C03 /* UIView+AnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C676B1B08B99E00323C03 /* UIView+AnimationKit.swift */; };
+		188C676F1B08B9A400323C03 /* DKKeyFrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C676E1B08B9A400323C03 /* DKKeyFrameAnimation.swift */; };
+		188C67711B08B9B000323C03 /* DKChainaleAnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C67701B08B9B000323C03 /* DKChainaleAnimationKit.swift */; };
 		18CEB5C21B059B0300B6ACCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEB5C11B059B0300B6ACCB /* AppDelegate.swift */; };
 		18CEB5C41B059B0300B6ACCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEB5C31B059B0300B6ACCB /* ViewController.swift */; };
 		18CEB5C71B059B0300B6ACCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CEB5C51B059B0300B6ACCB /* Main.storyboard */; };
 		18CEB5C91B059B0300B6ACCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CEB5C81B059B0300B6ACCB /* Images.xcassets */; };
 		18CEB5CC1B059B0300B6ACCB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CEB5CA1B059B0300B6ACCB /* LaunchScreen.xib */; };
 		18CEB5D81B059B0300B6ACCB /* DKChainableAnimationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEB5D71B059B0300B6ACCB /* DKChainableAnimationKitTests.swift */; };
-		18CEB5EF1B059B5700B6ACCB /* DKChainaleAnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEB5EB1B059B5700B6ACCB /* DKChainaleAnimationKit.swift */; };
-		18CEB5F01B059B5700B6ACCB /* DKKeyFrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEB5EC1B059B5700B6ACCB /* DKKeyFrameAnimation.swift */; };
-		18CEB5F11B059B5700B6ACCB /* NSBKeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEB5ED1B059B5700B6ACCB /* NSBKeyframeAnimationFunction.swift */; };
-		18CEB5F21B059B5700B6ACCB /* UIView+AnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEB5EE1B059B5700B6ACCB /* UIView+AnimationKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		188C676A1B08B99E00323C03 /* NSBKeyframeAnimationFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSBKeyframeAnimationFunction.swift; path = Classes/NSBKeyframeAnimationFunction.swift; sourceTree = SOURCE_ROOT; };
+		188C676B1B08B99E00323C03 /* UIView+AnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+AnimationKit.swift"; path = "Classes/UIView+AnimationKit.swift"; sourceTree = SOURCE_ROOT; };
+		188C676E1B08B9A400323C03 /* DKKeyFrameAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DKKeyFrameAnimation.swift; path = Classes/DKKeyFrameAnimation.swift; sourceTree = SOURCE_ROOT; };
+		188C67701B08B9B000323C03 /* DKChainaleAnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DKChainaleAnimationKit.swift; path = Classes/DKChainaleAnimationKit.swift; sourceTree = SOURCE_ROOT; };
 		18CEB5BC1B059B0300B6ACCB /* DKChainableAnimationKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKChainableAnimationKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CEB5C01B059B0300B6ACCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18CEB5C11B059B0300B6ACCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,10 +44,6 @@
 		18CEB5D11B059B0300B6ACCB /* DKChainableAnimationKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKChainableAnimationKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CEB5D61B059B0300B6ACCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18CEB5D71B059B0300B6ACCB /* DKChainableAnimationKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKChainableAnimationKitTests.swift; sourceTree = "<group>"; };
-		18CEB5EB1B059B5700B6ACCB /* DKChainaleAnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKChainaleAnimationKit.swift; sourceTree = "<group>"; };
-		18CEB5EC1B059B5700B6ACCB /* DKKeyFrameAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKKeyFrameAnimation.swift; sourceTree = "<group>"; };
-		18CEB5ED1B059B5700B6ACCB /* NSBKeyframeAnimationFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBKeyframeAnimationFunction.swift; sourceTree = "<group>"; };
-		18CEB5EE1B059B5700B6ACCB /* UIView+AnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +124,10 @@
 		18CEB5EA1B059B5700B6ACCB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				18CEB5EB1B059B5700B6ACCB /* DKChainaleAnimationKit.swift */,
-				18CEB5EC1B059B5700B6ACCB /* DKKeyFrameAnimation.swift */,
-				18CEB5ED1B059B5700B6ACCB /* NSBKeyframeAnimationFunction.swift */,
-				18CEB5EE1B059B5700B6ACCB /* UIView+AnimationKit.swift */,
+				188C67701B08B9B000323C03 /* DKChainaleAnimationKit.swift */,
+				188C676E1B08B9A400323C03 /* DKKeyFrameAnimation.swift */,
+				188C676A1B08B99E00323C03 /* NSBKeyframeAnimationFunction.swift */,
+				188C676B1B08B99E00323C03 /* UIView+AnimationKit.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -232,12 +232,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CEB5F21B059B5700B6ACCB /* UIView+AnimationKit.swift in Sources */,
+				188C676D1B08B99E00323C03 /* UIView+AnimationKit.swift in Sources */,
 				18CEB5C41B059B0300B6ACCB /* ViewController.swift in Sources */,
+				188C676C1B08B99E00323C03 /* NSBKeyframeAnimationFunction.swift in Sources */,
 				18CEB5C21B059B0300B6ACCB /* AppDelegate.swift in Sources */,
-				18CEB5EF1B059B5700B6ACCB /* DKChainaleAnimationKit.swift in Sources */,
-				18CEB5F11B059B5700B6ACCB /* NSBKeyframeAnimationFunction.swift in Sources */,
-				18CEB5F01B059B5700B6ACCB /* DKKeyFrameAnimation.swift in Sources */,
+				188C676F1B08B9A400323C03 /* DKKeyFrameAnimation.swift in Sources */,
+				188C67711B08B9B000323C03 /* DKChainaleAnimationKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +433,7 @@
 				18CEB5DD1B059B0300B6ACCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18CEB5DE1B059B0300B6ACCB /* Build configuration list for PBXNativeTarget "DKChainableAnimationKitTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +442,7 @@
 				18CEB5E01B059B0300B6ACCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

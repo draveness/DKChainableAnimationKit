@@ -10,13 +10,13 @@ import UIKit
 
 public class DKKeyFrameAnimation: CAKeyframeAnimation {
 
-    let kFPS = 60
+    internal let kFPS = 60
 
-    public typealias NSBKeyframeAnimationFunction = (Double, Double, Double, Double) -> Double;
+    internal typealias NSBKeyframeAnimationFunction = (Double, Double, Double, Double) -> Double;
 
-    public var fromValue: AnyObject!
-    public var toValue: AnyObject!
-    public var functionBlock: NSBKeyframeAnimationFunction!
+    internal var fromValue: AnyObject!
+    internal var toValue: AnyObject!
+    internal var functionBlock: NSBKeyframeAnimationFunction!
 
     convenience init(keyPath path: String!) {
         self.init()
@@ -24,11 +24,11 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
         self.functionBlock = NSBKeyframeAnimationFunctionLinear
     }
 
-    func calculte() {
+    internal func calculte() {
         self.createValueArray()
     }
 
-    func createValueArray() {
+    internal func createValueArray() {
         if let fromValue: AnyObject = self.fromValue, let toValue: AnyObject = self.toValue {
             if valueIsKindOf(NSNumber) {
                 self.values = self.valueArrayFor(startValue: CGFloat(fromValue.floatValue), endValue: CGFloat(toValue.floatValue)) as [AnyObject]
