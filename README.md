@@ -4,6 +4,8 @@
 
 This is a swift port for JHChainableAnimations by [jhurray](https://github.com/jhurray).
 
+# Demo
+
 ![language](https://img.shields.io/badge/Language-%20Swift%20-orange.svg)
 ![Version](https://img.shields.io/badge/Pod-%20v1.0.0%20-or.svg)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
@@ -63,7 +65,7 @@ DKChainableAnimationKit is designed to be extremely easy to use. First call `ani
 
 
 ```
-view.animation.moveX(10).animate(1.0)
+view.animation.moveX(100.0).animate(1.0)
 ```
 
 ## Animating

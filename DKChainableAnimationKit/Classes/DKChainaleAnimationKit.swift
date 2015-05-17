@@ -142,7 +142,7 @@ class DKChainableAnimationKit: NSObject {
     }
 
     internal func makeHeight(height: CGFloat) -> DKChainableAnimationKit {
-        return self.makeOrigin(self.view.layer.frame.size.width, height)
+        return self.makeSize(self.view.layer.frame.size.width, height)
     }
 
     internal func makeOpacity(opacity: CGFloat) -> DKChainableAnimationKit {
@@ -176,7 +176,7 @@ class DKChainableAnimationKit: NSObject {
     internal func makeBorderColor(color: UIColor) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let borderColorAnimation = self.basicAnimationForKeyPath("borderColor")
-            borderColorAnimation.fromValue = view.layer.borderColor
+            borderColorAnimation.fromValue = UIColor(CGColor: view.layer.borderColor)
             borderColorAnimation.toValue = color
             self.addAnimationFromCalculationBlock(borderColorAnimation)
         }
