@@ -61,7 +61,7 @@ pod "DKChainableAnimationKit", "~> 1.0.0"
 
 # Usage
 
-DKChainableAnimationKit is designed to be extremely easy to use. First call `animation` method on `UIView` instance, and then add the animation you want followed by a `animate(t)`.
+DKChainableAnimationKit is designed to be extremely easy to use. First call `animation` method on `UIView` instance, and then add the animation you want followed by a `animate(t)` method.
 
 
 ```
@@ -170,8 +170,13 @@ view.animation.moveOnPath(path).animate(1.0)
 
 Animation effects does not work on path movement.
 
+----
+
+# Contact
+
+* If you have some advice open an issue or a PR.
+* Email [Draveness](mailto: stark.draven@gmail.com?subject=DKChainableAnimationKit)
+
 # License
 
 DKAnimationKit is available under the MIT license. See the LICENSE file for more info.
-
-
