@@ -52,9 +52,19 @@ class DKChainableAnimationKit: NSObject {
         return self.makeOrigin(rect.origin.x, rect.origin.y).makeBounds(rect)
     }
 
+    internal func makeFrame(x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> DKChainableAnimationKit {
+        let rect = CGRect(x: x, y: y, width: width, height: height)
+        return self.makeOrigin(x, y).makeBounds(rect)
+    }
+
     internal func makeBounds(rect: CGRect) -> DKChainableAnimationKit {
         return self.makeSize(rect.size.width, rect.size.height)
     }
+
+    internal func makeBounds(x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> DKChainableAnimationKit {
+        return self.makeSize(width, height)
+    }
+
 
     internal func makeSize(width: CGFloat, _ height: CGFloat) -> DKChainableAnimationKit {
 
