@@ -178,7 +178,7 @@ Animation effects does not work on path movement.
 
 <tr>
 <td width="80%">
-<code>view.animation.moveX(100.0).animate(0.5)</code>
+<code>moveX(100.0)</code>
 </td>
 <td width="20%">
 <img src="./Gifs/Demo/moveX.gif"></img>
@@ -187,7 +187,7 @@ Animation effects does not work on path movement.
 
 <tr>
 <td width="80%">
-<code>view.animation.moveY(100.0).animate(0.5)</code>
+<code>moveY(100.0)</code>
 </td>
 <td width="20%">
 <img src="./Gifs/Demo/moveY.gif"></img>
@@ -196,14 +196,183 @@ Animation effects does not work on path movement.
 
 <tr>
 <td width="80%">
-<code>view.animation.moveXY(100.0, 100.0).animate(0.5)</code>
+<code>moveWidth(100.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/moveWidth.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>moveHeight(100.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/moveHeight.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>moveXY(100.0, 100.0)</code>
 </td>
 <td width="20%">
 <img src="./Gifs/Demo/moveXY.gif"></img>
 </td>
 </tr>
 
+<tr>
+<td width="80%">
+<code>makeX(100.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeX.gif"></img>
+</td>
+</tr>
 
+<tr>
+<td width="80%">
+<code>makeY(100.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeY.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeOrigin(100.0, 100.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeOrigin.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeCenter(100.0, 100.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeCenter.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeWidth(100.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeWidth.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeHeight(100.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeHeight.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeSize(100.0, 100.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeHeight.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeFrame(rect)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeFrame.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeBounds(rect)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeBounds.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeScale(2.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeScale.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeScaleX(2.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeScaleX.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeScaleY(2.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeScaleY.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeOpacity(0.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeOpacity.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeBackground(purple)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeBackground.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeBorderColor(red)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeBorderColor.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeBorderWidth(10.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeBorderWidth.gif"></img>
+</td>
+</tr>
+
+<tr>
+<td width="80%">
+<code>makeCornerRadius(25.0)</code>
+</td>
+<td width="20%">
+<img src="./Gifs/Demo/makeCornerRadius.gif"></img>
+</td>
+</tr>
 </table>
 
 ----
