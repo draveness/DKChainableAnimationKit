@@ -384,4 +384,4 @@ Animation effects does not work on path movement.
 
 # License
 
-DKAnimationKit is available under the MIT license. See the LICENSE file for more info.
+DKChainableAnimationKit is available under the MIT license. See the LICENSE file for more info.
