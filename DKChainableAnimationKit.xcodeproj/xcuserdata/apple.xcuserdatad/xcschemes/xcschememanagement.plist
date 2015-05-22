@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DKChainableAnimationKit.xcscheme_^#shared#^_</key>
+		<key>DKChainableAnimationKit 2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>DKChainableAnimationKit.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,6 +17,26 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>185AB3151B0ECB0000ADF537</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>185AB31F1B0ECB0000ADF537</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>185AB33E1B0ECBF000ADF537</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>185AB3481B0ECBF100ADF537</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>18CEB5BB1B059B0300B6ACCB</key>
 		<dict>
 			<key>primary</key>
