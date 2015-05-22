@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DKChainableAnimationKit"
-  s.version      = "1.1.2"
+  s.version      = "1.1.3"
   s.summary      = "Chainable Animation in Swift"
 
   s.description  = <<-DESC
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.license      = "MIT"
   s.author             = { "Draveness" => "stark.draven@gmail.com" }
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/Draveness/DKChainableAnimationKit.git", :tag => s.version }
 
   s.source_files  = "Classes/*.swift"

@@ -56,7 +56,7 @@ view.animation.makeScale(2.0).spring.animate(1.0)
 ```
 use_frameworks!
 
-pod "DKChainableAnimationKit", "~> 1.1.2"
+pod "DKChainableAnimationKit", "~> 1.1.3"
 ```
 
 # Usage
