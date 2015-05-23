@@ -12,16 +12,16 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
 
     internal let kFPS = 60
 
-    internal typealias NSBKeyframeAnimationFunction = (Double, Double, Double, Double) -> Double;
+    internal typealias DKKeyframeAnimationFunction = (Double, Double, Double, Double) -> Double;
 
     internal var fromValue: AnyObject!
     internal var toValue: AnyObject!
-    internal var functionBlock: NSBKeyframeAnimationFunction!
+    internal var functionBlock: DKKeyframeAnimationFunction!
 
     convenience init(keyPath path: String!) {
         self.init()
         self.keyPath = path
-        self.functionBlock = NSBKeyframeAnimationFunctionLinear
+        self.functionBlock = DKKeyframeAnimationFunctionLinear
     }
 
     internal func calculte() {
@@ -68,10 +68,71 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
                     let toSize = self.toValue.CGSizeValue()
                     let path = self.createPathFromXYValues(self.valueArrayFor(startValue: fromSize.width, endValue: toSize.width), yValues: self.valueArrayFor(startValue: fromSize.height, endValue: toSize.height))
                     self.path = path
+                } else if valueType.containsString("CATransform3D") {
+                    let fromTransform = self.fromValue.CATransform3DValue
+                    let toTransform = self.toValue.CATransform3DValue
+
+                    let m11 = self.valueArrayFor(startValue: fromTransform.m11, endValue: toTransform.m11)
+                    let m12 = self.valueArrayFor(startValue: fromTransform.m12, endValue: toTransform.m12)
+                    let m13 = self.valueArrayFor(startValue: fromTransform.m13, endValue: toTransform.m13)
+                    let m14 = self.valueArrayFor(startValue: fromTransform.m14, endValue: toTransform.m14)
+                    let m21 = self.valueArrayFor(startValue: fromTransform.m21, endValue: toTransform.m21)
+                    let m22 = self.valueArrayFor(startValue: fromTransform.m22, endValue: toTransform.m22)
+                    let m23 = self.valueArrayFor(startValue: fromTransform.m23, endValue: toTransform.m23)
+                    let m24 = self.valueArrayFor(startValue: fromTransform.m24, endValue: toTransform.m24)
+                    let m31 = self.valueArrayFor(startValue: fromTransform.m31, endValue: toTransform.m31)
+                    let m32 = self.valueArrayFor(startValue: fromTransform.m32, endValue: toTransform.m32)
+                    let m33 = self.valueArrayFor(startValue: fromTransform.m33, endValue: toTransform.m33)
+                    let m34 = self.valueArrayFor(startValue: fromTransform.m34, endValue: toTransform.m34)
+                    let m41 = self.valueArrayFor(startValue: fromTransform.m41, endValue: toTransform.m41)
+                    let m42 = self.valueArrayFor(startValue: fromTransform.m42, endValue: toTransform.m42)
+                    let m43 = self.valueArrayFor(startValue: fromTransform.m43, endValue: toTransform.m43)
+                    let m44 = self.valueArrayFor(startValue: fromTransform.m44, endValue: toTransform.m44)
+
+                    self.values = self.createTransformArrayFrom(
+                        m11: m11, m12: m12, m13: m13, m14: m14,
+                        m21: m21, m22: m22, m23: m23, m24: m24,
+                        m31: m31, m32: m32, m33: m33, m34: m34,
+                        m41: m41, m42: m42, m43: m43, m44: m44) as [AnyObject]
                 }
             }
             self.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         }
+    }
+
+    private func createTransformArrayFrom(
+        #m11: NSArray, m12: NSArray, m13: NSArray, m14: NSArray,
+        m21: NSArray, m22: NSArray, m23: NSArray, m24: NSArray,
+        m31: NSArray, m32: NSArray, m33: NSArray, m34: NSArray,
+        m41: NSArray, m42: NSArray, m43: NSArray, m44: NSArray) -> NSArray {
+            let numberOfTransforms = m11.count;
+            var values = NSMutableArray(capacity: numberOfTransforms)
+            var value: CATransform3D!
+            for (var i = 1; i < numberOfTransforms; i++) {
+                value = CATransform3DIdentity;
+                value.m11 = CGFloat(m11.objectAtIndex(i).floatValue)
+                value.m12 = CGFloat(m12.objectAtIndex(i).floatValue)
+                value.m13 = CGFloat(m13.objectAtIndex(i).floatValue)
+                value.m14 = CGFloat(m14.objectAtIndex(i).floatValue)
+
+                value.m21 = CGFloat(m21.objectAtIndex(i).floatValue)
+                value.m22 = CGFloat(m22.objectAtIndex(i).floatValue)
+                value.m23 = CGFloat(m23.objectAtIndex(i).floatValue)
+                value.m24 = CGFloat(m24.objectAtIndex(i).floatValue)
+
+                value.m31 = CGFloat(m31.objectAtIndex(i).floatValue)
+                value.m32 = CGFloat(m32.objectAtIndex(i).floatValue)
+                value.m33 = CGFloat(m33.objectAtIndex(i).floatValue)
+                value.m44 = CGFloat(m34.objectAtIndex(i).floatValue)
+
+                value.m41 = CGFloat(m41.objectAtIndex(i).floatValue)
+                value.m42 = CGFloat(m42.objectAtIndex(i).floatValue)
+                value.m43 = CGFloat(m43.objectAtIndex(i).floatValue)
+                value.m44 = CGFloat(m44.objectAtIndex(i).floatValue)
+
+                values.addObject(NSValue(CATransform3D: value))
+            }
+            return values
     }
 
     private func createPathFromXYValues(xValues: NSArray, yValues: NSArray) -> CGPathRef {

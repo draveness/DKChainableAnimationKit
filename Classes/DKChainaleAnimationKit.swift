@@ -600,215 +600,215 @@ public class DKChainableAnimationKit: NSObject {
 
     public var easeInQuad: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuad)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInQuad)
             return self
         }
     }
 
     public var easeOutQuad: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuad)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseOutQuad)
             return self
         }
     }
 
     public var easeInOutQuad: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuad)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInOutQuad)
             return self
         }
     }
 
     public var easeInCubic: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInCubic)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInCubic)
             return self
         }
     }
 
     public var easeOutCubic: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutCubic)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseOutCubic)
             return self
         }
     }
 
     public var easeInOutCubic: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutCubic)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInOutCubic)
             return self
         }
     }
 
     public var easeInQuart: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuart)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInQuart)
             return self
         }
     }
 
     public var easeOutQuart: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuart)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseOutQuart)
             return self
         }
     }
 
     public var easeInOutQuart: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuart)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInOutQuart)
             return self
         }
     }
 
     public var easeInQuint: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInQuint)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInQuint)
             return self
         }
     }
 
     public var easeOutQuint: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutQuint)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseOutQuint)
             return self
         }
     }
 
     public var easeInOutQuint: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutQuint)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInOutQuint)
             return self
         }
     }
 
     public var easeInSine: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInSine)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInSine)
             return self
         }
     }
 
     public var easeOutSine: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutSine)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseOutSine)
             return self
         }
     }
 
     public var easeInOutSine: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutSine)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInOutSine)
             return self
         }
     }
 
     public var easeInExpo: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInExpo)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInExpo)
             return self
         }
     }
 
     public var easeOutExpo: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutExpo)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseOutExpo)
             return self
         }
     }
 
     public var easeInOutExpo: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutExpo)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInOutExpo)
             return self
         }
     }
 
     public var easeInCirc: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInCirc)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInCirc)
             return self
         }
     }
 
     public var easeOutCirc: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutCirc)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseOutCirc)
             return self
         }
     }
 
     public var easeInOutCirc: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutCirc)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInOutCirc)
             return self
         }
     }
 
     public var easeInElastic: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInElastic)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInElastic)
             return self
         }
     }
 
     public var easeOutElastic: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutElastic)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseOutElastic)
             return self
         }
     }
 
     public var easeInOutElastic: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutElastic)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInOutElastic)
             return self
         }
     }
 
     public var easeInBack: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInBack)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInBack)
             return self
         }
     }
 
     public var easeOutBack: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutBack)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseOutBack)
             return self
         }
     }
 
     public var easeInOutBack: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutBack)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInOutBack)
             return self
         }
     }
 
     public var easeInBounce: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInBounce)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInBounce)
             return self
         }
     }
 
     public var easeOutBounce: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseOutBounce)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseOutBounce)
             return self
         }
     }
 
     public var easeInOutBounce: DKChainableAnimationKit {
         get {
-            self.addAnimationKeyframeCalculation(NSBKeyframeAnimationFunctionEaseInOutBounce)
+            self.addAnimationKeyframeCalculation(DKKeyframeAnimationFunctionEaseInOutBounce)
             return self
         }
     }
 
-    private func addAnimationKeyframeCalculation(functionBlock: NSBKeyframeAnimationFunctionBlock) {
+    private func addAnimationKeyframeCalculation(functionBlock: DKKeyframeAnimationFunctionBlock) {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let animationCluster = self.animations.first
             if let animation = animationCluster?.last {
@@ -944,7 +944,7 @@ public class DKChainableAnimationKit: NSObject {
 
     // MARK: - Animation Action
 
-    private func addAnimationCalculationAction(action: AnimationCalculationAction) {
+    internal func addAnimationCalculationAction(action: AnimationCalculationAction) {
         if var actions = self.animationCalculationActions.last as [AnimationCalculationAction]? {
             actions.append(action)
             self.animationCalculationActions.removeLast()
@@ -952,7 +952,7 @@ public class DKChainableAnimationKit: NSObject {
         }
     }
 
-    private func addAnimationCompletionAction(action: AnimationCompletionAction) {
+    internal func addAnimationCompletionAction(action: AnimationCompletionAction) {
         if var actions = self.animationCompletionActions.last as [AnimationCompletionAction]? {
             actions.append(action)
             self.animationCompletionActions.removeLast()
@@ -960,7 +960,7 @@ public class DKChainableAnimationKit: NSObject {
         }
     }
 
-    private func addAnimationFromCalculationBlock(animation: DKKeyFrameAnimation) {
+    internal func addAnimationFromCalculationBlock(animation: DKKeyFrameAnimation) {
         if var animationCluster = self.animations.first {
             animationCluster.append(animation)
             self.animations.removeAtIndex(0)
@@ -970,25 +970,25 @@ public class DKChainableAnimationKit: NSObject {
 
     // MARK: - Basic Animation Helper
 
-    private func basicAnimationGroup() -> CAAnimationGroup {
+    internal func basicAnimationGroup() -> CAAnimationGroup {
         return CAAnimationGroup()
     }
     
-    private func basicAnimationForKeyPath(keyPath: String) -> DKKeyFrameAnimation {
+    internal func basicAnimationForKeyPath(keyPath: String) -> DKKeyFrameAnimation {
         let animation = DKKeyFrameAnimation(keyPath: keyPath)
         animation.repeatCount = 0
         animation.autoreverses = false
         return animation
     }
 
-    private func newPositionFrom(#newOrigin: CGPoint) -> CGPoint {
+    internal func newPositionFrom(#newOrigin: CGPoint) -> CGPoint {
         let anchor = self.view.layer.anchorPoint
         let size = self.view.bounds.size
         let newPosition = CGPoint(x: newOrigin.x + anchor.x * size.width, y: newOrigin.y + anchor.y * size.height)
         return newPosition
     }
 
-    private func newPositionFrom(#newCenter: CGPoint) -> CGPoint {
+    internal func newPositionFrom(#newCenter: CGPoint) -> CGPoint {
         let anchor = self.view.layer.anchorPoint
         let size = self.view.bounds.size
         let newPosition = CGPoint(x: newCenter.x + (anchor.x - 0.5) * size.width, y: newCenter.y + (anchor.y - 0.5) * size.height)
