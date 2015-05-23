@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18505BB21B10395C00927905 /* DKChainableAnimationKit+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18505BB11B10395C00927905 /* DKChainableAnimationKit+Transform.swift */; };
-		188C676C1B08B99E00323C03 /* DKKeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C676A1B08B99E00323C03 /* DKKeyframeAnimationFunction.swift */; };
-		188C676D1B08B99E00323C03 /* UIView+AnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C676B1B08B99E00323C03 /* UIView+AnimationKit.swift */; };
-		188C676F1B08B9A400323C03 /* DKKeyFrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C676E1B08B9A400323C03 /* DKKeyFrameAnimation.swift */; };
-		188C67711B08B9B000323C03 /* DKChainaleAnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C67701B08B9B000323C03 /* DKChainaleAnimationKit.swift */; };
 		18CEB5C21B059B0300B6ACCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEB5C11B059B0300B6ACCB /* AppDelegate.swift */; };
 		18CEB5C41B059B0300B6ACCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEB5C31B059B0300B6ACCB /* ViewController.swift */; };
 		18CEB5C71B059B0300B6ACCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CEB5C51B059B0300B6ACCB /* Main.storyboard */; };
@@ -31,11 +26,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18505BB11B10395C00927905 /* DKChainableAnimationKit+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DKChainableAnimationKit+Transform.swift"; path = "Classes/DKChainableAnimationKit+Transform.swift"; sourceTree = SOURCE_ROOT; };
-		188C676A1B08B99E00323C03 /* DKKeyframeAnimationFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DKKeyframeAnimationFunction.swift; path = Classes/DKKeyframeAnimationFunction.swift; sourceTree = SOURCE_ROOT; };
-		188C676B1B08B99E00323C03 /* UIView+AnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+AnimationKit.swift"; path = "Classes/UIView+AnimationKit.swift"; sourceTree = SOURCE_ROOT; };
-		188C676E1B08B9A400323C03 /* DKKeyFrameAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DKKeyFrameAnimation.swift; path = Classes/DKKeyFrameAnimation.swift; sourceTree = SOURCE_ROOT; };
-		188C67701B08B9B000323C03 /* DKChainaleAnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DKChainaleAnimationKit.swift; path = Classes/DKChainaleAnimationKit.swift; sourceTree = SOURCE_ROOT; };
 		18CEB5BC1B059B0300B6ACCB /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CEB5C01B059B0300B6ACCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18CEB5C11B059B0300B6ACCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +77,6 @@
 		18CEB5BE1B059B0300B6ACCB /* iOS Example */ = {
 			isa = PBXGroup;
 			children = (
-				18CEB5EA1B059B5700B6ACCB /* Classes */,
 				18CEB5C11B059B0300B6ACCB /* AppDelegate.swift */,
 				18CEB5C31B059B0300B6ACCB /* ViewController.swift */,
 				18CEB5C51B059B0300B6ACCB /* Main.storyboard */,
@@ -122,18 +111,6 @@
 				18CEB5D61B059B0300B6ACCB /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		18CEB5EA1B059B5700B6ACCB /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				188C67701B08B9B000323C03 /* DKChainaleAnimationKit.swift */,
-				188C676E1B08B9A400323C03 /* DKKeyFrameAnimation.swift */,
-				18505BB11B10395C00927905 /* DKChainableAnimationKit+Transform.swift */,
-				188C676A1B08B99E00323C03 /* DKKeyframeAnimationFunction.swift */,
-				188C676B1B08B99E00323C03 /* UIView+AnimationKit.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,13 +213,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				188C676D1B08B99E00323C03 /* UIView+AnimationKit.swift in Sources */,
 				18CEB5C41B059B0300B6ACCB /* ViewController.swift in Sources */,
-				188C676C1B08B99E00323C03 /* DKKeyframeAnimationFunction.swift in Sources */,
-				18505BB21B10395C00927905 /* DKChainableAnimationKit+Transform.swift in Sources */,
 				18CEB5C21B059B0300B6ACCB /* AppDelegate.swift in Sources */,
-				188C676F1B08B9A400323C03 /* DKKeyFrameAnimation.swift in Sources */,
-				188C67711B08B9B000323C03 /* DKChainaleAnimationKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
