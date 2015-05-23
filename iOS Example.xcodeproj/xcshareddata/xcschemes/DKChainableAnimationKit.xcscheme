@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "18CEB5BB1B059B0300B6ACCB"
-               BuildableName = "DKChainableAnimationKit.app"
-               BlueprintName = "DKChainableAnimationKit"
-               ReferencedContainer = "container:DKChainableAnimationKit.xcodeproj">
+               BuildableName = "iOS Example.app"
+               BlueprintName = "iOS Example"
+               ReferencedContainer = "container:iOS Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "18CEB5D01B059B0300B6ACCB"
-               BuildableName = "DKChainableAnimationKitTests.xctest"
-               BlueprintName = "DKChainableAnimationKitTests"
-               ReferencedContainer = "container:DKChainableAnimationKit.xcodeproj">
+               BuildableName = "iOS ExampleTests.xctest"
+               BlueprintName = "iOS ExampleTests"
+               ReferencedContainer = "container:iOS Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "18CEB5D01B059B0300B6ACCB"
-               BuildableName = "DKChainableAnimationKitTests.xctest"
-               BlueprintName = "DKChainableAnimationKitTests"
-               ReferencedContainer = "container:DKChainableAnimationKit.xcodeproj">
+               BuildableName = "iOS ExampleTests.xctest"
+               BlueprintName = "iOS ExampleTests"
+               ReferencedContainer = "container:iOS Example.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18CEB5BB1B059B0300B6ACCB"
-            BuildableName = "DKChainableAnimationKit.app"
-            BlueprintName = "DKChainableAnimationKit"
-            ReferencedContainer = "container:DKChainableAnimationKit.xcodeproj">
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
+            ReferencedContainer = "container:iOS Example.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18CEB5BB1B059B0300B6ACCB"
-            BuildableName = "DKChainableAnimationKit.app"
-            BlueprintName = "DKChainableAnimationKit"
-            ReferencedContainer = "container:DKChainableAnimationKit.xcodeproj">
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
+            ReferencedContainer = "container:iOS Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18CEB5BB1B059B0300B6ACCB"
-            BuildableName = "DKChainableAnimationKit.app"
-            BlueprintName = "DKChainableAnimationKit"
-            ReferencedContainer = "container:DKChainableAnimationKit.xcodeproj">
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
+            ReferencedContainer = "container:iOS Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
