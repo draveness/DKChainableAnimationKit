@@ -13,6 +13,8 @@
 		18CEB5C91B059B0300B6ACCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CEB5C81B059B0300B6ACCB /* Images.xcassets */; };
 		18CEB5CC1B059B0300B6ACCB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CEB5CA1B059B0300B6ACCB /* LaunchScreen.xib */; };
 		18CEB5D81B059B0300B6ACCB /* DKChainableAnimationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEB5D71B059B0300B6ACCB /* DKChainableAnimationKitTests.swift */; };
+		52B89BCA1B1122B900ABD060 /* DKChainableAnimationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B89BC71B1122AC00ABD060 /* DKChainableAnimationKit.framework */; };
+		52B89BCB1B1122B900ABD060 /* DKChainableAnimationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52B89BC71B1122AC00ABD060 /* DKChainableAnimationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +25,42 @@
 			remoteGlobalIDString = 18CEB5BB1B059B0300B6ACCB;
 			remoteInfo = DKChainableAnimationKit;
 		};
+		52B89BC61B1122AC00ABD060 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52B89BC11B1122AC00ABD060 /* DKChainableAnimationKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5287D6741B1120E6006A9A84;
+			remoteInfo = DKChainableAnimationKit;
+		};
+		52B89BC81B1122AC00ABD060 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52B89BC11B1122AC00ABD060 /* DKChainableAnimationKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5287D67F1B1120E6006A9A84;
+			remoteInfo = DKChainableAnimationKitTests;
+		};
+		52B89BCC1B1122B900ABD060 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52B89BC11B1122AC00ABD060 /* DKChainableAnimationKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5287D6731B1120E6006A9A84;
+			remoteInfo = DKChainableAnimationKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		52B89BBE1B11223400ABD060 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				52B89BCB1B1122B900ABD060 /* DKChainableAnimationKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		18CEB5BC1B059B0300B6ACCB /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +73,7 @@
 		18CEB5D11B059B0300B6ACCB /* iOS ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CEB5D61B059B0300B6ACCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18CEB5D71B059B0300B6ACCB /* DKChainableAnimationKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKChainableAnimationKitTests.swift; sourceTree = "<group>"; };
+		52B89BC11B1122AC00ABD060 /* DKChainableAnimationKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = DKChainableAnimationKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B89BCA1B1122B900ABD060 /* DKChainableAnimationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,8 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				18CEB5BE1B059B0300B6ACCB /* iOS Example */,
-				18CEB5D41B059B0300B6ACCB /* iOS Example */,
+				18CEB5D41B059B0300B6ACCB /* iOS Example Tests */,
 				18CEB5BD1B059B0300B6ACCB /* Products */,
+				52B89BC11B1122AC00ABD060 /* DKChainableAnimationKit.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,13 +135,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		18CEB5D41B059B0300B6ACCB /* iOS Example */ = {
+		18CEB5D41B059B0300B6ACCB /* iOS Example Tests */ = {
 			isa = PBXGroup;
 			children = (
 				18CEB5D71B059B0300B6ACCB /* DKChainableAnimationKitTests.swift */,
 				18CEB5D51B059B0300B6ACCB /* Supporting Files */,
 			);
-			name = "iOS Example";
 			path = "iOS Example Tests";
 			sourceTree = "<group>";
 		};
@@ -111,6 +150,15 @@
 				18CEB5D61B059B0300B6ACCB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52B89BC21B1122AC00ABD060 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52B89BC71B1122AC00ABD060 /* DKChainableAnimationKit.framework */,
+				52B89BC91B1122AC00ABD060 /* DKChainableAnimationKitTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,10 +171,12 @@
 				18CEB5B81B059B0300B6ACCB /* Sources */,
 				18CEB5B91B059B0300B6ACCB /* Frameworks */,
 				18CEB5BA1B059B0300B6ACCB /* Resources */,
+				52B89BBE1B11223400ABD060 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				52B89BCD1B1122B900ABD060 /* PBXTargetDependency */,
 			);
 			name = "iOS Example";
 			productName = DKChainableAnimationKit;
@@ -180,6 +230,12 @@
 			mainGroup = 18CEB5B31B059B0300B6ACCB;
 			productRefGroup = 18CEB5BD1B059B0300B6ACCB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 52B89BC21B1122AC00ABD060 /* Products */;
+					ProjectRef = 52B89BC11B1122AC00ABD060 /* DKChainableAnimationKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				18CEB5BB1B059B0300B6ACCB /* iOS Example */,
@@ -187,6 +243,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		52B89BC71B1122AC00ABD060 /* DKChainableAnimationKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DKChainableAnimationKit.framework;
+			remoteRef = 52B89BC61B1122AC00ABD060 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52B89BC91B1122AC00ABD060 /* DKChainableAnimationKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DKChainableAnimationKitTests.xctest;
+			remoteRef = 52B89BC81B1122AC00ABD060 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		18CEB5BA1B059B0300B6ACCB /* Resources */ = {
@@ -233,6 +306,11 @@
 			isa = PBXTargetDependency;
 			target = 18CEB5BB1B059B0300B6ACCB /* iOS Example */;
 			targetProxy = 18CEB5D21B059B0300B6ACCB /* PBXContainerItemProxy */;
+		};
+		52B89BCD1B1122B900ABD060 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DKChainableAnimationKit;
+			targetProxy = 52B89BCC1B1122B900ABD060 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -341,6 +419,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "iOS Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "iOS Example";
@@ -351,6 +433,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "iOS Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "iOS Example";

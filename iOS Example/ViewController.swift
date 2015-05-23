@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DKChainableAnimationKit
 
 class ViewController: UIViewController {
 
