@@ -11,7 +11,7 @@
 		5287D6801B1120E6006A9A84 /* DKChainableAnimationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287D6741B1120E6006A9A84 /* DKChainableAnimationKit.framework */; };
 		5287D6871B1120E6006A9A84 /* DKChainableAnimationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287D6861B1120E6006A9A84 /* DKChainableAnimationKitTests.swift */; };
 		52B89BB51B11213000ABD060 /* DKChainableAnimationKit+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89BB01B11213000ABD060 /* DKChainableAnimationKit+Transform.swift */; };
-		52B89BB61B11213000ABD060 /* DKChainaleAnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89BB11B11213000ABD060 /* DKChainaleAnimationKit.swift */; };
+		52B89BB61B11213000ABD060 /* DKChainableAnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89BB11B11213000ABD060 /* DKChainableAnimationKit.swift */; };
 		52B89BB71B11213000ABD060 /* DKKeyFrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89BB21B11213000ABD060 /* DKKeyFrameAnimation.swift */; };
 		52B89BB81B11213000ABD060 /* DKKeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89BB31B11213000ABD060 /* DKKeyframeAnimationFunction.swift */; };
 		52B89BB91B11213000ABD060 /* UIView+AnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89BB41B11213000ABD060 /* UIView+AnimationKit.swift */; };
@@ -35,7 +35,7 @@
 		5287D6851B1120E6006A9A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5287D6861B1120E6006A9A84 /* DKChainableAnimationKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKChainableAnimationKitTests.swift; sourceTree = "<group>"; };
 		52B89BB01B11213000ABD060 /* DKChainableAnimationKit+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Transform.swift"; sourceTree = "<group>"; };
-		52B89BB11B11213000ABD060 /* DKChainaleAnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKChainaleAnimationKit.swift; sourceTree = "<group>"; };
+		52B89BB11B11213000ABD060 /* DKChainableAnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKChainableAnimationKit.swift; sourceTree = "<group>"; };
 		52B89BB21B11213000ABD060 /* DKKeyFrameAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKKeyFrameAnimation.swift; sourceTree = "<group>"; };
 		52B89BB31B11213000ABD060 /* DKKeyframeAnimationFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKKeyframeAnimationFunction.swift; sourceTree = "<group>"; };
 		52B89BB41B11213000ABD060 /* UIView+AnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationKit.swift"; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				52B89BB01B11213000ABD060 /* DKChainableAnimationKit+Transform.swift */,
-				52B89BB11B11213000ABD060 /* DKChainaleAnimationKit.swift */,
+				52B89BB11B11213000ABD060 /* DKChainableAnimationKit.swift */,
 				52B89BB21B11213000ABD060 /* DKKeyFrameAnimation.swift */,
 				52B89BB31B11213000ABD060 /* DKKeyframeAnimationFunction.swift */,
 				52B89BB41B11213000ABD060 /* UIView+AnimationKit.swift */,
@@ -233,7 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B89BB51B11213000ABD060 /* DKChainableAnimationKit+Transform.swift in Sources */,
-				52B89BB61B11213000ABD060 /* DKChainaleAnimationKit.swift in Sources */,
+				52B89BB61B11213000ABD060 /* DKChainableAnimationKit.swift in Sources */,
 				52B89BB71B11213000ABD060 /* DKKeyFrameAnimation.swift in Sources */,
 				52B89BB91B11213000ABD060 /* UIView+AnimationKit.swift in Sources */,
 				52B89BB81B11213000ABD060 /* DKKeyframeAnimationFunction.swift in Sources */,
