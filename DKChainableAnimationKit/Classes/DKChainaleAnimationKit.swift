@@ -19,7 +19,7 @@ public class DKChainableAnimationKit: NSObject {
     internal var animationCompletionActions: [[AnimationCompletionAction]]!
     internal var animationGroups: NSMutableArray!
     internal var animations: [[DKKeyFrameAnimation]]!
-    internal var animationCompletion: (Void -> Void)?
+    public var animationCompletion: (Void -> Void)?
 
     // MARK: - Initialize
 
