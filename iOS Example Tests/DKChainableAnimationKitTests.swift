@@ -2,8 +2,8 @@
 //  DKChainableAnimationKitTests.swift
 //  DKChainableAnimationKitTests
 //
-//  Created by Mathias Nagler on 23.05.15.
-//  Copyright (c) 2015 DeltaX. All rights reserved.
+//  Created by apple on 15/5/15.
+//  Copyright (c) 2015年 DeltaX. All rights reserved.
 //
 
 import UIKit

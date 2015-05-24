@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5287D6731B1120E6006A9A84"
-               BuildableName = "DKChainableAnimationKit.framework"
-               BlueprintName = "DKChainableAnimationKit"
-               ReferencedContainer = "container:DKChainableAnimationKit.xcodeproj">
+               BlueprintIdentifier = "18CEB5BB1B059B0300B6ACCB"
+               BuildableName = "iOS Example.app"
+               BlueprintName = "iOS Example"
+               ReferencedContainer = "container:iOS Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5287D67E1B1120E6006A9A84"
-               BuildableName = "DKChainableAnimationKitTests.xctest"
-               BlueprintName = "DKChainableAnimationKitTests"
-               ReferencedContainer = "container:DKChainableAnimationKit.xcodeproj">
+               BlueprintIdentifier = "18CEB5D01B059B0300B6ACCB"
+               BuildableName = "iOS ExampleTests.xctest"
+               BlueprintName = "iOS ExampleTests"
+               ReferencedContainer = "container:iOS Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5287D67E1B1120E6006A9A84"
-               BuildableName = "DKChainableAnimationKitTests.xctest"
-               BlueprintName = "DKChainableAnimationKitTests"
-               ReferencedContainer = "container:DKChainableAnimationKit.xcodeproj">
+               BlueprintIdentifier = "18CEB5D01B059B0300B6ACCB"
+               BuildableName = "iOS ExampleTests.xctest"
+               BlueprintName = "iOS ExampleTests"
+               ReferencedContainer = "container:iOS Example.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5287D6731B1120E6006A9A84"
-            BuildableName = "DKChainableAnimationKit.framework"
-            BlueprintName = "DKChainableAnimationKit"
-            ReferencedContainer = "container:DKChainableAnimationKit.xcodeproj">
+            BlueprintIdentifier = "18CEB5BB1B059B0300B6ACCB"
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
+            ReferencedContainer = "container:iOS Example.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -72,15 +72,16 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5287D6731B1120E6006A9A84"
-            BuildableName = "DKChainableAnimationKit.framework"
-            BlueprintName = "DKChainableAnimationKit"
-            ReferencedContainer = "container:DKChainableAnimationKit.xcodeproj">
+            BlueprintIdentifier = "18CEB5BB1B059B0300B6ACCB"
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
+            ReferencedContainer = "container:iOS Example.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -90,15 +91,16 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5287D6731B1120E6006A9A84"
-            BuildableName = "DKChainableAnimationKit.framework"
-            BlueprintName = "DKChainableAnimationKit"
-            ReferencedContainer = "container:DKChainableAnimationKit.xcodeproj">
+            BlueprintIdentifier = "18CEB5BB1B059B0300B6ACCB"
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
+            ReferencedContainer = "container:iOS Example.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

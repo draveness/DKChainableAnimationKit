@@ -7,144 +7,146 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18505BB21B10395C00927905 /* DKChainableAnimationKit+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18505BB11B10395C00927905 /* DKChainableAnimationKit+Transform.swift */; };
-		188C676C1B08B99E00323C03 /* DKKeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C676A1B08B99E00323C03 /* DKKeyframeAnimationFunction.swift */; };
-		188C676D1B08B99E00323C03 /* UIView+AnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C676B1B08B99E00323C03 /* UIView+AnimationKit.swift */; };
-		188C676F1B08B9A400323C03 /* DKKeyFrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C676E1B08B9A400323C03 /* DKKeyFrameAnimation.swift */; };
-		188C67711B08B9B000323C03 /* DKChainaleAnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C67701B08B9B000323C03 /* DKChainaleAnimationKit.swift */; };
-		18CEB5C21B059B0300B6ACCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEB5C11B059B0300B6ACCB /* AppDelegate.swift */; };
-		18CEB5C41B059B0300B6ACCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEB5C31B059B0300B6ACCB /* ViewController.swift */; };
-		18CEB5C71B059B0300B6ACCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CEB5C51B059B0300B6ACCB /* Main.storyboard */; };
-		18CEB5C91B059B0300B6ACCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CEB5C81B059B0300B6ACCB /* Images.xcassets */; };
-		18CEB5CC1B059B0300B6ACCB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CEB5CA1B059B0300B6ACCB /* LaunchScreen.xib */; };
-		18CEB5D81B059B0300B6ACCB /* DKChainableAnimationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEB5D71B059B0300B6ACCB /* DKChainableAnimationKitTests.swift */; };
+		5287D67A1B1120E6006A9A84 /* DKChainableAnimationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5287D6791B1120E6006A9A84 /* DKChainableAnimationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5287D6801B1120E6006A9A84 /* DKChainableAnimationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287D6741B1120E6006A9A84 /* DKChainableAnimationKit.framework */; };
+		5287D6871B1120E6006A9A84 /* DKChainableAnimationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287D6861B1120E6006A9A84 /* DKChainableAnimationKitTests.swift */; };
+		52B89BB51B11213000ABD060 /* DKChainableAnimationKit+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89BB01B11213000ABD060 /* DKChainableAnimationKit+Transform.swift */; };
+		52B89BB61B11213000ABD060 /* DKChainableAnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89BB11B11213000ABD060 /* DKChainableAnimationKit.swift */; };
+		52B89BB71B11213000ABD060 /* DKKeyFrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89BB21B11213000ABD060 /* DKKeyFrameAnimation.swift */; };
+		52B89BB81B11213000ABD060 /* DKKeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89BB31B11213000ABD060 /* DKKeyframeAnimationFunction.swift */; };
+		52B89BB91B11213000ABD060 /* UIView+AnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89BB41B11213000ABD060 /* UIView+AnimationKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		18CEB5D21B059B0300B6ACCB /* PBXContainerItemProxy */ = {
+		5287D6811B1120E6006A9A84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 18CEB5B41B059B0300B6ACCB /* Project object */;
+			containerPortal = 5287D66B1B1120E6006A9A84 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 18CEB5BB1B059B0300B6ACCB;
+			remoteGlobalIDString = 5287D6731B1120E6006A9A84;
 			remoteInfo = DKChainableAnimationKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18505BB11B10395C00927905 /* DKChainableAnimationKit+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DKChainableAnimationKit+Transform.swift"; path = "Classes/DKChainableAnimationKit+Transform.swift"; sourceTree = SOURCE_ROOT; };
-		188C676A1B08B99E00323C03 /* DKKeyframeAnimationFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DKKeyframeAnimationFunction.swift; path = Classes/DKKeyframeAnimationFunction.swift; sourceTree = SOURCE_ROOT; };
-		188C676B1B08B99E00323C03 /* UIView+AnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+AnimationKit.swift"; path = "Classes/UIView+AnimationKit.swift"; sourceTree = SOURCE_ROOT; };
-		188C676E1B08B9A400323C03 /* DKKeyFrameAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DKKeyFrameAnimation.swift; path = Classes/DKKeyFrameAnimation.swift; sourceTree = SOURCE_ROOT; };
-		188C67701B08B9B000323C03 /* DKChainaleAnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DKChainaleAnimationKit.swift; path = Classes/DKChainaleAnimationKit.swift; sourceTree = SOURCE_ROOT; };
-		18CEB5BC1B059B0300B6ACCB /* DKChainableAnimationKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKChainableAnimationKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		18CEB5C01B059B0300B6ACCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18CEB5C11B059B0300B6ACCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18CEB5C31B059B0300B6ACCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18CEB5C61B059B0300B6ACCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		18CEB5C81B059B0300B6ACCB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		18CEB5CB1B059B0300B6ACCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		18CEB5D11B059B0300B6ACCB /* DKChainableAnimationKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKChainableAnimationKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18CEB5D61B059B0300B6ACCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18CEB5D71B059B0300B6ACCB /* DKChainableAnimationKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKChainableAnimationKitTests.swift; sourceTree = "<group>"; };
+		5287D6741B1120E6006A9A84 /* DKChainableAnimationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DKChainableAnimationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5287D6781B1120E6006A9A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5287D6791B1120E6006A9A84 /* DKChainableAnimationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKChainableAnimationKit.h; sourceTree = "<group>"; };
+		5287D67F1B1120E6006A9A84 /* DKChainableAnimationKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKChainableAnimationKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5287D6851B1120E6006A9A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5287D6861B1120E6006A9A84 /* DKChainableAnimationKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKChainableAnimationKitTests.swift; sourceTree = "<group>"; };
+		52B89BB01B11213000ABD060 /* DKChainableAnimationKit+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Transform.swift"; sourceTree = "<group>"; };
+		52B89BB11B11213000ABD060 /* DKChainableAnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKChainableAnimationKit.swift; sourceTree = "<group>"; };
+		52B89BB21B11213000ABD060 /* DKKeyFrameAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKKeyFrameAnimation.swift; sourceTree = "<group>"; };
+		52B89BB31B11213000ABD060 /* DKKeyframeAnimationFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKKeyframeAnimationFunction.swift; sourceTree = "<group>"; };
+		52B89BB41B11213000ABD060 /* UIView+AnimationKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		18CEB5B91B059B0300B6ACCB /* Frameworks */ = {
+		5287D6701B1120E6006A9A84 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		18CEB5CE1B059B0300B6ACCB /* Frameworks */ = {
+		5287D67C1B1120E6006A9A84 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5287D6801B1120E6006A9A84 /* DKChainableAnimationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18CEB5B31B059B0300B6ACCB = {
+		5287D66A1B1120E6006A9A84 = {
 			isa = PBXGroup;
 			children = (
-				18CEB5BE1B059B0300B6ACCB /* DKChainableAnimationKit */,
-				18CEB5D41B059B0300B6ACCB /* DKChainableAnimationKitTests */,
-				18CEB5BD1B059B0300B6ACCB /* Products */,
+				5287D6761B1120E6006A9A84 /* DKChainableAnimationKit */,
+				5287D6831B1120E6006A9A84 /* DKChainableAnimationKitTests */,
+				5287D6751B1120E6006A9A84 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		18CEB5BD1B059B0300B6ACCB /* Products */ = {
+		5287D6751B1120E6006A9A84 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18CEB5BC1B059B0300B6ACCB /* DKChainableAnimationKit.app */,
-				18CEB5D11B059B0300B6ACCB /* DKChainableAnimationKitTests.xctest */,
+				5287D6741B1120E6006A9A84 /* DKChainableAnimationKit.framework */,
+				5287D67F1B1120E6006A9A84 /* DKChainableAnimationKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		18CEB5BE1B059B0300B6ACCB /* DKChainableAnimationKit */ = {
+		5287D6761B1120E6006A9A84 /* DKChainableAnimationKit */ = {
 			isa = PBXGroup;
 			children = (
-				18CEB5EA1B059B5700B6ACCB /* Classes */,
-				18CEB5C11B059B0300B6ACCB /* AppDelegate.swift */,
-				18CEB5C31B059B0300B6ACCB /* ViewController.swift */,
-				18CEB5C51B059B0300B6ACCB /* Main.storyboard */,
-				18CEB5C81B059B0300B6ACCB /* Images.xcassets */,
-				18CEB5CA1B059B0300B6ACCB /* LaunchScreen.xib */,
-				18CEB5BF1B059B0300B6ACCB /* Supporting Files */,
+				52B89BAF1B11213000ABD060 /* Classes */,
+				5287D6791B1120E6006A9A84 /* DKChainableAnimationKit.h */,
+				5287D6771B1120E6006A9A84 /* Supporting Files */,
 			);
 			path = DKChainableAnimationKit;
 			sourceTree = "<group>";
 		};
-		18CEB5BF1B059B0300B6ACCB /* Supporting Files */ = {
+		5287D6771B1120E6006A9A84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				18CEB5C01B059B0300B6ACCB /* Info.plist */,
+				5287D6781B1120E6006A9A84 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		18CEB5D41B059B0300B6ACCB /* DKChainableAnimationKitTests */ = {
+		5287D6831B1120E6006A9A84 /* DKChainableAnimationKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				18CEB5D71B059B0300B6ACCB /* DKChainableAnimationKitTests.swift */,
-				18CEB5D51B059B0300B6ACCB /* Supporting Files */,
+				5287D6861B1120E6006A9A84 /* DKChainableAnimationKitTests.swift */,
+				5287D6841B1120E6006A9A84 /* Supporting Files */,
 			);
 			path = DKChainableAnimationKitTests;
 			sourceTree = "<group>";
 		};
-		18CEB5D51B059B0300B6ACCB /* Supporting Files */ = {
+		5287D6841B1120E6006A9A84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				18CEB5D61B059B0300B6ACCB /* Info.plist */,
+				5287D6851B1120E6006A9A84 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		18CEB5EA1B059B5700B6ACCB /* Classes */ = {
+		52B89BAF1B11213000ABD060 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				188C67701B08B9B000323C03 /* DKChainaleAnimationKit.swift */,
-				188C676E1B08B9A400323C03 /* DKKeyFrameAnimation.swift */,
-				18505BB11B10395C00927905 /* DKChainableAnimationKit+Transform.swift */,
-				188C676A1B08B99E00323C03 /* DKKeyframeAnimationFunction.swift */,
-				188C676B1B08B99E00323C03 /* UIView+AnimationKit.swift */,
+				52B89BB01B11213000ABD060 /* DKChainableAnimationKit+Transform.swift */,
+				52B89BB11B11213000ABD060 /* DKChainableAnimationKit.swift */,
+				52B89BB21B11213000ABD060 /* DKKeyFrameAnimation.swift */,
+				52B89BB31B11213000ABD060 /* DKKeyframeAnimationFunction.swift */,
+				52B89BB41B11213000ABD060 /* UIView+AnimationKit.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		5287D6711B1120E6006A9A84 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5287D67A1B1120E6006A9A84 /* DKChainableAnimationKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		18CEB5BB1B059B0300B6ACCB /* DKChainableAnimationKit */ = {
+		5287D6731B1120E6006A9A84 /* DKChainableAnimationKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18CEB5DB1B059B0300B6ACCB /* Build configuration list for PBXNativeTarget "DKChainableAnimationKit" */;
+			buildConfigurationList = 5287D68A1B1120E6006A9A84 /* Build configuration list for PBXNativeTarget "DKChainableAnimationKit" */;
 			buildPhases = (
-				18CEB5B81B059B0300B6ACCB /* Sources */,
-				18CEB5B91B059B0300B6ACCB /* Frameworks */,
-				18CEB5BA1B059B0300B6ACCB /* Resources */,
+				5287D66F1B1120E6006A9A84 /* Sources */,
+				5287D6701B1120E6006A9A84 /* Frameworks */,
+				5287D6711B1120E6006A9A84 /* Headers */,
+				5287D6721B1120E6006A9A84 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -152,76 +154,71 @@
 			);
 			name = DKChainableAnimationKit;
 			productName = DKChainableAnimationKit;
-			productReference = 18CEB5BC1B059B0300B6ACCB /* DKChainableAnimationKit.app */;
-			productType = "com.apple.product-type.application";
+			productReference = 5287D6741B1120E6006A9A84 /* DKChainableAnimationKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		18CEB5D01B059B0300B6ACCB /* DKChainableAnimationKitTests */ = {
+		5287D67E1B1120E6006A9A84 /* DKChainableAnimationKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18CEB5DE1B059B0300B6ACCB /* Build configuration list for PBXNativeTarget "DKChainableAnimationKitTests" */;
+			buildConfigurationList = 5287D68D1B1120E6006A9A84 /* Build configuration list for PBXNativeTarget "DKChainableAnimationKitTests" */;
 			buildPhases = (
-				18CEB5CD1B059B0300B6ACCB /* Sources */,
-				18CEB5CE1B059B0300B6ACCB /* Frameworks */,
-				18CEB5CF1B059B0300B6ACCB /* Resources */,
+				5287D67B1B1120E6006A9A84 /* Sources */,
+				5287D67C1B1120E6006A9A84 /* Frameworks */,
+				5287D67D1B1120E6006A9A84 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				18CEB5D31B059B0300B6ACCB /* PBXTargetDependency */,
+				5287D6821B1120E6006A9A84 /* PBXTargetDependency */,
 			);
 			name = DKChainableAnimationKitTests;
 			productName = DKChainableAnimationKitTests;
-			productReference = 18CEB5D11B059B0300B6ACCB /* DKChainableAnimationKitTests.xctest */;
+			productReference = 5287D67F1B1120E6006A9A84 /* DKChainableAnimationKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		18CEB5B41B059B0300B6ACCB /* Project object */ = {
+		5287D66B1B1120E6006A9A84 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = DeltaX;
 				TargetAttributes = {
-					18CEB5BB1B059B0300B6ACCB = {
-						CreatedOnToolsVersion = 6.3;
+					5287D6731B1120E6006A9A84 = {
+						CreatedOnToolsVersion = 6.3.2;
 					};
-					18CEB5D01B059B0300B6ACCB = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = 18CEB5BB1B059B0300B6ACCB;
+					5287D67E1B1120E6006A9A84 = {
+						CreatedOnToolsVersion = 6.3.2;
 					};
 				};
 			};
-			buildConfigurationList = 18CEB5B71B059B0300B6ACCB /* Build configuration list for PBXProject "DKChainableAnimationKit" */;
+			buildConfigurationList = 5287D66E1B1120E6006A9A84 /* Build configuration list for PBXProject "DKChainableAnimationKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = 18CEB5B31B059B0300B6ACCB;
-			productRefGroup = 18CEB5BD1B059B0300B6ACCB /* Products */;
+			mainGroup = 5287D66A1B1120E6006A9A84;
+			productRefGroup = 5287D6751B1120E6006A9A84 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18CEB5BB1B059B0300B6ACCB /* DKChainableAnimationKit */,
-				18CEB5D01B059B0300B6ACCB /* DKChainableAnimationKitTests */,
+				5287D6731B1120E6006A9A84 /* DKChainableAnimationKit */,
+				5287D67E1B1120E6006A9A84 /* DKChainableAnimationKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		18CEB5BA1B059B0300B6ACCB /* Resources */ = {
+		5287D6721B1120E6006A9A84 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CEB5C71B059B0300B6ACCB /* Main.storyboard in Resources */,
-				18CEB5CC1B059B0300B6ACCB /* LaunchScreen.xib in Resources */,
-				18CEB5C91B059B0300B6ACCB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		18CEB5CF1B059B0300B6ACCB /* Resources */ = {
+		5287D67D1B1120E6006A9A84 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -231,59 +228,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		18CEB5B81B059B0300B6ACCB /* Sources */ = {
+		5287D66F1B1120E6006A9A84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				188C676D1B08B99E00323C03 /* UIView+AnimationKit.swift in Sources */,
-				18CEB5C41B059B0300B6ACCB /* ViewController.swift in Sources */,
-				188C676C1B08B99E00323C03 /* DKKeyframeAnimationFunction.swift in Sources */,
-				18505BB21B10395C00927905 /* DKChainableAnimationKit+Transform.swift in Sources */,
-				18CEB5C21B059B0300B6ACCB /* AppDelegate.swift in Sources */,
-				188C676F1B08B9A400323C03 /* DKKeyFrameAnimation.swift in Sources */,
-				188C67711B08B9B000323C03 /* DKChainaleAnimationKit.swift in Sources */,
+				52B89BB51B11213000ABD060 /* DKChainableAnimationKit+Transform.swift in Sources */,
+				52B89BB61B11213000ABD060 /* DKChainableAnimationKit.swift in Sources */,
+				52B89BB71B11213000ABD060 /* DKKeyFrameAnimation.swift in Sources */,
+				52B89BB91B11213000ABD060 /* UIView+AnimationKit.swift in Sources */,
+				52B89BB81B11213000ABD060 /* DKKeyframeAnimationFunction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		18CEB5CD1B059B0300B6ACCB /* Sources */ = {
+		5287D67B1B1120E6006A9A84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CEB5D81B059B0300B6ACCB /* DKChainableAnimationKitTests.swift in Sources */,
+				5287D6871B1120E6006A9A84 /* DKChainableAnimationKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		18CEB5D31B059B0300B6ACCB /* PBXTargetDependency */ = {
+		5287D6821B1120E6006A9A84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 18CEB5BB1B059B0300B6ACCB /* DKChainableAnimationKit */;
-			targetProxy = 18CEB5D21B059B0300B6ACCB /* PBXContainerItemProxy */;
+			target = 5287D6731B1120E6006A9A84 /* DKChainableAnimationKit */;
+			targetProxy = 5287D6811B1120E6006A9A84 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		18CEB5C51B059B0300B6ACCB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18CEB5C61B059B0300B6ACCB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		18CEB5CA1B059B0300B6ACCB /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18CEB5CB1B059B0300B6ACCB /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		18CEB5D91B059B0300B6ACCB /* Debug */ = {
+		5287D6881B1120E6006A9A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -302,6 +278,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -319,15 +296,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		18CEB5DA1B059B0300B6ACCB /* Release */ = {
+		5287D6891B1120E6006A9A84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -346,6 +326,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -357,37 +338,49 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		18CEB5DC1B059B0300B6ACCB /* Debug */ = {
+		5287D68B1B1120E6006A9A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DKChainableAnimationKit/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		18CEB5DD1B059B0300B6ACCB /* Release */ = {
+		5287D68C1B1120E6006A9A84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DKChainableAnimationKit/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		18CEB5DF1B059B0300B6ACCB /* Debug */ = {
+		5287D68E1B1120E6006A9A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -399,14 +392,12 @@
 				INFOPLIST_FILE = DKChainableAnimationKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DKChainableAnimationKit.app/DKChainableAnimationKit";
 			};
 			name = Debug;
 		};
-		18CEB5E01B059B0300B6ACCB /* Release */ = {
+		5287D68F1B1120E6006A9A84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -414,41 +405,40 @@
 				INFOPLIST_FILE = DKChainableAnimationKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DKChainableAnimationKit.app/DKChainableAnimationKit";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18CEB5B71B059B0300B6ACCB /* Build configuration list for PBXProject "DKChainableAnimationKit" */ = {
+		5287D66E1B1120E6006A9A84 /* Build configuration list for PBXProject "DKChainableAnimationKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				18CEB5D91B059B0300B6ACCB /* Debug */,
-				18CEB5DA1B059B0300B6ACCB /* Release */,
+				5287D6881B1120E6006A9A84 /* Debug */,
+				5287D6891B1120E6006A9A84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18CEB5DB1B059B0300B6ACCB /* Build configuration list for PBXNativeTarget "DKChainableAnimationKit" */ = {
+		5287D68A1B1120E6006A9A84 /* Build configuration list for PBXNativeTarget "DKChainableAnimationKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				18CEB5DC1B059B0300B6ACCB /* Debug */,
-				18CEB5DD1B059B0300B6ACCB /* Release */,
+				5287D68B1B1120E6006A9A84 /* Debug */,
+				5287D68C1B1120E6006A9A84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18CEB5DE1B059B0300B6ACCB /* Build configuration list for PBXNativeTarget "DKChainableAnimationKitTests" */ = {
+		5287D68D1B1120E6006A9A84 /* Build configuration list for PBXNativeTarget "DKChainableAnimationKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				18CEB5DF1B059B0300B6ACCB /* Debug */,
-				18CEB5E01B059B0300B6ACCB /* Release */,
+				5287D68E1B1120E6006A9A84 /* Debug */,
+				5287D68F1B1120E6006A9A84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 18CEB5B41B059B0300B6ACCB /* Project object */;
+	rootObject = 5287D66B1B1120E6006A9A84 /* Project object */;
 }
