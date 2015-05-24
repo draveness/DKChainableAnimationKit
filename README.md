@@ -11,6 +11,7 @@ This is a swift port for JHChainableAnimations by [jhurray](https://github.com/j
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 <table>
 <tr>
@@ -57,6 +58,15 @@ view.animation.makeScale(2.0).spring.animate(1.0)
 use_frameworks!
 
 pod "DKChainableAnimationKit", "~> 1.3.0"
+```
+
+# Installation with Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a depency manager for Objectiv-C and Swift. 
+
+## Cartfile
+```
+github "Draveness/DKChainableAnimationKit"
 ```
 
 # Usage
