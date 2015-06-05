@@ -147,6 +147,14 @@ public class DKChainableAnimationKit: NSObject {
         return self
     }
 
+    public func makeCenterX(x: CGFloat) -> DKChainableAnimationKit {
+        return self.makeX(x - view.bounds.size.width / 2)
+    }
+
+    public func makeCenterY(y: CGFloat) -> DKChainableAnimationKit {
+        return self.makeY(y - view.bounds.size.height / 2)
+    }
+
     public func makeWidth(width: CGFloat) -> DKChainableAnimationKit {
         return self.makeSize(width, self.view.layer.frame.size.height)
     }
