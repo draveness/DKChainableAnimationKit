@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class DKChainableAnimationKit: NSObject {
+public class DKChainableAnimationKit {
 
     weak var view: UIView!
 
@@ -23,8 +23,7 @@ public class DKChainableAnimationKit: NSObject {
 
     // MARK: - Initialize
 
-    override init() {
-        super.init()
+    init() {
         self.setup()
     }
 
@@ -857,6 +856,10 @@ public class DKChainableAnimationKit: NSObject {
         return self
     }
 
+    public func animate(duration: CGFloat) -> DKChainableAnimationKit {
+        return animate(NSTimeInterval(duration))
+    }
+
     public func thenAfter(after: NSTimeInterval) -> DKChainableAnimationKit {
         if let group = self.animationGroups.lastObject as? CAAnimationGroup {
             group.duration = after
@@ -869,13 +872,21 @@ public class DKChainableAnimationKit: NSObject {
         return self
     }
 
-    public func animateWithCompletion(duration: NSTimeInterval, completion: Void -> Void) -> DKChainableAnimationKit {
+    public func thenAfter(after: CGFloat) -> DKChainableAnimationKit {
+        return thenAfter(NSTimeInterval(after))
+    }
+
+    public func animateWithCompletion(duration: NSTimeInterval, _ completion: Void -> Void) -> DKChainableAnimationKit {
         if let group = self.animationGroups.lastObject as? CAAnimationGroup {
             group.duration = duration
             self.animationCompletion = completion
             self.animateChain()
         }
         return self
+    }
+
+    public func animateWithCompletion(duration: CGFloat, _ completion: Void -> Void) -> DKChainableAnimationKit {
+        return animateWithCompletion(NSTimeInterval(duration), completion)
     }
 
     private func degreesToRadians(degree: Double) -> Double {
