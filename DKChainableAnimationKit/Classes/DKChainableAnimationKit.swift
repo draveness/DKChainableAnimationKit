@@ -838,6 +838,10 @@ public class DKChainableAnimationKit {
         return self
     }
 
+    public func delay(time: CGFloat) -> DKChainableAnimationKit {
+        return delay(NSTimeInterval(time))
+    }
+
     public var seconds: DKChainableAnimationKit {
         get {
             return self
