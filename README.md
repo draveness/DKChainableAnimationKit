@@ -385,6 +385,11 @@ Animation effects does not work on path movement.
 </tr>
 </table>
 
+# To Do
+
+* Support OS X
+* Support Swift 2.0
+
 ----
 
 # Contact
