@@ -75,7 +75,7 @@ public class DKChainableAnimationKit {
         }
 
         self.addAnimationCompletionAction { (view: UIView) -> Void in
-            var bounds = CGRect(x: 0, y: 0, width: width, height: height)
+            let bounds = CGRect(x: 0, y: 0, width: width, height: height)
             view.layer.bounds = bounds
             view.bounds = bounds
         }
@@ -193,7 +193,7 @@ public class DKChainableAnimationKit {
     public func makeBorderColor(color: UIColor) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let borderColorAnimation = self.basicAnimationForKeyPath("borderColor")
-            borderColorAnimation.fromValue = UIColor(CGColor: view.layer.borderColor)
+            borderColorAnimation.fromValue = UIColor(CGColor: view.layer.borderColor!)
             borderColorAnimation.toValue = color
             self.addAnimationFromCalculationBlock(borderColorAnimation)
         }
@@ -290,7 +290,7 @@ public class DKChainableAnimationKit {
 
     // MARK: - Anchor
 
-    private func makeAnchorFrom(#x: CGFloat, y: CGFloat) {
+    private func makeAnchorFrom(x x: CGFloat, y: CGFloat) {
         let anchorPoint = CGPoint(x: x, y: y)
         func action(view: UIView) {
             if CGPointEqualToPoint(anchorPoint, view.layer.anchorPoint) {
@@ -1004,14 +1004,14 @@ public class DKChainableAnimationKit {
         return animation
     }
 
-    internal func newPositionFrom(#newOrigin: CGPoint) -> CGPoint {
+    internal func newPositionFrom(newOrigin newOrigin: CGPoint) -> CGPoint {
         let anchor = self.view.layer.anchorPoint
         let size = self.view.bounds.size
         let newPosition = CGPoint(x: newOrigin.x + anchor.x * size.width, y: newOrigin.y + anchor.y * size.height)
         return newPosition
     }
 
-    internal func newPositionFrom(#newCenter: CGPoint) -> CGPoint {
+    internal func newPositionFrom(newCenter newCenter: CGPoint) -> CGPoint {
         let anchor = self.view.layer.anchorPoint
         let size = self.view.bounds.size
         let newPosition = CGPoint(x: newCenter.x + (anchor.x - 0.5) * size.width, y: newCenter.y + (anchor.y - 0.5) * size.height)
