@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18C4E6981B2A7B5F00BE027A /* DKChainableAnimationKit+Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4E6971B2A7B5F00BE027A /* DKChainableAnimationKit+Effects.swift */; };
 		5287D67A1B1120E6006A9A84 /* DKChainableAnimationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5287D6791B1120E6006A9A84 /* DKChainableAnimationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5287D6801B1120E6006A9A84 /* DKChainableAnimationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287D6741B1120E6006A9A84 /* DKChainableAnimationKit.framework */; };
 		5287D6871B1120E6006A9A84 /* DKChainableAnimationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287D6861B1120E6006A9A84 /* DKChainableAnimationKitTests.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18C4E6971B2A7B5F00BE027A /* DKChainableAnimationKit+Effects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Effects.swift"; sourceTree = "<group>"; };
 		5287D6741B1120E6006A9A84 /* DKChainableAnimationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DKChainableAnimationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5287D6781B1120E6006A9A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5287D6791B1120E6006A9A84 /* DKChainableAnimationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKChainableAnimationKit.h; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				52B89BB01B11213000ABD060 /* DKChainableAnimationKit+Transform.swift */,
+				18C4E6971B2A7B5F00BE027A /* DKChainableAnimationKit+Effects.swift */,
 				52B89BB11B11213000ABD060 /* DKChainableAnimationKit.swift */,
 				52B89BB21B11213000ABD060 /* DKKeyFrameAnimation.swift */,
 				52B89BB31B11213000ABD060 /* DKKeyframeAnimationFunction.swift */,
@@ -234,6 +237,7 @@
 			files = (
 				52B89BB51B11213000ABD060 /* DKChainableAnimationKit+Transform.swift in Sources */,
 				52B89BB61B11213000ABD060 /* DKChainableAnimationKit.swift in Sources */,
+				18C4E6981B2A7B5F00BE027A /* DKChainableAnimationKit+Effects.swift in Sources */,
 				52B89BB71B11213000ABD060 /* DKKeyFrameAnimation.swift in Sources */,
 				52B89BB91B11213000ABD060 /* UIView+AnimationKit.swift in Sources */,
 				52B89BB81B11213000ABD060 /* DKKeyframeAnimationFunction.swift in Sources */,
