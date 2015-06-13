@@ -48,8 +48,8 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
                 self.fromValue.objCType
                 let valueType: NSString! = NSString(CString: self.fromValue.objCType, encoding: 1)
                 if valueType.containsString("CGRect") {
-                    let fromRect = self.fromValue.CGRectValue()
-                    let toRect = self.toValue.CGRectValue()
+                    let fromRect = self.fromValue.CGRectValue
+                    let toRect = self.toValue.CGRectValue
 
                     let xValues = self.valueArrayFor(startValue: fromRect.origin.x, endValue: toRect.origin.x) as! [CGFloat]
                     let yValues = self.valueArrayFor(startValue: fromRect.origin.y, endValue: toRect.origin.x) as! [CGFloat]
@@ -59,8 +59,8 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
                     self.values = self.rectArrayFrom(xValues: xValues, yValues: yValues, widthValues: widthValues, heightValues: heightValues) as [AnyObject]
 
                 } else if valueType.containsString("CGPoint") {
-                    let fromPoint = self.fromValue.CGPointValue()
-                    let toPoint = self.toValue.CGPointValue()
+                    let fromPoint = self.fromValue.CGPointValue
+                    let toPoint = self.toValue.CGPointValue
                     let path = self.createPathFromXYValues(self.valueArrayFor(startValue: fromPoint.x, endValue: toPoint.x), yValues: self.valueArrayFor(startValue: fromPoint.y, endValue: toPoint.y))
                     self.path = path
                 } else if valueType.containsString("CGSize") {
@@ -101,12 +101,12 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
     }
 
     private func createTransformArrayFrom(
-        #m11: NSArray, m12: NSArray, m13: NSArray, m14: NSArray,
+        m11 m11: NSArray, m12: NSArray, m13: NSArray, m14: NSArray,
         m21: NSArray, m22: NSArray, m23: NSArray, m24: NSArray,
         m31: NSArray, m32: NSArray, m33: NSArray, m34: NSArray,
         m41: NSArray, m42: NSArray, m43: NSArray, m44: NSArray) -> NSArray {
             let numberOfTransforms = m11.count;
-            var values = NSMutableArray(capacity: numberOfTransforms)
+            let values = NSMutableArray(capacity: numberOfTransforms)
             var value: CATransform3D!
             for (var i = 1; i < numberOfTransforms; i++) {
                 value = CATransform3DIdentity;
@@ -155,9 +155,9 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
         return self.fromValue.isKindOfClass(klass) && self.toValue.isKindOfClass(klass)
     }
 
-    private func rectArrayFrom(#xValues: [CGFloat], yValues: [CGFloat], widthValues: [CGFloat], heightValues: [CGFloat]) -> NSArray {
+    private func rectArrayFrom(xValues xValues: [CGFloat], yValues: [CGFloat], widthValues: [CGFloat], heightValues: [CGFloat]) -> NSArray {
         let numberOfRects = xValues.count
-        var values: NSMutableArray = []
+        let values: NSMutableArray = []
         var value: NSValue
 
         for i in 1..<numberOfRects {
@@ -168,7 +168,7 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
 
     }
 
-    private func colorArrayFrom(#redValues: [CGFloat], greenValues: [CGFloat], blueValues: [CGFloat], alphaValues: [CGFloat]) -> [CGColor] {
+    private func colorArrayFrom(redValues redValues: [CGFloat], greenValues: [CGFloat], blueValues: [CGFloat], alphaValues: [CGFloat]) -> [CGColor] {
         let numberOfColors = redValues.count
         var values: [CGColor] = []
         var value: CGColor!
@@ -180,7 +180,7 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
         return values
     }
 
-    private func valueArrayFor(#startValue: CGFloat, endValue: CGFloat) -> NSArray {
+    private func valueArrayFor(startValue startValue: CGFloat, endValue: CGFloat) -> NSArray {
         let startValue = Double(startValue)
         let endValue = Double(endValue)
 
@@ -192,7 +192,7 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
 
         var valueArray: [Double] = []
 
-        for i in 0..<steps {
+        for _ in 0..<steps {
             v = self.functionBlock(self.duration * progress * 1000, 0, 1, self.duration * 1000);
             value = startValue + v * (endValue - startValue);
 
