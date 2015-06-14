@@ -3,7 +3,7 @@
 //  DKChainableAnimationKit
 //
 //  Created by apple on 15/5/13.
-//  Copyright (c) 2015年 DeltaX. All rights reserved.
+//  Copyright (c) 2015年 Draveness. All rights reserved.
 //
 
 import UIKit
@@ -20,7 +20,6 @@ public class DKChainableAnimationKit {
     internal var animationGroups: NSMutableArray!
     internal var animations: [[DKKeyFrameAnimation]]!
     public var animationCompletion: (Void -> Void)?
-
 
     // MARK: - Initialize
 

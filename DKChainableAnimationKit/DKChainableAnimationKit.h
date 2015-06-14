@@ -3,7 +3,7 @@
 //  DKChainableAnimationKit
 //
 //  Created by Mathias Nagler on 23.05.15.
-//  Copyright (c) 2015 DeltaX. All rights reserved.
+//  Copyright (c) 2015 Draveness. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

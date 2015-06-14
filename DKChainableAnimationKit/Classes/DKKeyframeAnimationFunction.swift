@@ -3,8 +3,7 @@
 //  DKKeyframeAnimationFunction.swift
 //  DKChainableAnimationKit
 //
-//  Created by apple on 15/5/13.
-//  Copyright (c) 2015年 DeltaX. All rights reserved.
+//  Copyright (c) 2015年 Draveness. All rights reserved.
 //  This is a swift port for https://github.com/NachoSoto/NSBKeyframeAnimation/blob/master/NSBKeyframeAnimation/Classes/NSBKeyframeAnimation/NSBKeyframeAnimationFunctions.c file.
 
 import UIKit
