@@ -21,6 +21,7 @@ public class DKChainableAnimationKit {
     internal var animations: [[DKKeyFrameAnimation]]!
     public var animationCompletion: (Void -> Void)?
 
+
     // MARK: - Initialize
 
     init() {
@@ -85,6 +86,38 @@ public class DKChainableAnimationKit {
         return animate(NSTimeInterval(duration))
     }
 
+//    public func animateWithRepeat(duration: NSTimeInterval) -> DKChainableAnimationKit {
+//        if let group = self.animationGroups.lastObject as? CAAnimationGroup {
+//            group.duration = duration
+//            saveAnimations()
+//            animationCompletion = {
+//                self.restoreAnimations()
+//                self.animateChain()
+//            }
+//            self.animateChain()
+//        }
+//        return self
+//    }
+//
+//    internal var tempAnimationCalculationActions: [[AnimationCalculationAction]]!
+//    internal var tempAnimationCompletionActions: [[AnimationCompletionAction]]!
+//    internal var tempAnimationGroups: NSMutableArray!
+//    internal var tempAnimations: [[DKKeyFrameAnimation]]!
+//
+//    internal func saveAnimations() {
+//        self.tempAnimationCalculationActions = self.animationCalculationActions
+//        self.tempAnimationCompletionActions = self.animationCompletionActions
+//        self.tempAnimationGroups = self.animationGroups.mutableCopy() as! NSMutableArray
+//        self.tempAnimations = self.animations
+//    }
+//
+//    internal func restoreAnimations() {
+//        self.animationCalculationActions = self.tempAnimationCalculationActions
+//        self.animationCompletionActions = self.tempAnimationCompletionActions
+//        self.animationGroups = self.tempAnimationGroups.mutableCopy() as! NSMutableArray
+//        self.animations = self.tempAnimations
+//    }
+
     public func thenAfter(after: NSTimeInterval) -> DKChainableAnimationKit {
         if let group = self.animationGroups.lastObject as? CAAnimationGroup {
             group.duration = after
@@ -138,7 +171,8 @@ public class DKChainableAnimationKit {
                 action(self.view)
             }
         }
-        if let group: CAAnimationGroup = self.animationGroups.firstObject as? CAAnimationGroup, animationCluster: [DKKeyFrameAnimation] = self.animations.first {
+        if let group: CAAnimationGroup = self.animationGroups.firstObject as? CAAnimationGroup,
+            animationCluster: [DKKeyFrameAnimation] = self.animations.first {
             for animation in animationCluster {
                 animation.duration = group.duration
                 animation.calculte()
@@ -187,7 +221,6 @@ public class DKChainableAnimationKit {
     }
 
     // MARK: - Animation Action
-
 
     internal func addAnimationKeyframeCalculation(functionBlock: DKKeyframeAnimationFunctionBlock) {
         self.addAnimationCalculationAction { (view: UIView) -> Void in

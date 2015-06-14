@@ -24,6 +24,10 @@ public extension DKChainableAnimationKit {
         return self
     }
 
+    public func makeAlpha(alpha: CGFloat) -> DKChainableAnimationKit {
+        return makeOpacity(alpha)
+    }
+
     public func makeBackground(color: UIColor) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let backgroundColorAnimation = self.basicAnimationForKeyPath("backgroundColor")
