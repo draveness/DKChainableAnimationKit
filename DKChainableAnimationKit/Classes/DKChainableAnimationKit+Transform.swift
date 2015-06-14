@@ -145,4 +145,24 @@ extension DKChainableAnimationKit {
         }
         return self
     }
+
+    public func rotate(angle: Double) -> DKChainableAnimationKit {
+        self.addAnimationCalculationAction { (view: UIView) -> Void in
+            let rotationAnimation = self.basicAnimationForKeyPath("transform.rotation")
+            let transform = view.layer.transform
+            let originalRotation = Double(atan2(transform.m12, transform.m11))
+            rotationAnimation.fromValue = originalRotation
+            rotationAnimation.toValue = originalRotation + self.degreesToRadians(angle)
+            self.addAnimationFromCalculationBlock(rotationAnimation)
+        }
+
+        self.addAnimationCompletionAction { (view: UIView) -> Void in
+            let transform = view.layer.transform
+            let originalRotation = Double(atan2(transform.m12, transform.m11))
+            let zRotation = CATransform3DMakeRotation(CGFloat(self.degreesToRadians(angle) + originalRotation), 0.0, 0.0, 1.0)
+            view.layer.transform = zRotation
+        }
+        return self
+    }
+
 }

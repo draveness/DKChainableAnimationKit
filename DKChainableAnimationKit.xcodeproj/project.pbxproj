@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		18C4E6981B2A7B5F00BE027A /* DKChainableAnimationKit+Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4E6971B2A7B5F00BE027A /* DKChainableAnimationKit+Effects.swift */; };
+		18CCF79B1B2D2CDB00CB22B0 /* DKChainableAnimationKit+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCF79A1B2D2CDB00CB22B0 /* DKChainableAnimationKit+Anchor.swift */; };
+		18CCF79D1B2D2D6500CB22B0 /* DKChainableAnimationKit+Bezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCF79C1B2D2D6500CB22B0 /* DKChainableAnimationKit+Bezier.swift */; };
+		18CCF79F1B2D2DDE00CB22B0 /* DKChainableAnimationKit+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCF79E1B2D2DDE00CB22B0 /* DKChainableAnimationKit+Frame.swift */; };
+		18CCF7A11B2D2EFA00CB22B0 /* DKChainableAnimationKit+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCF7A01B2D2EFA00CB22B0 /* DKChainableAnimationKit+Extra.swift */; };
 		5287D67A1B1120E6006A9A84 /* DKChainableAnimationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5287D6791B1120E6006A9A84 /* DKChainableAnimationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5287D6801B1120E6006A9A84 /* DKChainableAnimationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287D6741B1120E6006A9A84 /* DKChainableAnimationKit.framework */; };
 		5287D6871B1120E6006A9A84 /* DKChainableAnimationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287D6861B1120E6006A9A84 /* DKChainableAnimationKitTests.swift */; };
@@ -30,6 +34,10 @@
 
 /* Begin PBXFileReference section */
 		18C4E6971B2A7B5F00BE027A /* DKChainableAnimationKit+Effects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Effects.swift"; sourceTree = "<group>"; };
+		18CCF79A1B2D2CDB00CB22B0 /* DKChainableAnimationKit+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Anchor.swift"; sourceTree = "<group>"; };
+		18CCF79C1B2D2D6500CB22B0 /* DKChainableAnimationKit+Bezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Bezier.swift"; sourceTree = "<group>"; };
+		18CCF79E1B2D2DDE00CB22B0 /* DKChainableAnimationKit+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Frame.swift"; sourceTree = "<group>"; };
+		18CCF7A01B2D2EFA00CB22B0 /* DKChainableAnimationKit+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DKChainableAnimationKit+Extra.swift"; sourceTree = "<group>"; };
 		5287D6741B1120E6006A9A84 /* DKChainableAnimationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DKChainableAnimationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5287D6781B1120E6006A9A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5287D6791B1120E6006A9A84 /* DKChainableAnimationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKChainableAnimationKit.h; sourceTree = "<group>"; };
@@ -118,9 +126,13 @@
 		52B89BAF1B11213000ABD060 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				52B89BB11B11213000ABD060 /* DKChainableAnimationKit.swift */,
 				52B89BB01B11213000ABD060 /* DKChainableAnimationKit+Transform.swift */,
 				18C4E6971B2A7B5F00BE027A /* DKChainableAnimationKit+Effects.swift */,
-				52B89BB11B11213000ABD060 /* DKChainableAnimationKit.swift */,
+				18CCF79A1B2D2CDB00CB22B0 /* DKChainableAnimationKit+Anchor.swift */,
+				18CCF79C1B2D2D6500CB22B0 /* DKChainableAnimationKit+Bezier.swift */,
+				18CCF79E1B2D2DDE00CB22B0 /* DKChainableAnimationKit+Frame.swift */,
+				18CCF7A01B2D2EFA00CB22B0 /* DKChainableAnimationKit+Extra.swift */,
 				52B89BB21B11213000ABD060 /* DKKeyFrameAnimation.swift */,
 				52B89BB31B11213000ABD060 /* DKKeyframeAnimationFunction.swift */,
 				52B89BB41B11213000ABD060 /* UIView+AnimationKit.swift */,
@@ -236,10 +248,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B89BB51B11213000ABD060 /* DKChainableAnimationKit+Transform.swift in Sources */,
+				18CCF7A11B2D2EFA00CB22B0 /* DKChainableAnimationKit+Extra.swift in Sources */,
+				18CCF79D1B2D2D6500CB22B0 /* DKChainableAnimationKit+Bezier.swift in Sources */,
 				52B89BB61B11213000ABD060 /* DKChainableAnimationKit.swift in Sources */,
 				18C4E6981B2A7B5F00BE027A /* DKChainableAnimationKit+Effects.swift in Sources */,
 				52B89BB71B11213000ABD060 /* DKKeyFrameAnimation.swift in Sources */,
+				18CCF79F1B2D2DDE00CB22B0 /* DKChainableAnimationKit+Frame.swift in Sources */,
 				52B89BB91B11213000ABD060 /* UIView+AnimationKit.swift in Sources */,
+				18CCF79B1B2D2CDB00CB22B0 /* DKChainableAnimationKit+Anchor.swift in Sources */,
 				52B89BB81B11213000ABD060 /* DKKeyframeAnimationFunction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
