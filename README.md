@@ -57,7 +57,7 @@ view.animation.makeScale(2.0).spring.animate(1.0)
 ```
 use_frameworks!
 
-pod "DKChainableAnimationKit", "~> 1.4.0"
+pod "DKChainableAnimationKit", "~> 1.5.0"
 ```
 
 # Installation with Carthage
