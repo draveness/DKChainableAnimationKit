@@ -71,6 +71,12 @@ github "Draveness/DKChainableAnimationKit"
 
 # Usage
 
+Import DKChainableAnimationKit in proper place.
+
+```
+import DKChainableAnimationKit
+```
+
 DKChainableAnimationKit is designed to be extremely easy to use. First call `animation` method on `UIView` instance, and then add the animation you want followed by a `animate(t)` method.
 
 
