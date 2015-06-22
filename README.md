@@ -34,12 +34,6 @@ This is a swift port for JHChainableAnimations by [jhurray](https://github.com/j
 
 **If you app is written in Objective-C, you should use [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations) instead.**
 
-## With JHChainableAnimation3s
-
-```
-view.makeScale()(2.0).spring().animate()(1.0)
-```
-
 ## With DKChainableAnimationKit
 
 Using DKChainableAnimationKit, you do not need to write the **extra parentheses**.
