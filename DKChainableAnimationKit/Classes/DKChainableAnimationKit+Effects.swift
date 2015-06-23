@@ -2,7 +2,7 @@
 //  DKChainableAnimationKit+Effects.swift
 //  DKChainableAnimationKit
 //
-//  Created by apple on 15/6/12.
+//  Created by Draveness on 15/6/12.
 //  Copyright (c) 2015年 Draveness. All rights reserved.
 //
 

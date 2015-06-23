@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  DKChainableAnimationKit
 //
-//  Created by apple on 15/5/15.
+//  Created by Draveness on 15/5/15.
 //  Copyright (c) 2015年 Draveness. All rights reserved.
 //
 

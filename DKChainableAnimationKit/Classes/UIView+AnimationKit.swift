@@ -2,7 +2,7 @@
 //  UIView+AnimationKit.swift
 //  DKChainableAnimationKit
 //
-//  Created by apple on 15/5/13.
+//  Created by Draveness on 15/5/13.
 //  Copyright (c) 2015年 Draveness. All rights reserved.
 //
 
