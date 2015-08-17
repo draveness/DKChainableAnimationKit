@@ -20,7 +20,7 @@ public extension UIView {
             } else {
                 animation = DKChainableAnimationKit()
                 animation.view = self
-                objc_setAssociatedObject(self, &animationKitAssociationKey, animation, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
+                objc_setAssociatedObject(self, &animationKitAssociationKey, animation, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
                 return animation
             }
         }
