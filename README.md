@@ -385,10 +385,13 @@ Animation effects does not work on path movement.
 </tr>
 </table>
 
+# Swift 2.0
+
+If you would like to use this repo with Swift 2.0, checkout `swift-2.0` branch.
+
 # To Do
 
 * Support OS X
-* Support Swift 2.0
 
 ----
 
