@@ -32,7 +32,7 @@ class ViewController: UIViewController {
 
     func animateView(sender: UIButton) {
         sender.userInteractionEnabled = false
-        let purple = UIColor.purpleColor()
+        _ = UIColor.purpleColor()
         let green = UIColor.greenColor()
 
         v.animation.moveX(100).thenAfter(1.0).moveWidth(50).bounce.makeBackground(green).easeIn.anchorTopLeft.thenAfter(0.5).rotate(95).easeBack.thenAfter(0.5).moveY(300).easeIn.makeOpacity(0.0).animateWithCompletion(0.4, {

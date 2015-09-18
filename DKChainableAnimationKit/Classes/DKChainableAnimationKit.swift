@@ -267,14 +267,14 @@ public class DKChainableAnimationKit {
         return animation
     }
 
-    internal func newPositionFrom(#newOrigin: CGPoint) -> CGPoint {
+    internal func newPositionFrom(newOrigin newOrigin: CGPoint) -> CGPoint {
         let anchor = self.view.layer.anchorPoint
         let size = self.view.bounds.size
         let newPosition = CGPoint(x: newOrigin.x + anchor.x * size.width, y: newOrigin.y + anchor.y * size.height)
         return newPosition
     }
 
-    internal func newPositionFrom(#newCenter: CGPoint) -> CGPoint {
+    internal func newPositionFrom(newCenter newCenter: CGPoint) -> CGPoint {
         let anchor = self.view.layer.anchorPoint
         let size = self.view.bounds.size
         let newPosition = CGPoint(x: newCenter.x + (anchor.x - 0.5) * size.width, y: newCenter.y + (anchor.y - 0.5) * size.height)

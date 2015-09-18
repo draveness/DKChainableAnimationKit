@@ -38,7 +38,7 @@ public extension DKChainableAnimationKit {
         }
 
         self.addAnimationCompletionAction { (view: UIView) -> Void in
-            var bounds = CGRect(x: 0, y: 0, width: width, height: height)
+            let bounds = CGRect(x: 0, y: 0, width: width, height: height)
             view.layer.bounds = bounds
             view.bounds = bounds
         }

@@ -10,7 +10,7 @@ import UIKit
 
 public extension DKChainableAnimationKit {
 
-    internal func makeAnchorFrom(#x: CGFloat, y: CGFloat) {
+    internal func makeAnchorFrom(x x: CGFloat, y: CGFloat) {
         let anchorPoint = CGPoint(x: x, y: y)
         func action(view: UIView) {
             if CGPointEqualToPoint(anchorPoint, view.layer.anchorPoint) {

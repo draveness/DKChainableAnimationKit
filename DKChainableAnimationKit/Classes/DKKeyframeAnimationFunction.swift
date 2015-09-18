@@ -93,23 +93,23 @@ func DKKeyframeAnimationFunctionEaseInOutQuint(var t: Double, b: Double, c: Doub
     }
 }
 
-func DKKeyframeAnimationFunctionEaseInSine(var t: Double, b: Double, c: Double, d: Double) -> Double {
+func DKKeyframeAnimationFunctionEaseInSine(t: Double, b: Double, c: Double, d: Double) -> Double {
     return -c * cos(t / d * (M_PI_2)) + c + b;
 }
 
-func DKKeyframeAnimationFunctionEaseOutSine(var t: Double, b: Double, c: Double, d: Double) -> Double {
+func DKKeyframeAnimationFunctionEaseOutSine(t: Double, b: Double, c: Double, d: Double) -> Double {
     return c * sin(t / d * (M_PI_2)) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseInOutSine(var t: Double, b: Double, c: Double, d: Double) -> Double {
+func DKKeyframeAnimationFunctionEaseInOutSine(t: Double, b: Double, c: Double, d: Double) -> Double {
     return -c / 2 * (cos(M_PI * t / d) - 1) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseInExpo(var t: Double, b: Double, c: Double, d: Double) -> Double {
+func DKKeyframeAnimationFunctionEaseInExpo(t: Double, b: Double, c: Double, d: Double) -> Double {
     return (t==0) ? b : c * pow(2, 10 * (t / d - 1)) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseOutExpo(var t: Double, b: Double, c: Double, d: Double) -> Double {
+func DKKeyframeAnimationFunctionEaseOutExpo(t: Double, b: Double, c: Double, d: Double) -> Double {
 
     return (t == d) ? b+c : c * (-pow(2, -10 * t / d) + 1) + b;
 }
@@ -252,8 +252,8 @@ func DKKeyframeAnimationFunctionEaseInOutBack(var t: Double, b: Double, c: Doubl
     }
 }
 
-func DKKeyframeAnimationFunctionEaseInBounce(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    return c - DKKeyframeAnimationFunctionEaseOutBounce(d - t, 0, c, d) + b;
+func DKKeyframeAnimationFunctionEaseInBounce(t: Double, b: Double, c: Double, d: Double) -> Double {
+    return c - DKKeyframeAnimationFunctionEaseOutBounce(d - t, b: 0, c: c, d: d) + b;
 }
 
 func DKKeyframeAnimationFunctionEaseOutBounce(var t: Double, b: Double, c: Double, d: Double) -> Double {
@@ -272,10 +272,10 @@ func DKKeyframeAnimationFunctionEaseOutBounce(var t: Double, b: Double, c: Doubl
     }
 }
 
-func DKKeyframeAnimationFunctionEaseInOutBounce(var t: Double, b: Double, c: Double, d: Double) -> Double {
+func DKKeyframeAnimationFunctionEaseInOutBounce(t: Double, b: Double, c: Double, d: Double) -> Double {
     if t < d / 2 {
-        return DKKeyframeAnimationFunctionEaseInBounce (t * 2, 0, c, d) * 0.5 + b;
+        return DKKeyframeAnimationFunctionEaseInBounce (t * 2, b: 0, c: c, d: d) * 0.5 + b;
     } else {
-        return DKKeyframeAnimationFunctionEaseOutBounce(t * 2 - d, 0, c, d) * 0.5 + c * 0.5 + b;
+        return DKKeyframeAnimationFunctionEaseOutBounce(t * 2 - d, b: 0, c: c, d: d) * 0.5 + c * 0.5 + b;
     }
 }

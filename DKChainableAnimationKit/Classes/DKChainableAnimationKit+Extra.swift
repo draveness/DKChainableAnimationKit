@@ -45,7 +45,7 @@ public extension DKChainableAnimationKit {
     public func makeBorderColor(color: UIColor) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let borderColorAnimation = self.basicAnimationForKeyPath("borderColor")
-            borderColorAnimation.fromValue = UIColor(CGColor: view.layer.borderColor)
+            borderColorAnimation.fromValue = UIColor(CGColor: view.layer.borderColor!)
             borderColorAnimation.toValue = color
             self.addAnimationFromCalculationBlock(borderColorAnimation)
         }
