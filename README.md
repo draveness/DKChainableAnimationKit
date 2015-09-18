@@ -6,7 +6,7 @@ This is a swift port for JHChainableAnimations by [jhurray](https://github.com/j
 
 # Demo
 
-![language](https://img.shields.io/badge/Language-%20Swift%20-orange.svg)
+![language](https://img.shields.io/badge/Language-%20Swift 2.0%20-orange.svg)
 [![Version](http://img.shields.io/cocoapods/v/DKChainableAnimationKit.svg?style=flat)](http://cocoadocs.org/docsets/DKChainableAnimationKit)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)
@@ -51,7 +51,7 @@ view.animation.makeScale(2.0).spring.animate(1.0)
 ```
 use_frameworks!
 
-pod "DKChainableAnimationKit", "~> 1.5.0"
+pod "DKChainableAnimationKit", "~> 1.6.0"
 ```
 
 # Installation with Carthage
