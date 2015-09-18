@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DKChainableAnimationKit"
-  s.version      = "1.5.0"
+  s.version      = "1.6.0"
   s.summary      = "Chainable Animation in Swift"
 
   s.description  = <<-DESC
