@@ -154,7 +154,7 @@ public class DKChainableAnimationKit {
         self.sanityCheck()
         CATransaction.begin()
         CATransaction.setCompletionBlock { () -> Void in
-            self.view.layer.removeAnimationForKey("AnimationChain")
+            self.view?.layer.removeAnimationForKey("AnimationChain")
             self.chainLinkDidFinishAnimating()
         }
         self.animateChainLink()
