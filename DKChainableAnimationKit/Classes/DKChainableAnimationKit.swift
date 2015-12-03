@@ -165,7 +165,7 @@ public class DKChainableAnimationKit {
 
     private func animateChainLink() {
         self.makeAnchor(0.5, 0.5)
-        if let animationCluster = self.animationCalculationActions.first {
+        if let animationCluster = self.animationCalculationActions.first, let _ = self.view {
             for action in animationCluster {
                 action(self.view)
             }
@@ -177,7 +177,7 @@ public class DKChainableAnimationKit {
                 animation.calculte()
             }
             group.animations = animationCluster
-            self.view.layer.addAnimation(group, forKey: "AnimationChain")
+            self.view?.layer.addAnimation(group, forKey: "AnimationChain")
         }
     }
 
