@@ -15,8 +15,7 @@ public extension DKChainableAnimationKit {
     }
 
     public func makeFrame(x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> DKChainableAnimationKit {
-        let rect = CGRect(x: x, y: y, width: width, height: height)
-        return self.makeOrigin(x, y).makeBounds(rect)
+        return self.makeFrame(CGRect(x: x, y: y, width: width, height: height))
     }
 
     public func makeBounds(rect: CGRect) -> DKChainableAnimationKit {
