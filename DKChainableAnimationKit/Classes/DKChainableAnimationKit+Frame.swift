@@ -11,7 +11,7 @@ import Foundation
 public extension DKChainableAnimationKit {
 
     public func makeFrame(rect: CGRect) -> DKChainableAnimationKit {
-        return self.makeOrigin(rect.origin.x, rect.origin.y).makeBounds(rect)
+        return self.makeOrigin(rect.origin).makeSize(rect.size)
     }
 
     public func makeFrame(x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> DKChainableAnimationKit {
@@ -27,6 +27,10 @@ public extension DKChainableAnimationKit {
     }
 
 
+    public func makeSize(size: CGSize) -> DKChainableAnimationKit {
+        return self.makeSize(size.width, size.height)
+    }
+
     public func makeSize(width: CGFloat, _ height: CGFloat) -> DKChainableAnimationKit {
 
         self.addAnimationCalculationAction { (view: UIView) -> Void in
@@ -37,11 +41,15 @@ public extension DKChainableAnimationKit {
         }
 
         self.addAnimationCompletionAction { (view: UIView) -> Void in
-            let bounds = CGRect(x: 0, y: 0, width: width, height: height)
-            view.layer.bounds = bounds
-            view.bounds = bounds
+            view.layer.bounds.size = CGSize(width: width, height: height)
+            view.bounds.size = CGSize(width: width, height: height)
         }
         return self
+    }
+
+    public func makeOrigin(origin: CGPoint) -> DKChainableAnimationKit {
+        return self.makeOrigin(origin.x, origin.y)
+
     }
 
     public func makeOrigin(x: CGFloat, _ y: CGFloat) -> DKChainableAnimationKit {
@@ -58,7 +66,10 @@ public extension DKChainableAnimationKit {
             view.layer.position = newPosition
         }
         return self
+    }
 
+    public func makeCenter(center: CGPoint) -> DKChainableAnimationKit {
+        return self.makeCenter(center.x, center.y)
     }
 
     public func makeCenter(x: CGFloat, _ y: CGFloat) -> DKChainableAnimationKit {

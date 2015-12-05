@@ -207,6 +207,7 @@
 		18CEB5B41B059B0300B6ACCB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = DeltaX;
 				TargetAttributes = {
