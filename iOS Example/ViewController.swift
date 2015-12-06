@@ -35,21 +35,21 @@ class ViewController: UIViewController {
         _ = UIColor.purpleColor()
         let green = UIColor.greenColor()
 
-//        v.animation.makeFrame(10, 60, 100, 100).animate(1.0)
+        v.animation.makeFrame(10, 60, 100, 100).animate(1.0)
 
-        v.animation.moveX(100).thenAfter(1.0).moveWidth(50).bounce.makeBackground(green).easeIn.anchorTopLeft.thenAfter(0.5).rotate(95).easeBack.thenAfter(0.5).moveY(300).easeIn.makeOpacity(0.0).animateWithCompletion(0.4, {
-            self.v.layer.transform = CATransform3DMakeRotation(0, 0, 0, 1)
-            self.v.frame = CGRectMake(100, 150, 50, 50)
-            self.v.animation.makeOpacity(1.0).makeBackground(UIColor.blueColor()).animate(1.0)
-            self.v.layer.cornerRadius = 0
-
-
-            sender.animation.moveY(-50).easeInOutExpo.animate(1.1).animationCompletion = {
-                sender.userInteractionEnabled = true
-            };
-        })
-
-        sender.animation.moveY(50).easeInOutExpo.animate(0.5)
+//        v.animation.moveX(100).thenAfter(1.0).moveWidth(50).bounce.makeBackground(green).easeIn.anchorTopLeft.thenAfter(0.5).rotate(95).easeBack.thenAfter(0.5).moveY(300).easeIn.makeOpacity(0.0).animateWithCompletion(0.4, {
+//            self.v.layer.transform = CATransform3DMakeRotation(0, 0, 0, 1)
+//            self.v.frame = CGRectMake(100, 150, 50, 50)
+//            self.v.animation.makeOpacity(1.0).makeBackground(UIColor.blueColor()).animate(1.0)
+//            self.v.layer.cornerRadius = 0
+//
+//
+//            sender.animation.moveY(-50).easeInOutExpo.animate(1.1).animationCompletion = {
+//                sender.userInteractionEnabled = true
+//            };
+//        })
+//
+//        sender.animation.moveY(50).easeInOutExpo.animate(0.5)
 
     }
 }

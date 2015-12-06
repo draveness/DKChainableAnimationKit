@@ -33,10 +33,18 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
             if valueIsKindOf(NSNumber) {
                 self.values = self.valueArrayFor(startValue: CGFloat(fromValue.floatValue), endValue: CGFloat(toValue.floatValue)) as [AnyObject]
             } else if valueIsKindOf(UIColor) {
-                let fromColor = self.fromValue.CGColor
-                let toColor = self.toValue.CGColor
-                let fromComponents = CGColorGetComponents(fromColor)
-                let toComponents = CGColorGetComponents(toColor)
+                var fromColor = self.fromValue
+                var toColor = self.toValue
+                if CGColorGetNumberOfComponents(fromColor.CGColor) == 2 {
+                    let fromComponents = CGColorGetComponents(fromColor.CGColor)
+                    fromColor = UIColor(red: fromComponents[0], green: fromComponents[0], blue: fromComponents[0], alpha: fromComponents[1])
+                }
+                if CGColorGetNumberOfComponents(toColor.CGColor) == 2 {
+                    let toComponents = CGColorGetComponents(toColor.CGColor)
+                    toColor = UIColor(red: toComponents[0], green: toComponents[0], blue: toComponents[0], alpha: toComponents[1])
+                }
+                let fromComponents = CGColorGetComponents(fromColor.CGColor)
+                let toComponents = CGColorGetComponents(toColor.CGColor)
 
                 let redValues = self.valueArrayFor(startValue: fromComponents[0], endValue: toComponents[0]) as! [CGFloat]
                 let greenValues = self.valueArrayFor(startValue: fromComponents[1], endValue: toComponents[1]) as! [CGFloat]
