@@ -10,41 +10,42 @@ import UIKit
 
 typealias DKKeyframeAnimationFunctionBlock = (Double, Double, Double, Double) -> Double
 
-func DKKeyframeAnimationFunctionLinear(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t /= d
+func DKKeyframeAnimationFunctionLinear(t: Double, b: Double, c: Double, d: Double) -> Double {
+    let t = t / d
     return c * t + b
 }
 
-func DKKeyframeAnimationFunctionEaseInQuad(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t /= d
+func DKKeyframeAnimationFunctionEaseInQuad(t: Double, b: Double, c: Double, d: Double) -> Double {
+    let t = t / d
     return c * t * t + b;
 }
 
-func DKKeyframeAnimationFunctionEaseOutQuad(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t /= d
+func DKKeyframeAnimationFunctionEaseOutQuad(t: Double, b: Double, c: Double, d: Double) -> Double {
+    let t = t / d
     return -c * t * (t - 2) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseInOutQuad(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t /= d / 2
+func DKKeyframeAnimationFunctionEaseInOutQuad(t: Double, b: Double, c: Double, d: Double) -> Double {
+    var t = t / (d / 2)
     if t < 1 {
         return c / 2 * t * t + b;
     }
-    return -c / 2 * ((--t) * (t - 2) - 1) + b;
+    t -= 1
+    return -c / 2 * ((t) * (t - 2) - 1) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseInCubic(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t /= d
+func DKKeyframeAnimationFunctionEaseInCubic(t: Double, b: Double, c: Double, d: Double) -> Double {
+    let t = t / d
     return c * t * t * t + b;
 }
 
-func DKKeyframeAnimationFunctionEaseOutCubic(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t = t / d - 1
+func DKKeyframeAnimationFunctionEaseOutCubic(t: Double, b: Double, c: Double, d: Double) -> Double {
+    let t = t / d - 1
     return c * (t * t * t + 1) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseInOutCubic(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t /= d / 2
+func DKKeyframeAnimationFunctionEaseInOutCubic(t: Double, b: Double, c: Double, d: Double) -> Double {
+    var t = t / (d / 2)
     if t < 1 {
         return c / 2 * t * t * t + b;
     } else {
@@ -53,18 +54,18 @@ func DKKeyframeAnimationFunctionEaseInOutCubic(var t: Double, b: Double, c: Doub
     }
 }
 
-func DKKeyframeAnimationFunctionEaseInQuart(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t /= d
+func DKKeyframeAnimationFunctionEaseInQuart(t: Double, b: Double, c: Double, d: Double) -> Double {
+    let t = t / d
     return c * t * t * t * t + b;
 }
 
-func DKKeyframeAnimationFunctionEaseOutQuart(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t = t / d - 1
+func DKKeyframeAnimationFunctionEaseOutQuart(t: Double, b: Double, c: Double, d: Double) -> Double {
+    let t = t / d - 1
     return -c * (t * t * t * t - 1) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseInOutQuart(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t /= d / 2
+func DKKeyframeAnimationFunctionEaseInOutQuart(t: Double, b: Double, c: Double, d: Double) -> Double {
+    var t = t / (d / 2)
     if t < 1 {
         return c / 2 * t * t * t * t + b;
     } else {
@@ -73,18 +74,18 @@ func DKKeyframeAnimationFunctionEaseInOutQuart(var t: Double, b: Double, c: Doub
     }
 }
 
-func DKKeyframeAnimationFunctionEaseInQuint(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t /= d
+func DKKeyframeAnimationFunctionEaseInQuint(t: Double, b: Double, c: Double, d: Double) -> Double {
+    let t = t / d
     return c * t * t * t * t * t + b;
 }
 
-func DKKeyframeAnimationFunctionEaseOutQuint(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t = t / d - 1
+func DKKeyframeAnimationFunctionEaseOutQuint(t: Double, b: Double, c: Double, d: Double) -> Double {
+    let t = t / d - 1
     return c * (t * t * t * t * t + 1) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseInOutQuint(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t /= d / 2
+func DKKeyframeAnimationFunctionEaseInOutQuint(t: Double, b: Double, c: Double, d: Double) -> Double {
+    var t = t / (d / 2)
     if t < 1 {
         return c / 2 * t * t * t * t * t + b;
     } else {
@@ -114,32 +115,33 @@ func DKKeyframeAnimationFunctionEaseOutExpo(t: Double, b: Double, c: Double, d: 
     return (t == d) ? b+c : c * (-pow(2, -10 * t / d) + 1) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseInOutExpo(var t: Double, b: Double, c: Double, d: Double) -> Double {
+func DKKeyframeAnimationFunctionEaseInOutExpo(t: Double, b: Double, c: Double, d: Double) -> Double {
     if t == 0 {
         return b
     }
     if t == d {
         return b + c
     }
-    t /= d / 2
+    var t = t / (d / 2)
     if t < 1 {
         return c / 2 * pow(2, 10 * (t - 1)) + b
     }
-    return c / 2 * (-pow(2, -10 * --t) + 2) + b
+    t -= 1
+    return c / 2 * (-pow(2, -10 * t) + 2) + b
 }
 
-func DKKeyframeAnimationFunctionEaseInCirc(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t /= d
+func DKKeyframeAnimationFunctionEaseInCirc(t: Double, b: Double, c: Double, d: Double) -> Double {
+    let t = t / d
     return -c * (sqrt(1 - t * t) - 1) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseOutCirc(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t = t / d - 1
+func DKKeyframeAnimationFunctionEaseOutCirc(t: Double, b: Double, c: Double, d: Double) -> Double {
+    let t = t / d - 1
     return c * sqrt(1 - t * t) + b
 }
 
-func DKKeyframeAnimationFunctionEaseInOutCirc(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t /= d / 2
+func DKKeyframeAnimationFunctionEaseInOutCirc(t: Double, b: Double, c: Double, d: Double) -> Double {
+    var t = t / (d / 2)
     if t < 1 {
         return -c / 2 * (sqrt(1 - t * t) - 1) + b
     }
@@ -147,7 +149,7 @@ func DKKeyframeAnimationFunctionEaseInOutCirc(var t: Double, b: Double, c: Doubl
     return c / 2 * (sqrt(1 - t * t) + 1) + b
 }
 
-func DKKeyframeAnimationFunctionEaseInElastic(var t: Double, b: Double, c: Double, d: Double) -> Double {
+func DKKeyframeAnimationFunctionEaseInElastic(t: Double, b: Double, c: Double, d: Double) -> Double {
     var s = 1.70158
     var p = 0.0
     var a = c
@@ -155,7 +157,7 @@ func DKKeyframeAnimationFunctionEaseInElastic(var t: Double, b: Double, c: Doubl
     if t == 0 {
         return b
     }
-    t /= d
+    var t = t / d
     if t == 1 {
         return b + c
     }
@@ -172,14 +174,14 @@ func DKKeyframeAnimationFunctionEaseInElastic(var t: Double, b: Double, c: Doubl
     return -(a * pow(2, 10 * t) * sin((t * d - s) * (2 * M_PI) / p )) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseOutElastic(var t: Double, b: Double, c: Double, d: Double) -> Double {
+func DKKeyframeAnimationFunctionEaseOutElastic(t: Double, b: Double, c: Double, d: Double) -> Double {
     var s = 1.70158
     var p = 0.0
     var a = c
     if t == 0 {
         return b
     }
-    t /= d
+    var t = t / d
     if t == 1 {
         return b + c
     }
@@ -196,14 +198,14 @@ func DKKeyframeAnimationFunctionEaseOutElastic(var t: Double, b: Double, c: Doub
     return (a * pow(2, 10 * t) * sin((t * d - s) * (2 * M_PI) / p)) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseInOutElastic(var t: Double, b: Double, c: Double, d: Double) -> Double {
+func DKKeyframeAnimationFunctionEaseInOutElastic(t: Double, b: Double, c: Double, d: Double) -> Double {
     var s = 1.70158
     var p = 0.0
     var a = c;
     if t == 0 {
         return b
     }
-    t /= d
+    var t = t / d
     if t == 2 {
         return b + c
     }
@@ -226,21 +228,21 @@ func DKKeyframeAnimationFunctionEaseInOutElastic(var t: Double, b: Double, c: Do
     }
 }
 
-func DKKeyframeAnimationFunctionEaseInBack(var t: Double, b: Double, c: Double, d: Double) -> Double {
+func DKKeyframeAnimationFunctionEaseInBack(t: Double, b: Double, c: Double, d: Double) -> Double {
     let s = 1.70158
-    t /= d
+    let t = t / d
     return c * t * t * ((s + 1) * t - s) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseOutBack(var t: Double, b: Double, c: Double, d: Double) -> Double {
+func DKKeyframeAnimationFunctionEaseOutBack(t: Double, b: Double, c: Double, d: Double) -> Double {
     let s = 1.70158
-    t = t / d - 1
+    let t = t / d - 1
     return c * (t * t * ((s + 1) * t + s) + 1) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseInOutBack(var t: Double, b: Double, c: Double, d: Double) -> Double {
+func DKKeyframeAnimationFunctionEaseInOutBack(t: Double, b: Double, c: Double, d: Double) -> Double {
     var s = 1.70158
-    t /= d / 2
+    var t = t / (d / 2)
 
     if t < 1 {
         s *= 1.525
@@ -256,8 +258,8 @@ func DKKeyframeAnimationFunctionEaseInBounce(t: Double, b: Double, c: Double, d:
     return c - DKKeyframeAnimationFunctionEaseOutBounce(d - t, b: 0, c: c, d: d) + b;
 }
 
-func DKKeyframeAnimationFunctionEaseOutBounce(var t: Double, b: Double, c: Double, d: Double) -> Double {
-    t /= d
+func DKKeyframeAnimationFunctionEaseOutBounce(t: Double, b: Double, c: Double, d: Double) -> Double {
+    var t = t / d
     if t < 1 / 2.75 {
         return c * (7.5625 * t * t) + b;
     } else if t < 2 / 2.75 {

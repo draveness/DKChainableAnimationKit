@@ -108,7 +108,7 @@ public class DKKeyFrameAnimation: CAKeyframeAnimation {
             let numberOfTransforms = m11.count;
             let values = NSMutableArray(capacity: numberOfTransforms)
             var value: CATransform3D!
-            for (var i = 1; i < numberOfTransforms; i++) {
+            for i in 0..<numberOfTransforms {
                 value = CATransform3DIdentity;
                 value.m11 = CGFloat(m11.objectAtIndex(i).floatValue)
                 value.m12 = CGFloat(m12.objectAtIndex(i).floatValue)
