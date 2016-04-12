@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         button.backgroundColor = UIColor.blueColor()
         button.setTitle("Action!", forState: .Normal)
         button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        button.addTarget(self, action: "animateView:", forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(ViewController.animateView(_:)), forControlEvents: .TouchUpInside)
         self.view.addSubview(button)
     }
 
