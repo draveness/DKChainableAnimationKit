@@ -99,14 +99,14 @@ extension DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let transformAnimation = self.basicAnimationForKeyPath("transform")
             var transform = view.layer.transform
-            transform = CATransform3DTranslate(transform, scale, scale, 1)
+            transform = CATransform3DScale(transform, scale, scale, 1)
             transformAnimation.fromValue = NSValue(CATransform3D: view.layer.transform)
             transformAnimation.toValue = NSValue(CATransform3D: transform)
             self.addAnimationFromCalculationBlock(transformAnimation)
         }
         self.addAnimationCompletionAction { (view: UIView) -> Void in
             var transform = view.layer.transform
-            transform = CATransform3DTranslate(transform, scale, scale, 1)
+            transform = CATransform3DScale(transform, scale, scale, 1)
             view.layer.transform = transform
         }
         return self
@@ -116,14 +116,14 @@ extension DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let transformAnimation = self.basicAnimationForKeyPath("transform")
             var transform = view.layer.transform
-            transform = CATransform3DTranslate(transform, scaleX, 1, 1)
+            transform = CATransform3DScale(transform, scaleX, 1, 1)
             transformAnimation.fromValue = NSValue(CATransform3D: view.layer.transform)
             transformAnimation.toValue = NSValue(CATransform3D: transform)
             self.addAnimationFromCalculationBlock(transformAnimation)
         }
         self.addAnimationCompletionAction { (view: UIView) -> Void in
             var transform = view.layer.transform
-            transform = CATransform3DTranslate(transform, scaleX, 1, 1)
+            transform = CATransform3DScale(transform, scaleX, 1, 1)
             view.layer.transform = transform
         }
         return self
@@ -133,14 +133,14 @@ extension DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let transformAnimation = self.basicAnimationForKeyPath("transform")
             var transform = view.layer.transform
-            transform = CATransform3DTranslate(transform, 1, scaleY, 1)
+            transform = CATransform3DScale(transform, 1, scaleY, 1)
             transformAnimation.fromValue = NSValue(CATransform3D: view.layer.transform)
             transformAnimation.toValue = NSValue(CATransform3D: transform)
             self.addAnimationFromCalculationBlock(transformAnimation)
         }
         self.addAnimationCompletionAction { (view: UIView) -> Void in
             var transform = view.layer.transform
-            transform = CATransform3DTranslate(transform, 1, scaleY, 1)
+            transform = CATransform3DScale(transform, 1, scaleY, 1)
             view.layer.transform = transform
         }
         return self
