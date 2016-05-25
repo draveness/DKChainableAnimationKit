@@ -12,7 +12,7 @@ lane :release do |options|
   ensure_git_status_clean
 # scan
 
-  sync_build_number_to_git   
+#  sync_build_number_to_git   
   increment_version_number(version_number: target_version)
 
   version_bump_podspec(path: "DKChainableAnimationKit.podspec",
