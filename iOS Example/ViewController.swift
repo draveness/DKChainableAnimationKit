@@ -47,7 +47,7 @@ class ViewController: UIViewController {
             };
         })
 
-       _ = sender.animation.moveY(50).easeInOutExpo.animate(0.5)
+       sender.animation.moveY(50).easeInOutExpo.animate(0.5)
 
     }
 }
