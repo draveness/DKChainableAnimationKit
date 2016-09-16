@@ -81,7 +81,7 @@ open class DKChainableAnimationKit {
         return self
     }
 
-    open func animate(_ duration: CGFloat) -> DKChainableAnimationKit {
+    @discardableResult open func animate(_ duration: CGFloat) -> DKChainableAnimationKit {
         return animate(TimeInterval(duration))
     }
 
@@ -142,7 +142,7 @@ open class DKChainableAnimationKit {
         return self
     }
 
-    open func animateWithCompletion(_ duration: CGFloat, _ completion: @escaping (Void) -> Void) -> DKChainableAnimationKit {
+    @discardableResult open func animateWithCompletion(_ duration: CGFloat, _ completion: @escaping (Void) -> Void) -> DKChainableAnimationKit {
         return animateWithCompletion(TimeInterval(duration), completion)
     }
 
