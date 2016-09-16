@@ -10,10 +10,10 @@ import UIKit
 
 public extension DKChainableAnimationKit {
 
-    internal func makeAnchorFrom(x x: CGFloat, y: CGFloat) {
+    internal func makeAnchorFrom(x: CGFloat, y: CGFloat) {
         let anchorPoint = CGPoint(x: x, y: y)
-        func action(view: UIView) {
-            if CGPointEqualToPoint(anchorPoint, view.layer.anchorPoint) {
+        func action(_ view: UIView) {
+            if anchorPoint.equalTo(view.layer.anchorPoint) {
                 return
             }
             var newPoint = CGPoint(
@@ -24,8 +24,8 @@ public extension DKChainableAnimationKit {
                 x: view.bounds.size.width * view.layer.anchorPoint.x,
                 y: view.bounds.size.height * view.layer.anchorPoint.y
             )
-            newPoint = CGPointApplyAffineTransform(newPoint, view.transform)
-            oldPoint = CGPointApplyAffineTransform(oldPoint, view.transform)
+            newPoint = newPoint.applying(view.transform)
+            oldPoint = oldPoint.applying(view.transform)
 
             var position = view.layer.position
 
@@ -40,13 +40,13 @@ public extension DKChainableAnimationKit {
         }
 
         if var lastCalculationActions = self.animationCalculationActions.last {
-            lastCalculationActions.insert(action, atIndex: 0)
+            lastCalculationActions.insert(action, at: 0)
             self.animationCalculationActions.removeLast()
             self.animationCalculationActions.append(lastCalculationActions)
         }
     }
 
-    public func makeAnchor(x: CGFloat, _ y: CGFloat) -> DKChainableAnimationKit {
+    @discardableResult public func makeAnchor(_ x: CGFloat, _ y: CGFloat) -> DKChainableAnimationKit {
         self.makeAnchorFrom(x: x, y: y)
         return self
     }
