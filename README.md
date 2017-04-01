@@ -1,12 +1,12 @@
 ![](./Gifs/DKChainableAnimationKit.jpg)
 
 <p align='center'>
-![language](https://img.shields.io/badge/Language-%20Swift%20-orange.svg)
-![Version](https://img.shields.io/badge/Pod-%20v2.0.0%20-or.svg)
-[![Build Status](https://travis-ci.org/Draveness/DKChainableAnimationKit.svg?branch=master)](https://travis-ci.org/Draveness/DKChainableAnimationKit)
-![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)
-![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+<a href='#'><img src="https://img.shields.io/badge/Language-%20Swift%20-orange.svg"></a>
+<a href="http://cocoadocs.org/docsets/DKChainableAnimationKit"><img src="https://img.shields.io/cocoapods/p/DKChainableAnimationKit.svg?style=flat"></a>
+<a href='https://travis-ci.org/Draveness/DKChainableAnimationKit">'><img src="https://travis-ci.org/Draveness/DKChainableAnimationKit.svg?branch=master</a>
+<a href='#'><img src="https://img.shields.io/github/license/mashape/apistatus.svg"></a>
+<a href='#'><img src="https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg"></a>
+<a href='https://github.com/Carthage/Carthage'><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 </p>
 
 <table>
