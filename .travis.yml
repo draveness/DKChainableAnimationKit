@@ -1,7 +1,25 @@
-language: swift
+language: objective-c
+osx_image: xcode8.3
+xcode_workspace: DKChainableAnimationKit.xcworksapce
+xcode_scheme: DKChainableAnimationKit
+rvm:
+- ruby-2.4.0
 before_install:
-    - export LANG=en_US.UTF-8
-    - env
-    - locale
-
+- export LANG=en_US.UTF-8 gem install cocoapods
+- brew update
+- brew outdated carthage || brew upgrade carthage
+before_deploy:
+- carthage build --no-skip-current
+- carthage archive DKChainableAnimationKit
 script:
+- pod lib lint --verbose
+deploy:
+  provider: releases
+  api_key:
+    secure: EN48A2jNYfZXzEenx4HDa1A46oFjDayTK/AQgfw8e7FDDV5ZEYfZtRJqmwCDgs2UPDjkEq8VCA7RCQ2piga0o4eDAhSCkepU7qXbN3w4uyVUtBmrBQZNQTudbddTTSiKYI2X985HYceSZ0t3p+bV5xsT7vkcOfCh5Qdi3z0xTdwiU6aG8dz8FEo9k8rSur8J6Dd9BANhy6qJ8lh+ubFvELHivKYzA+AgK5+QAsAZ9QyqVZ79JjBUa4fyVCLlLnNUVFIx1GlyABPu91UpXGhZd2uVwfUp135NkZ1m7tXRqK7iEab1lL2n2o2dSXjgnlXBGauV5/Rc5jApBWcXGyE51N3W9j4DhSLDywoSV48ZGaX+MNz0ueT9p/hd0J3GISLH5muiCu91bT4NGjLHc9ux653TbDAzV0Jfnxsek5yDWUQmeF0RApYCeYkt3hToERos/MYGErIDOVwSoNWVmj67zNnfHXiQGb+4y8fd8KFylhhlc5nEzjJgFMjAi+ZBVVoiP3fQZk064ZcIk/3wynBis95sg3V8D84/uVIidITft5RFtQTV0XX1k+RB/Vknt3O1HTqWN6+gpSobLu0E1KYzuzrInUPrq9UjaYGnE851+W2J3va3lxdYkLlPHY5CJwRbFMqPmyeUKn3tLi91wovoK5DNrWqXAUmGt8PGK7Uscgg=
+  file: DKChainableAnimationKit.framework.zip
+  skip_cleanup: true
+  on:
+    repo: Draveness/DKChainableAnimationKit
+    tags: true
+
