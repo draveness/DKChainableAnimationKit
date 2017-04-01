@@ -3,7 +3,7 @@
 <p align='center'>
 <a href='#'><img src="https://img.shields.io/badge/Language-%20Swift%20-orange.svg"></a>
 <a href="http://cocoadocs.org/docsets/DKChainableAnimationKit"><img src="https://img.shields.io/cocoapods/p/DKChainableAnimationKit.svg?style=flat"></a>
-<a href='https://travis-ci.org/Draveness/DKChainableAnimationKit">'><img src="https://travis-ci.org/Draveness/DKChainableAnimationKit.svg?branch=master"></a>
+<a href='https://travis-ci.org/Draveness/DKChainableAnimationKit'><img src="https://travis-ci.org/Draveness/DKChainableAnimationKit.svg?branch=master"></a>
 <a href='#'><img src="https://img.shields.io/github/license/mashape/apistatus.svg"></a>
 <a href='#'><img src="https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg"></a>
 <a href='https://github.com/Carthage/Carthage'><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
