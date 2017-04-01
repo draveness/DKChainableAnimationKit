@@ -28,7 +28,7 @@
 </tr>
 </table>
 
-**If you app is written in Objective-C, you should use [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations) instead.**
+This project is highly inspired by JHChainableAnimations, **If you project is developed with Objective-C, use [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations) instead.**
 
 ## With DKChainableAnimationKit
 
