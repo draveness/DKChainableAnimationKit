@@ -203,11 +203,11 @@
 				TargetAttributes = {
 					5287D6731B1120E6006A9A84 = {
 						CreatedOnToolsVersion = 6.3.2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 					};
 					5287D67E1B1120E6006A9A84 = {
 						CreatedOnToolsVersion = 6.3.2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
