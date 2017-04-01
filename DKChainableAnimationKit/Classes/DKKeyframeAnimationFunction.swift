@@ -95,15 +95,15 @@ func DKKeyframeAnimationFunctionEaseInOutQuint(_ t: Double, b: Double, c: Double
 }
 
 func DKKeyframeAnimationFunctionEaseInSine(_ t: Double, b: Double, c: Double, d: Double) -> Double {
-    return -c * cos(t / d * (M_PI_2)) + c + b;
+    return -c * cos(t / d * (Double.pi / 2)) + c + b;
 }
 
 func DKKeyframeAnimationFunctionEaseOutSine(_ t: Double, b: Double, c: Double, d: Double) -> Double {
-    return c * sin(t / d * (M_PI_2)) + b;
+    return c * sin(t / d * (Double.pi / 2)) + b;
 }
 
 func DKKeyframeAnimationFunctionEaseInOutSine(_ t: Double, b: Double, c: Double, d: Double) -> Double {
-    return -c / 2 * (cos(M_PI * t / d) - 1) + b;
+    return -c / 2 * (cos(Double.pi * t / d) - 1) + b;
 }
 
 func DKKeyframeAnimationFunctionEaseInExpo(_ t: Double, b: Double, c: Double, d: Double) -> Double {
@@ -168,10 +168,10 @@ func DKKeyframeAnimationFunctionEaseInElastic(_ t: Double, b: Double, c: Double,
         a = c
         s = p / 4
     } else {
-        s = p / (2 * M_PI) * asin (c / a)
+        s = p / (2 * Double.pi) * asin (c / a)
     }
     t -= 1
-    return -(a * pow(2, 10 * t) * sin((t * d - s) * (2 * M_PI) / p )) + b;
+    return -(a * pow(2, 10 * t) * sin((t * d - s) * (2 * Double.pi) / p )) + b;
 }
 
 func DKKeyframeAnimationFunctionEaseOutElastic(_ t: Double, b: Double, c: Double, d: Double) -> Double {
@@ -192,10 +192,10 @@ func DKKeyframeAnimationFunctionEaseOutElastic(_ t: Double, b: Double, c: Double
         a = c
         s = p / 4
     } else {
-        s = p / (2 * M_PI) * asin (c / a)
+        s = p / (2 * Double.pi) * asin (c / a)
     }
     t -= 1
-    return (a * pow(2, 10 * t) * sin((t * d - s) * (2 * M_PI) / p)) + b;
+    return (a * pow(2, 10 * t) * sin((t * d - s) * (2 * Double.pi) / p)) + b;
 }
 
 func DKKeyframeAnimationFunctionEaseInOutElastic(_ t: Double, b: Double, c: Double, d: Double) -> Double {
@@ -216,15 +216,15 @@ func DKKeyframeAnimationFunctionEaseInOutElastic(_ t: Double, b: Double, c: Doub
         a = c
         s = p / 4
     } else {
-        s = p / (2 * M_PI) * asin (c / a)
+        s = p / (2 * Double.pi) * asin (c / a)
     }
 
     if t < 1 {
         t -= 1
-        return -0.5 * (a * pow(2,10 * t) * sin( (t * d - s) * (2 * M_PI) / p )) + b
+        return -0.5 * (a * pow(2,10 * t) * sin( (t * d - s) * (2 * Double.pi) / p )) + b
     } else {
         t -= 1
-        return a * pow(2,-10 * t) * sin( (t * d - s) * (2 * M_PI) / p ) * 0.5 + c + b
+        return a * pow(2,-10 * t) * sin( (t * d - s) * (2 * Double.pi) / p ) * 0.5 + c + b
     }
 }
 

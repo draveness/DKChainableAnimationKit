@@ -147,7 +147,7 @@ open class DKChainableAnimationKit {
     }
 
     internal func degreesToRadians(_ degree: Double) -> Double {
-        return (degree / 180.0) * M_PI
+        return (degree / 180.0) * Double.pi
     }
 
     fileprivate func animateChain() {
