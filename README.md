@@ -1,14 +1,8 @@
 ![](./Gifs/DKChainableAnimationKit.jpg)
 
-**DKChainableAnimationKit** is a DSL to make animation easy on iOS with **Swift**. 
-
-This is a swift port for JHChainableAnimations by [jhurray](https://github.com/jhurray).
-
-# Demo
-
 ![language](https://img.shields.io/badge/Language-%20Swift%20-orange.svg)
 ![Version](https://img.shields.io/badge/Pod-%20v2.0.0%20-or.svg)
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
+[![Build Status](https://travis-ci.org/Draveness/DKChainableAnimationKit.svg?branch=master)](https://travis-ci.org/Draveness/DKChainableAnimationKit)
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
