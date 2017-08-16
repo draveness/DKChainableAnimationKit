@@ -12,12 +12,18 @@ import DKChainableAnimationKit
 class ViewController: UIViewController {
 
     let v: UIView = UIView(frame: CGRect(x: 100, y: 150, width: 50, height: 50))
+    let secondView: UIView = UIView(frame: CGRect(x: 300, y: 250, width: 50, height: 50))
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         v.backgroundColor = UIColor.blue
         self.view.addSubview(v)
+
+        secondView.backgroundColor = UIColor.white
+        secondView.layer.borderWidth = 1.0
+        secondView.layer.borderColor = UIColor.red.cgColor
+        self.view.addSubview(secondView)
 
         UIApplication.shared.isStatusBarHidden = true
 
@@ -34,6 +40,14 @@ class ViewController: UIViewController {
         sender.isUserInteractionEnabled = false
         _ = UIColor.purple
         let green = UIColor.green
+        let black = UIColor.black
+        let white = UIColor.white
+
+        secondView.animation.moveY(-200).makeBackground(black).thenAfter(0.5)
+            .moveY(200).makeBackground(green).thenAfter(0.5)
+            .makeBackground(white).thenAfter(0.2)
+            .makeBackground(black).thenAfter(0.2)
+            .makeBackground(white).animate(0.2)
 
         v.animation.moveX(100).thenAfter(1.0).moveWidth(50).bounce.makeBackground(green).easeIn.anchorTopLeft.thenAfter(0.5).rotate(95).easeBack.thenAfter(0.5).moveY(300).easeIn.makeOpacity(0.0).animateWithCompletion(0.4, {
             self.v.layer.transform = CATransform3DMakeRotation(0, 0, 0, 1)

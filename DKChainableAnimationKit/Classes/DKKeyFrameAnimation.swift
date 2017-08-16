@@ -33,15 +33,43 @@ open class DKKeyFrameAnimation: CAKeyframeAnimation {
             if valueIsKindOf(NSNumber.self) {
                 self.values = self.valueArrayFor(startValue: CGFloat(fromValue.floatValue), endValue: CGFloat(toValue.floatValue)) as [AnyObject]
             } else if valueIsKindOf(UIColor.self) {
-                let fromColor = self.fromValue.cgColor
-                let toColor = self.toValue.cgColor
-                let fromComponents = fromColor?.components
-                let toComponents = toColor?.components
+                guard let fromColor = self.fromValue.cgColor else { fatalError("Could not extract CGColor") }
+                guard let toColor = self.toValue.cgColor else { fatalError("Could not extract CGColor") }
+                guard let fromComponents = fromColor.components else { fatalError("Could not extract color components") }
+                guard let toComponents = toColor.components else { fatalError("Could not extract color components") }
 
-                let redValues = self.valueArrayFor(startValue: (fromComponents?[0])!, endValue: (toComponents?[0])!) as! [CGFloat]
-                let greenValues = self.valueArrayFor(startValue: (fromComponents?[1])!, endValue: (toComponents?[1])!) as! [CGFloat]
-                let blueValues = self.valueArrayFor(startValue: (fromComponents?[2])!, endValue: (toComponents?[2])!) as! [CGFloat]
-                let alphaValues = self.valueArrayFor(startValue: (fromComponents?[3])!, endValue: (toComponents?[3])!) as! [CGFloat]
+                let red, green, blue: (start: CGFloat, end: CGFloat)
+                let alphaStart = fromComponents.last
+                let alphaEnd = toComponents.last
+
+                let numberOfComponentsInMonotoneColor = 2
+
+                switch fromColor.numberOfComponents {
+                case numberOfComponentsInMonotoneColor:
+                    red.start = fromComponents[0]
+                    green.start = fromComponents[0]
+                    blue.start = fromComponents[0]
+                default:
+                    red.start = fromComponents[0]
+                    green.start = fromComponents[1]
+                    blue.start = fromComponents[2]
+                }
+
+                switch toColor.numberOfComponents {
+                case numberOfComponentsInMonotoneColor:
+                    red.end = toComponents[0]
+                    green.end = toComponents[0]
+                    blue.end = toComponents[0]
+                default:
+                    red.end = toComponents[0]
+                    green.end = toComponents[1]
+                    blue.end = toComponents[2]
+                }
+
+                let redValues = self.valueArrayFor(startValue: red.start, endValue: red.end) as! [CGFloat]
+                let greenValues = self.valueArrayFor(startValue: green.start, endValue: green.end) as! [CGFloat]
+                let blueValues = self.valueArrayFor(startValue: blue.start, endValue: blue.end) as! [CGFloat]
+                let alphaValues = self.valueArrayFor(startValue: alphaStart!, endValue: alphaEnd!) as! [CGFloat]
 
                 self.values = self.colorArrayFrom(redValues: redValues, greenValues: greenValues, blueValues: blueValues, alphaValues: alphaValues) as [AnyObject]
             } else if valueIsKindOf(NSValue.self) {
