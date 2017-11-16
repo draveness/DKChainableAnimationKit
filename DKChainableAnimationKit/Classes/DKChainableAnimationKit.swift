@@ -19,7 +19,7 @@ open class DKChainableAnimationKit {
     internal var animationCompletionActions: [[AnimationCompletionAction]]!
     internal var animationGroups: NSMutableArray!
     internal var animations: [[DKKeyFrameAnimation]]!
-    open var animationCompletion: ((Void) -> Void)?
+    open var animationCompletion: (() -> Void)?
 
     // MARK: - Initialize
 
@@ -133,7 +133,7 @@ open class DKChainableAnimationKit {
         return thenAfter(TimeInterval(after))
     }
 
-    @discardableResult open func animateWithCompletion(_ duration: TimeInterval, _ completion: @escaping (Void) -> Void) -> DKChainableAnimationKit {
+    @discardableResult open func animateWithCompletion(_ duration: TimeInterval, _ completion: @escaping () -> Void) -> DKChainableAnimationKit {
         if let group = self.animationGroups.lastObject as? CAAnimationGroup {
             group.duration = duration
             self.animationCompletion = completion
@@ -142,7 +142,7 @@ open class DKChainableAnimationKit {
         return self
     }
 
-    @discardableResult open func animateWithCompletion(_ duration: CGFloat, _ completion: @escaping (Void) -> Void) -> DKChainableAnimationKit {
+    @discardableResult open func animateWithCompletion(_ duration: CGFloat, _ completion: @escaping () -> Void) -> DKChainableAnimationKit {
         return animateWithCompletion(TimeInterval(duration), completion)
     }
 

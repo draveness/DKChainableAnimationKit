@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         self.view.addSubview(button)
     }
 
-    func animateView(_ sender: UIButton) {
+    @objc func animateView(_ sender: UIButton) {
         sender.isUserInteractionEnabled = false
         _ = UIColor.purple
         let green = UIColor.green
