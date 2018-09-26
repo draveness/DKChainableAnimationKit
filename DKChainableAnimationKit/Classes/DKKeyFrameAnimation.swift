@@ -123,7 +123,7 @@ open class DKKeyFrameAnimation: CAKeyframeAnimation {
                         m41: m41, m42: m42, m43: m43, m44: m44) as [AnyObject]
                 }
             }
-            self.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+            self.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         }
     }
 
