@@ -28,7 +28,7 @@ public extension DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let pathAnimation = self.basicAnimationForKeyPath("position")
             pathAnimation.path = path.cgPath
-            pathAnimation.rotationMode = kCAAnimationRotateAuto
+            pathAnimation.rotationMode = CAAnimationRotationMode.rotateAuto
             self.addAnimationFromCalculationBlock(pathAnimation)
         }
 
@@ -43,7 +43,7 @@ public extension DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let pathAnimation = self.basicAnimationForKeyPath("position")
             pathAnimation.path = path.cgPath
-            pathAnimation.rotationMode = kCAAnimationRotateAutoReverse
+            pathAnimation.rotationMode = CAAnimationRotationMode.rotateAutoReverse
             self.addAnimationFromCalculationBlock(pathAnimation)
         }
 
