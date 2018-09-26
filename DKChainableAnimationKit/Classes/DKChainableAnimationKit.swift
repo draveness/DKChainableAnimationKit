@@ -207,7 +207,7 @@ open class DKChainableAnimationKit {
             self.clear()
             if let completion = self.animationCompletion {
                 self.animationCompletion = nil
-                completion(())
+                completion()
             }
         } else {
             self.animateChain()
