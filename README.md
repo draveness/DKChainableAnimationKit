@@ -391,7 +391,7 @@ Animation effects does not work on path movement.
 # Contact
 
 * If you have some advice open an issue or a PR.
-* Email [Draveness](mailto: stark.draven@gmail.com?subject=DKChainableAnimationKit)
+* Email [Draveness](mailto: i@draveness.me)
 
 # License
 
