@@ -213,11 +213,11 @@
 				TargetAttributes = {
 					18CEB5BB1B059B0300B6ACCB = {
 						CreatedOnToolsVersion = 6.3;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1100;
 					};
 					18CEB5D01B059B0300B6ACCB = {
 						CreatedOnToolsVersion = 6.3;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1100;
 						TestTargetID = 18CEB5BB1B059B0300B6ACCB;
 					};
 				};
@@ -227,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -433,8 +434,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.draveness.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "iOS Example";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -447,8 +447,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.draveness.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "iOS Example";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -468,8 +467,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.draveness.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "iOS ExampleTests";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS Example.app/iOS Example";
 			};
 			name = Debug;
@@ -486,8 +484,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.draveness.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "iOS ExampleTests";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS Example.app/iOS Example";
 			};
 			name = Release;

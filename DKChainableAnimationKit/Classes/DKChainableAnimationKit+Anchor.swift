@@ -46,74 +46,74 @@ public extension DKChainableAnimationKit {
         }
     }
 
-    @discardableResult public func makeAnchor(_ x: CGFloat, _ y: CGFloat) -> DKChainableAnimationKit {
+    @discardableResult  func makeAnchor(_ x: CGFloat, _ y: CGFloat) -> DKChainableAnimationKit {
         self.makeAnchorFrom(x: x, y: y)
         return self
     }
 
-    public var anchorDefault: DKChainableAnimationKit {
+     var anchorDefault: DKChainableAnimationKit {
         get {
             return self.anchorCenter
         }
     }
 
-    public var anchorCenter: DKChainableAnimationKit {
+     var anchorCenter: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 0.5, y: 0.5)
             return self
         }
     }
 
-    public var anchorTopLeft: DKChainableAnimationKit {
+     var anchorTopLeft: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 0.0, y: 0.0)
             return self
         }
     }
 
-    public var anchorTopRight: DKChainableAnimationKit {
+     var anchorTopRight: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 1.0, y: 0.0)
             return self
         }
     }
 
-    public var anchorBottomLeft: DKChainableAnimationKit {
+     var anchorBottomLeft: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 0.0, y: 1.0)
             return self
         }
     }
 
-    public var anchorBottomRight: DKChainableAnimationKit {
+     var anchorBottomRight: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 1.0, y: 1.0)
             return self
         }
     }
 
-    public var anchorTop: DKChainableAnimationKit {
+     var anchorTop: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 0.5, y: 0.0)
             return self
         }
     }
 
-    public var anchorBottom: DKChainableAnimationKit {
+     var anchorBottom: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 0.5, y: 1.0)
             return self
         }
     }
 
-    public var anchorLeft: DKChainableAnimationKit {
+     var anchorLeft: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 0.0, y: 0.5)
             return self
         }
     }
 
-    public var anchorRight: DKChainableAnimationKit {
+     var anchorRight: DKChainableAnimationKit {
         get {
             self.makeAnchorFrom(x: 1.0, y: 0.5)
             return self
