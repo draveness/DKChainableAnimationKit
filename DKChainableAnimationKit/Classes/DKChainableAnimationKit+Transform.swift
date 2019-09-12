@@ -151,8 +151,8 @@ extension DKChainableAnimationKit {
             let rotationAnimation = self.basicAnimationForKeyPath("transform.rotation")
             let transform = view.layer.transform
             let originalRotation = Double(atan2(transform.m12, transform.m11))
-            rotationAnimation.fromValue = originalRotation as AnyObject!
-            rotationAnimation.toValue = (originalRotation + self.degreesToRadians(angle)) as AnyObject!
+            rotationAnimation.fromValue = originalRotation as AnyObject?
+            rotationAnimation.toValue = (originalRotation + self.degreesToRadians(angle)) as AnyObject?
             self.addAnimationFromCalculationBlock(rotationAnimation)
         }
 

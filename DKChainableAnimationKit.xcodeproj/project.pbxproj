@@ -203,7 +203,7 @@
 				TargetAttributes = {
 					5287D6731B1120E6006A9A84 = {
 						CreatedOnToolsVersion = 6.3.2;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1100;
 					};
 					5287D67E1B1120E6006A9A84 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -216,6 +216,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 5287D66A1B1120E6006A9A84;
@@ -392,8 +393,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.draveness.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -411,8 +411,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.draveness.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

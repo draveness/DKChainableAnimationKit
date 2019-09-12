@@ -30,8 +30,8 @@ class ViewController: UIViewController {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         button.frame = CGRect(x: 0, y: self.view.bounds.size.height - 50.0, width: self.view.bounds.size.width, height: 50)
         button.backgroundColor = UIColor.blue
-        button.setTitle("Action!", for: UIControlState.normal)
-        button.setTitleColor(UIColor.white, for: UIControlState.normal)
+        button.setTitle("Action!", for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(ViewController.animateView(_:)), for: .touchUpInside)
         self.view.addSubview(button)
     }
